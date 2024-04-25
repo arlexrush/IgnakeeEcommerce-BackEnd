@@ -1,0 +1,13 @@
+﻿using Ecommerce.Application.Contracts.Infrastructure;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ecommerce.Infrastructure.ShippingCatcherMP
+{
+    public class CatcherMPService: ICatcherMPService
+    {
+    }
+}

@@ -1,0 +1,1747 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\products\\queries\\paginationproducts\\paginationproductsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\products\\queries\\paginationproducts\\paginationproductsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59348839-450A-4B27-A72D-4CF72B09145F}|src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\api\\ecommerce.api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59348839-450A-4B27-A72D-4CF72B09145F}|src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj|solutionrelative:src\\api\\ecommerce.api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\behaviors\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\behaviors\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\specification\\products\\productforcountingspecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\specification\\products\\productforcountingspecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\specification\\specificationparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\specification\\specificationparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59348839-450A-4B27-A72D-4CF72B09145F}|src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\api\\ecommerce.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59348839-450A-4B27-A72D-4CF72B09145F}|src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj|solutionrelative:src\\api\\ecommerce.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\products\\queries\\paginationproducts\\paginationproductsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\products\\queries\\paginationproducts\\paginationproductsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\shared\\queries\\paginationvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\shared\\queries\\paginationvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\products\\queries\\vms\\productvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\products\\queries\\vms\\productvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\specification\\basespecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\specification\\basespecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\specification\\products\\productspecificationparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\specification\\products\\productspecificationparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\specification\\ispecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\specification\\ispecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\infrastructure\\ecommerce.infrastructure\\repositories\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|solutionrelative:src\\infrastructure\\ecommerce.infrastructure\\repositories\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\specification\\products\\productspecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\specification\\products\\productspecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\infrastructure\\ecommerce.infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|solutionrelative:src\\infrastructure\\ecommerce.infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\infrastructure\\ecommerce.infrastructure\\persistence\\ecommercedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|solutionrelative:src\\infrastructure\\ecommerce.infrastructure\\persistence\\ecommercedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\shared\\queries\\paginationbasequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\shared\\queries\\paginationbasequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\products\\queries\\getproductbyid\\getproductbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\products\\queries\\getproductbyid\\getproductbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\products\\queries\\vms\\imagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\products\\queries\\vms\\imagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\commons\\basedomainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\commons\\basedomainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\shipping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\shipping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\shippingoperator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\shippingoperator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\shippings\\vms\\shippingoperatorvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\shippings\\vms\\shippingoperatorvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\infrastructure\\ecommerce.infrastructure\\shippingmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|solutionrelative:src\\infrastructure\\ecommerce.infrastructure\\shippingmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\payments\\commands\\createpayment\\createpaymentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\payments\\commands\\createpayment\\createpaymentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59348839-450A-4B27-A72D-4CF72B09145F}|src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\api\\ecommerce.api\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59348839-450A-4B27-A72D-4CF72B09145F}|src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj|solutionrelative:src\\api\\ecommerce.api\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\contracts\\infrastructure\\ishippingmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\contracts\\infrastructure\\ishippingmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\commands\\updateorder\\updateordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\commands\\updateorder\\updateordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\commands\\createorder\\createordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\commands\\createorder\\createordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\payments\\commands\\createpayment\\createpaymentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\payments\\commands\\createpayment\\createpaymentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\infrastructure\\ecommerce.infrastructure\\shippingmrw\\mrwservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|solutionrelative:src\\infrastructure\\ecommerce.infrastructure\\shippingmrw\\mrwservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\propertyinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\propertyinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\infrastructure\\ecommerce.infrastructure\\infrastructureserviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|solutionrelative:src\\infrastructure\\ecommerce.infrastructure\\infrastructureserviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\infrastructure\\ecommerce.infrastructure\\shippingglovo\\glovoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|solutionrelative:src\\infrastructure\\ecommerce.infrastructure\\shippingglovo\\glovoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\contracts\\infrastructure\\imrwservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\contracts\\infrastructure\\imrwservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59348839-450A-4B27-A72D-4CF72B09145F}|src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\api\\ecommerce.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{59348839-450A-4B27-A72D-4CF72B09145F}|src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj|solutionrelative:src\\api\\ecommerce.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\preregistroenvio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\preregistroenvio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\datosenvio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\datosenvio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\peso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\peso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\datosdestinatario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\datosdestinatario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\tipoidentificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\tipoidentificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\tipoddireccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\tipoddireccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\respuestapreregistroenvio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\respuestapreregistroenvio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\tiposms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\tiposms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\infrastructure\\ecommerce.infrastructure\\shippingcorreos\\correosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|solutionrelative:src\\infrastructure\\ecommerce.infrastructure\\shippingcorreos\\correosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\calculatarifa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\calculatarifa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\respuestacalculatarifa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\respuestacalculatarifa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\correossettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\correos\\correossettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\contracts\\infrastructure\\icorreosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\contracts\\infrastructure\\icorreosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\shoppingcarts\\commands\\additemshoppingcart\\additemshoppingcartcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\shoppingcarts\\commands\\additemshoppingcart\\additemshoppingcartcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\queries\\paginationorders\\paginationordersqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\queries\\paginationorders\\paginationordersqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\vms\\ordervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\vms\\ordervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\addresses\\commands\\createaddress\\createaddresscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\addresses\\commands\\createaddress\\createaddresscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\queries\\paginationorders\\paginationordersquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\queries\\paginationorders\\paginationordersquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\persistence\\iasyncrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\persistence\\iasyncrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\models\\order\\shippingvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\models\\order\\shippingvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\shoppingcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\shoppingcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\shoppingcartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\shoppingcartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\vms\\orderitemvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\vms\\orderitemvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\contracts\\infrastructure\\iglovoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\contracts\\infrastructure\\iglovoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\glovo\\glovosettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\models\\shipping\\glovo\\glovosettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\commands\\createorder\\createordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\commands\\createorder\\createordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59348839-450A-4B27-A72D-4CF72B09145F}|src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\api\\ecommerce.api\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59348839-450A-4B27-A72D-4CF72B09145F}|src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj|solutionrelative:src\\api\\ecommerce.api\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\queries\\getorderbyid\\getorderbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\queries\\getorderbyid\\getorderbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\queries\\getorderbyid\\getorderbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\queries\\getorderbyid\\getorderbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\models\\order\\orderstatuslabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\models\\order\\orderstatuslabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\taxstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\taxstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59348839-450A-4B27-A72D-4CF72B09145F}|src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\api\\ecommerce.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59348839-450A-4B27-A72D-4CF72B09145F}|src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj|solutionrelative:src\\api\\ecommerce.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59348839-450A-4B27-A72D-4CF72B09145F}|src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\api\\ecommerce.api\\controllers\\shoppingcartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59348839-450A-4B27-A72D-4CF72B09145F}|src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj|solutionrelative:src\\api\\ecommerce.api\\controllers\\shoppingcartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\commands\\updateorder\\updateordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\orders\\commands\\updateorder\\updateordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\tax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\tax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\shoppingcarts\\vms\\shoppingcartitemvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\shoppingcarts\\vms\\shoppingcartitemvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\addresses\\commands\\createaddress\\createaddresscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\addresses\\commands\\createaddress\\createaddresscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\infrastructure\\ecommerce.infrastructure\\producttaxes\\taxservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|solutionrelative:src\\infrastructure\\ecommerce.infrastructure\\producttaxes\\taxservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\contracts\\infrastructure\\itaxservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\contracts\\infrastructure\\itaxservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\taxbyproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\taxbyproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\shoppingcarts\\commands\\deleteitemshoppingcart\\deleteitemshoppingcartcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\shoppingcarts\\commands\\deleteitemshoppingcart\\deleteitemshoppingcartcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\shoppingcarts\\vms\\shoppingcartvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\shoppingcarts\\vms\\shoppingcartvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\shoppingcarts\\commands\\updateshippingcart\\updateshoppingcartcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\shoppingcarts\\commands\\updateshippingcart\\updateshoppingcartcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\shoppingcarts\\commands\\additemshoppingcart\\additemshoppingcartcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\shoppingcarts\\commands\\additemshoppingcart\\additemshoppingcartcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\productstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\productstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\addresses\\vms\\shippingaddressvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\addresses\\vms\\shippingaddressvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\shoppingcarts\\commands\\deleteitemshoppingcart\\deleteitemshoppingcartcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\shoppingcarts\\commands\\deleteitemshoppingcart\\deleteitemshoppingcartcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\infrastructure\\ecommerce.infrastructure\\messageimplementation\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}|src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj|solutionrelative:src\\infrastructure\\ecommerce.infrastructure\\messageimplementation\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\addresses\\commands\\createaddress\\createaddressvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\addresses\\commands\\createaddress\\createaddressvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\orderaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\orderaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\features\\shoppingcarts\\commands\\updateshippingcart\\updateshoppingcartcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\features\\shoppingcarts\\commands\\updateshippingcart\\updateshoppingcartcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59348839-450A-4B27-A72D-4CF72B09145F}|src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\api\\ecommerce.api\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59348839-450A-4B27-A72D-4CF72B09145F}|src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj|solutionrelative:src\\api\\ecommerce.api\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59348839-450A-4B27-A72D-4CF72B09145F}|src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\api\\ecommerce.api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59348839-450A-4B27-A72D-4CF72B09145F}|src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj|solutionrelative:src\\api\\ecommerce.api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\models\\payment\\stripesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\models\\payment\\stripesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.domain\\ecommerce.domain\\applicationtax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}|src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj|solutionrelative:src\\core\\ecommerce.domain\\ecommerce.domain\\applicationtax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|c:\\users\\arlex\\source\\repos_.net\\projectshop\\backend\\src\\core\\ecommerce.application\\ecommerce.application\\exceptions\\unprocessableentityexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0702AF8-D044-407F-ABE9-E258E03AEE0C}|src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj|solutionrelative:src\\core\\ecommerce.application\\ecommerce.application\\exceptions\\unprocessableentityexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Api\\Ecommerce.Api\\Program.cs",
+              "RelativeDocumentMoniker": "src\\Api\\Ecommerce.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Api\\Ecommerce.Api\\Program.cs",
+              "RelativeToolTip": "src\\Api\\Ecommerce.Api\\Program.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAMwBsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-13T20:18:02.372Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Product.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Product.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Product.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Product.cs",
+              "ViewState": "AQIAAJQAAAAAAAAAAAAcwDEAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-08-10T17:26:55.098Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Api\\Ecommerce.Api\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "src\\Api\\Ecommerce.Api\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Api\\Ecommerce.Api\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "src\\Api\\Ecommerce.Api\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAEwEEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-08-14T20:34:35.882Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PaginationVm.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Shared\\Queries\\PaginationVm.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Shared\\Queries\\PaginationVm.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Shared\\Queries\\PaginationVm.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Shared\\Queries\\PaginationVm.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAAAoAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-05T01:00:11.149Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PaginationBaseQuery.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Shared\\Queries\\PaginationBaseQuery.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Shared\\Queries\\PaginationBaseQuery.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Shared\\Queries\\PaginationBaseQuery.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Shared\\Queries\\PaginationBaseQuery.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwA0AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-25T01:07:34.156Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PaginationProductsQuery.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\PaginationProducts\\PaginationProductsQuery.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\PaginationProducts\\PaginationProductsQuery.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\PaginationProducts\\PaginationProductsQuery.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\PaginationProducts\\PaginationProductsQuery.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAmwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-05T01:04:29.977Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PaginationProductsQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\PaginationProducts\\PaginationProductsQueryHandler.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\PaginationProducts\\PaginationProductsQueryHandler.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\PaginationProducts\\PaginationProductsQueryHandler.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\PaginationProducts\\PaginationProductsQueryHandler.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAuwCAAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-05T01:06:42.468Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Mapping\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Mapping\\MappingProfile.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAqwF8AAABdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-08-13T22:22:03.276Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "ShoppingCart.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ShoppingCart.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ShoppingCart.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ShoppingCart.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ShoppingCart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAACBjwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-08-13T22:20:56.92Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "ShoppingCartItem.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ShoppingCartItem.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ShoppingCartItem.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ShoppingCartItem.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ShoppingCartItem.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAYwBYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-08-14T15:21:42.254Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "ShoppingCartVm.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Vms\\ShoppingCartVm.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Vms\\ShoppingCartVm.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Vms\\ShoppingCartVm.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Vms\\ShoppingCartVm.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAlwAoAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-08-10T17:18:27.601Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "ShoppingCartItemVm.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Vms\\ShoppingCartItemVm.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Vms\\ShoppingCartItemVm.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Vms\\ShoppingCartItemVm.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Vms\\ShoppingCartItemVm.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAxwAsAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-08-10T17:17:18.74Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "ShoppingCartController.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Api\\Ecommerce.Api\\Controllers\\ShoppingCartController.cs",
+              "RelativeDocumentMoniker": "src\\Api\\Ecommerce.Api\\Controllers\\ShoppingCartController.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Api\\Ecommerce.Api\\Controllers\\ShoppingCartController.cs",
+              "RelativeToolTip": "src\\Api\\Ecommerce.Api\\Controllers\\ShoppingCartController.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAlwDkAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-08-14T18:07:18.488Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 95,
+              "Title": "UpdateShoppingCartCommand.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\UpdateShippingCart\\UpdateShoppingCartCommand.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\UpdateShippingCart\\UpdateShoppingCartCommand.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\UpdateShippingCart\\UpdateShoppingCartCommand.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\UpdateShippingCart\\UpdateShoppingCartCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAxwAwAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-08-14T20:23:40.397Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "UpdateShoppingCartCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\UpdateShippingCart\\UpdateShoppingCartCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\UpdateShippingCart\\UpdateShoppingCartCommandHandler.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\UpdateShippingCart\\UpdateShoppingCartCommandHandler.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\UpdateShippingCart\\UpdateShoppingCartCommandHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwDYAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-08-14T20:24:09.671Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "IAsyncRepository.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Persistence\\IAsyncRepository.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Persistence\\IAsyncRepository.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Persistence\\IAsyncRepository.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Persistence\\IAsyncRepository.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAqwAoAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-10-29T14:59:06.133Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RepositoryBase.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\Repositories\\RepositoryBase.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Ecommerce.Infrastructure\\Repositories\\RepositoryBase.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\Repositories\\RepositoryBase.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Ecommerce.Infrastructure\\Repositories\\RepositoryBase.cs",
+              "ViewState": "AQIAAIAAAAAAAAAAAAApwIUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-10-29T19:25:25.401Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\Repositories\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Ecommerce.Infrastructure\\Repositories\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\Repositories\\UnitOfWork.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Ecommerce.Infrastructure\\Repositories\\UnitOfWork.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAMwDkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-10-29T19:31:11.37Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "AddItemShoppingCartCommand.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\AddItemShoppingcart\\AddItemShoppingCartCommand.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\AddItemShoppingcart\\AddItemShoppingCartCommand.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\AddItemShoppingcart\\AddItemShoppingCartCommand.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\AddItemShoppingcart\\AddItemShoppingCartCommand.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAApwA4AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-10-30T02:37:39.455Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "AddItemShoppingCartCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\AddItemShoppingcart\\AddItemShoppingCartCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\AddItemShoppingcart\\AddItemShoppingCartCommandHandler.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\AddItemShoppingcart\\AddItemShoppingCartCommandHandler.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\AddItemShoppingcart\\AddItemShoppingCartCommandHandler.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAlwB0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-10-30T02:39:01.421Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "DeleteItemShoppingCartCommand.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\DeleteItemShoppingCart\\DeleteItemShoppingCartCommand.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\DeleteItemShoppingCart\\DeleteItemShoppingCartCommand.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\DeleteItemShoppingCart\\DeleteItemShoppingCartCommand.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\DeleteItemShoppingCart\\DeleteItemShoppingCartCommand.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAApwAoAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-06T20:26:55.443Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "DeleteItemShoppingCartCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\DeleteItemShoppingCart\\DeleteItemShoppingCartCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\DeleteItemShoppingCart\\DeleteItemShoppingCartCommandHandler.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\DeleteItemShoppingCart\\DeleteItemShoppingCartCommandHandler.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\ShoppingCarts\\Commands\\DeleteItemShoppingCart\\DeleteItemShoppingCartCommandHandler.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAwB0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-06T20:27:30.495Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Address.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Address.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Address.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Address.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Address.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAmwAsAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-08T22:51:18.48Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "ShippingAddressVm.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Addresses\\Vms\\ShippingAddressVm.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Addresses\\Vms\\ShippingAddressVm.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Addresses\\Vms\\ShippingAddressVm.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Addresses\\Vms\\ShippingAddressVm.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwAoAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-09T16:21:48.276Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "CreateAddressValidator.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Addresses\\Commands\\CreateAddress\\CreateAddressValidator.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Addresses\\Commands\\CreateAddress\\CreateAddressValidator.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Addresses\\Commands\\CreateAddress\\CreateAddressValidator.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Addresses\\Commands\\CreateAddress\\CreateAddressValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-10T00:39:13.366Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "CreateAddressCommand.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Addresses\\Commands\\CreateAddress\\CreateAddressCommand.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Addresses\\Commands\\CreateAddress\\CreateAddressCommand.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Addresses\\Commands\\CreateAddress\\CreateAddressCommand.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Addresses\\Commands\\CreateAddress\\CreateAddressCommand.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAwwBEAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-09T16:21:39.958Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "CreateAddressCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Addresses\\Commands\\CreateAddress\\CreateAddressCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Addresses\\Commands\\CreateAddress\\CreateAddressCommandHandler.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Addresses\\Commands\\CreateAddress\\CreateAddressCommandHandler.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Addresses\\Commands\\CreateAddress\\CreateAddressCommandHandler.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAgwDcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-09T16:21:43.397Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "InfrastructureServiceRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\InfrastructureServiceRegistration.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Ecommerce.Infrastructure\\InfrastructureServiceRegistration.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\InfrastructureServiceRegistration.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Ecommerce.Infrastructure\\InfrastructureServiceRegistration.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAQwDIAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-13T19:53:30.216Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 99,
+              "Title": "StripeSettings.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Payment\\StripeSettings.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Payment\\StripeSettings.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Payment\\StripeSettings.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Payment\\StripeSettings.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAEwAgAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-13T19:45:26.54Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Api\\Ecommerce.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\Api\\Ecommerce.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Api\\Ecommerce.Api\\appsettings.json",
+              "RelativeToolTip": "src\\Api\\Ecommerce.Api\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAOB/wC8AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2023-11-13T19:18:49.256Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Order.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Order.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Order.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Order.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAowCsAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-13T20:07:07.613Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "OrderVm.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Vms\\OrderVm.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Vms\\OrderVm.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Vms\\OrderVm.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Vms\\OrderVm.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAxwBMAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-13T20:06:44.927Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CreateOrderCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Commands\\CreateOrder\\CreateOrderCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Commands\\CreateOrder\\CreateOrderCommandHandler.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Commands\\CreateOrder\\CreateOrderCommandHandler.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Commands\\CreateOrder\\CreateOrderCommandHandler.cs",
+              "ViewState": "AQIAACABAAAAAAAAAAAQwC0BAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-13T20:04:23.059Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "CreateOrderCommand.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Commands\\CreateOrder\\CreateOrderCommand.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Commands\\CreateOrder\\CreateOrderCommand.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Commands\\CreateOrder\\CreateOrderCommand.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Commands\\CreateOrder\\CreateOrderCommand.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwA4AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-13T20:03:29.756Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\OrderItem.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\OrderItem.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\OrderItem.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAcwBMAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-20T14:42:19.259Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "OrderItemVm.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Vms\\OrderItemVm.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Vms\\OrderItemVm.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Vms\\OrderItemVm.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Vms\\OrderItemVm.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAuwBQAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-13T20:14:11.992Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "OrderStatusLabel.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Order\\OrderStatusLabel.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Order\\OrderStatusLabel.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Order\\OrderStatusLabel.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Order\\OrderStatusLabel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwAsAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-13T21:14:54.938Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "OrderStatus.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\OrderStatus.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\OrderStatus.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\OrderStatus.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\OrderStatus.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAuwAkAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-13T21:09:31.913Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "OrderAddress.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\OrderAddress.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\OrderAddress.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\OrderAddress.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\OrderAddress.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAYwAsAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-13T23:41:02.583Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "TaxStatus.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\TaxStatus.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\TaxStatus.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\TaxStatus.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\TaxStatus.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwA4AAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-20T13:46:01.699Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "Country.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Country.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Country.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Country.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Country.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAswBYAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-15T17:45:37.557Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "ProductStatus.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ProductStatus.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ProductStatus.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ProductStatus.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ProductStatus.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBZwA4AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-20T13:46:24.157Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 100,
+              "Title": "ApplicationTax.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ApplicationTax.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ApplicationTax.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ApplicationTax.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ApplicationTax.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBZwA4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-20T14:14:17.244Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "Tax.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Tax.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Tax.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Tax.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Tax.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAowBAAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-20T14:04:42.8Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "ITaxService.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\ITaxService.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\ITaxService.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\ITaxService.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\ITaxService.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAEwA8AAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-20T21:21:03.423Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "TaxService.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\ProductTaxes\\TaxService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Ecommerce.Infrastructure\\ProductTaxes\\TaxService.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\ProductTaxes\\TaxService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Ecommerce.Infrastructure\\ProductTaxes\\TaxService.cs",
+              "ViewState": "AQIAAKwAAAAAAAAAAAAqwLYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-20T21:30:59.225Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "TaxByProduct.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\TaxByProduct.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\TaxByProduct.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\TaxByProduct.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\TaxByProduct.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAhwAwAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-20T16:14:43.774Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "CorreosService.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\ShippingCorreos\\CorreosService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Ecommerce.Infrastructure\\ShippingCorreos\\CorreosService.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\ShippingCorreos\\CorreosService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Ecommerce.Infrastructure\\ShippingCorreos\\CorreosService.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAxwFEAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-23T20:22:54.47Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\MessageImplementation\\EmailService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Ecommerce.Infrastructure\\MessageImplementation\\EmailService.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\MessageImplementation\\EmailService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Ecommerce.Infrastructure\\MessageImplementation\\EmailService.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAApwCsAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-21T00:30:11.459Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BaseDomainModel.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Commons\\BaseDomainModel.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Commons\\BaseDomainModel.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Commons\\BaseDomainModel.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Commons\\BaseDomainModel.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAcwAoAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-20T23:36:18.078Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EcommerceDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\Persistence\\EcommerceDbContext.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Ecommerce.Infrastructure\\Persistence\\EcommerceDbContext.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\Persistence\\EcommerceDbContext.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Ecommerce.Infrastructure\\Persistence\\EcommerceDbContext.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAMwA0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-20T13:59:06.613Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "CorreosSettings.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\CorreosSettings.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\CorreosSettings.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\CorreosSettings.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\CorreosSettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAApwAgAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-23T21:36:17.726Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 101,
+              "Title": "UnprocessableEntityException.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Exceptions\\UnprocessableEntityException.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Exceptions\\UnprocessableEntityException.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Exceptions\\UnprocessableEntityException.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Exceptions\\UnprocessableEntityException.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAgwAgAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-25T19:14:31.306Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "TipoSMS.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\TipoSMS.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\TipoSMS.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\TipoSMS.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\TipoSMS.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwAgAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-11T01:07:40.834Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ReviewController.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Api\\Ecommerce.Api\\Controllers\\ReviewController.cs",
+              "RelativeDocumentMoniker": "src\\Api\\Ecommerce.Api\\Controllers\\ReviewController.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Api\\Ecommerce.Api\\Controllers\\ReviewController.cs",
+              "RelativeToolTip": "src\\Api\\Ecommerce.Api\\Controllers\\ReviewController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwBsAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-14T23:27:42.025Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 96,
+              "Title": "CountryController.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Api\\Ecommerce.Api\\Controllers\\CountryController.cs",
+              "RelativeDocumentMoniker": "src\\Api\\Ecommerce.Api\\Controllers\\CountryController.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Api\\Ecommerce.Api\\Controllers\\CountryController.cs",
+              "RelativeToolTip": "src\\Api\\Ecommerce.Api\\Controllers\\CountryController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-14T18:22:37.651Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ValidationBehavior.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Behaviors\\ValidationBehavior.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Behaviors\\ValidationBehavior.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Behaviors\\ValidationBehavior.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Behaviors\\ValidationBehavior.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAEwCQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-14T13:02:32.497Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 98,
+              "Title": "ValidationException.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Exceptions\\ValidationException.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Exceptions\\ValidationException.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Exceptions\\ValidationException.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Exceptions\\ValidationException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAACBjwBYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-14T13:29:15.999Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 97,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Api\\Ecommerce.Api\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "src\\Api\\Ecommerce.Api\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Api\\Ecommerce.Api\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "src\\Api\\Ecommerce.Api\\Controllers\\CategoryController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAACBjwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-14T10:59:55.073Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Api\\Ecommerce.Api\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "src\\Api\\Ecommerce.Api\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Api\\Ecommerce.Api\\Controllers\\UserController.cs",
+              "RelativeToolTip": "src\\Api\\Ecommerce.Api\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAIwC4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-14T01:32:10.921Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "CalculaTarifa.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\CalculaTarifa.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\CalculaTarifa.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\CalculaTarifa.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\CalculaTarifa.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowAcAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-06T21:58:28.653Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "ICorreosService.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\ICorreosService.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\ICorreosService.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\ICorreosService.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\ICorreosService.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAqwA8AAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-06T21:58:04.614Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "RespuestaCalculaTarifa.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\RespuestaCalculaTarifa.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\RespuestaCalculaTarifa.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\RespuestaCalculaTarifa.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\RespuestaCalculaTarifa.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAtwBAAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-23T21:29:38.329Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "UpdateOrderCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Commands\\UpdateOrder\\UpdateOrderCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Commands\\UpdateOrder\\UpdateOrderCommandHandler.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Commands\\UpdateOrder\\UpdateOrderCommandHandler.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Commands\\UpdateOrder\\UpdateOrderCommandHandler.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwAwAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-08T20:01:30.741Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "UpdateOrderCommand.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Commands\\UpdateOrder\\UpdateOrderCommand.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Commands\\UpdateOrder\\UpdateOrderCommand.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Commands\\UpdateOrder\\UpdateOrderCommand.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Commands\\UpdateOrder\\UpdateOrderCommand.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAhwA4AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-08T20:01:28.654Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Api\\Ecommerce.Api\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "src\\Api\\Ecommerce.Api\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Api\\Ecommerce.Api\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "src\\Api\\Ecommerce.Api\\Controllers\\OrderController.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAYwEwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-10T00:41:02.168Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "GetOrderByIdQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Queries\\GetOrderById\\GetOrderByIdQueryHandler.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Queries\\GetOrderById\\GetOrderByIdQueryHandler.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Queries\\GetOrderById\\GetOrderByIdQueryHandler.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Queries\\GetOrderById\\GetOrderByIdQueryHandler.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAYwC8AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-23T11:48:40.463Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "GetOrderByIdQuery.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Queries\\GetOrderById\\GetOrderByIdQuery.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Queries\\GetOrderById\\GetOrderByIdQuery.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Queries\\GetOrderById\\GetOrderByIdQuery.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Queries\\GetOrderById\\GetOrderByIdQuery.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAYwBAAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-23T11:43:00.969Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProductSpecification.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\Products\\ProductSpecification.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\Products\\ProductSpecification.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\Products\\ProductSpecification.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\Products\\ProductSpecification.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAD4vw8AAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-05T01:08:54.805Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProductSpecificationParams.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\Products\\ProductSpecificationParams.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\Products\\ProductSpecificationParams.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\Products\\ProductSpecificationParams.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\Products\\ProductSpecificationParams.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-23T15:10:10.898Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "PaginationOrdersQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Queries\\PaginationOrders\\PaginationOrdersQueryHandler.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Queries\\PaginationOrders\\PaginationOrdersQueryHandler.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Queries\\PaginationOrders\\PaginationOrdersQueryHandler.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Queries\\PaginationOrders\\PaginationOrdersQueryHandler.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAuwDYAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-25T01:01:54.272Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "PaginationOrdersQuery.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Queries\\PaginationOrders\\PaginationOrdersQuery.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Queries\\PaginationOrders\\PaginationOrdersQuery.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Queries\\PaginationOrders\\PaginationOrdersQuery.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Orders\\Queries\\PaginationOrders\\PaginationOrdersQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-25T01:00:33.738Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CreatePaymentCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Payments\\Commands\\CreatePayment\\CreatePaymentCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Payments\\Commands\\CreatePayment\\CreatePaymentCommandHandler.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Payments\\Commands\\CreatePayment\\CreatePaymentCommandHandler.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Payments\\Commands\\CreatePayment\\CreatePaymentCommandHandler.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAUwHEAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-26T15:43:29.339Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CreatePaymentCommand.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Payments\\Commands\\CreatePayment\\CreatePaymentCommand.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Payments\\Commands\\CreatePayment\\CreatePaymentCommand.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Payments\\Commands\\CreatePayment\\CreatePaymentCommand.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Payments\\Commands\\CreatePayment\\CreatePaymentCommand.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAmwAoAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-26T15:42:08.395Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Shipping.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Shipping.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Shipping.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Shipping.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Shipping.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAqwA8AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-29T11:45:50.444Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "ShippingVm.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Order\\ShippingVm.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Order\\ShippingVm.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Order\\ShippingVm.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Order\\ShippingVm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAABhwA0AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-29T12:27:31.243Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ShippingOperator.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ShippingOperator.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ShippingOperator.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ShippingOperator.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\ShippingOperator.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAiwBAAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-29T13:17:44.674Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ShippingOperatorVm.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Shippings\\Vms\\ShippingOperatorVm.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Shippings\\Vms\\ShippingOperatorVm.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Shippings\\Vms\\ShippingOperatorVm.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Shippings\\Vms\\ShippingOperatorVm.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAADwvw8AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-29T13:40:42.606Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "GlovoSettings.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Glovo\\GlovoSettings.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Glovo\\GlovoSettings.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Glovo\\GlovoSettings.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Glovo\\GlovoSettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwAwAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-30T11:35:01.431Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "GlovoService.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\ShippingGlovo\\GlovoService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Ecommerce.Infrastructure\\ShippingGlovo\\GlovoService.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\ShippingGlovo\\GlovoService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Ecommerce.Infrastructure\\ShippingGlovo\\GlovoService.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAwDYAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-30T00:44:20.183Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "IGlovoService.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\IGlovoService.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\IGlovoService.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\IGlovoService.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\IGlovoService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBZwA0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-30T14:27:00.708Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ShippingManagementService.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\ShippingManagementService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Ecommerce.Infrastructure\\ShippingManagementService.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\ShippingManagementService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Ecommerce.Infrastructure\\ShippingManagementService.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAGBnwEEAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-29T21:23:56.165Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IShippingManagementService.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\IShippingManagementService.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\IShippingManagementService.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\IShippingManagementService.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\IShippingManagementService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBZwA8AAAB8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-29T21:20:26.352Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "PropertyInformation.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\PropertyInformation.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\PropertyInformation.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\PropertyInformation.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\PropertyInformation.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAiwAoAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-01T01:05:47.561Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "MrwService.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\ShippingMrw\\MrwService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Ecommerce.Infrastructure\\ShippingMrw\\MrwService.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\ShippingMrw\\MrwService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Ecommerce.Infrastructure\\ShippingMrw\\MrwService.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAuwBQAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-05T15:19:30.681Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IMrwService.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\IMrwService.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\IMrwService.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\IMrwService.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Contracts\\Infrastructure\\IMrwService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBZwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-12T02:59:04.379Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ISpecification.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\ISpecification.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\ISpecification.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\ISpecification.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\ISpecification.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T00:29:09.988Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BaseSpecification.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\BaseSpecification.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\BaseSpecification.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\BaseSpecification.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\BaseSpecification.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T00:20:30.937Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SpecificationParams.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\SpecificationParams.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\SpecificationParams.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\SpecificationParams.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\SpecificationParams.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T00:45:39.129Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductForCountingSpecification.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\Products\\ProductForCountingSpecification.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\Products\\ProductForCountingSpecification.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\Products\\ProductForCountingSpecification.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Specification\\Products\\ProductForCountingSpecification.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAkwAwAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T01:17:32.821Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ImageVm.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\Vms\\ImageVm.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\Vms\\ImageVm.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\Vms\\ImageVm.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\Vms\\ImageVm.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAiwAoAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T23:09:46.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductVm.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\Vms\\ProductVm.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\Vms\\ProductVm.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\Vms\\ProductVm.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\Vms\\ProductVm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIcAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T23:08:46.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GetProductByIdQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\GetProductById\\GetProductByIdQueryHandler.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\GetProductById\\GetProductByIdQueryHandler.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\GetProductById\\GetProductByIdQueryHandler.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Features\\Products\\Queries\\GetProductById\\GetProductByIdQueryHandler.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAcwCAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T10:21:53.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Image.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Image.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Image.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Image.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Image.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAACBjwAsAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T21:58:10.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Peso.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\Peso.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\Peso.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\Peso.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\Peso.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-12T01:21:36.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "DatosEnvio.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\DatosEnvio.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\DatosEnvio.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\DatosEnvio.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\DatosEnvio.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBZwA0AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-12T00:30:20.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "TipoDDireccion.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\TipoDDireccion.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\TipoDDireccion.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\TipoDDireccion.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\TipoDDireccion.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwAgAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-11T23:08:01.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\User.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\User.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\User.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAACBjwA0AAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-11T23:04:15.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "TipoIdentificacion.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\TipoIdentificacion.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\TipoIdentificacion.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\TipoIdentificacion.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\TipoIdentificacion.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAmwAkAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-11T23:03:02.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "DatosDestinatario.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\DatosDestinatario.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\DatosDestinatario.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\DatosDestinatario.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\DatosDestinatario.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAQwBAAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-11T16:36:39.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "PreRegistroEnvio.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\PreRegistroEnvio.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\PreRegistroEnvio.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\PreRegistroEnvio.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\PreRegistroEnvio.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAgwC8AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-11T14:37:10.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "RespuestaPreRegistroEnvio.cs",
+              "DocumentMoniker": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\RespuestaPreRegistroEnvio.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\RespuestaPreRegistroEnvio.cs",
+              "ToolTip": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\RespuestaPreRegistroEnvio.cs",
+              "RelativeToolTip": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Models\\Shipping\\Correos\\RespuestaPreRegistroEnvio.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAuwBoAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-09T14:59:17.764Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
