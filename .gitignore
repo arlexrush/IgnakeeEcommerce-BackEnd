@@ -1,0 +1,37 @@
+## Build output
+bin/
+obj/
+out/
+
+## User-specific files
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Logs
+*.log
+
+## Local secrets and environment files
+.env
+.env.*
+appsettings.Development.json
+appsettings.Production.json
+
+## Docker local data
+postgres-data/
+volumes/
+
+## Packages
+packages/
+*.nupkg
+
+## Test results
+TestResults/
+
+## OS files
+.DS_Store
+Thumbs.db

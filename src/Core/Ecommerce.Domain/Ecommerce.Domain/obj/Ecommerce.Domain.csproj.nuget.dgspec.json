@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj": {}
+    "C:\\NET_Dev\\IgnakeeEcommerce-BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj": {
+    "C:\\NET_Dev\\IgnakeeEcommerce-BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj",
+        "projectUniqueName": "C:\\NET_Dev\\IgnakeeEcommerce-BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj",
         "projectName": "Ecommerce.Domain",
-        "projectPath": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj",
+        "projectPath": "C:\\NET_Dev\\IgnakeeEcommerce-BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj",
         "packagesPath": "C:\\Users\\arlex\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arlex\\source\\REPOS_.NET\\ProjectShop\\BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\obj\\",
+        "outputPath": "C:\\NET_Dev\\IgnakeeEcommerce-BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,9 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -44,19 +45,17 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Identity": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -75,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

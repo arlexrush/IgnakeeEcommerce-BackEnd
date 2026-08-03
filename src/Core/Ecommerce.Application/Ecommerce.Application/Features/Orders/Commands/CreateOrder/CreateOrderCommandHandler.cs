@@ -61,9 +61,9 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
                 try
                 {
                     await _unitOfWork.Repository<Order>().DeleteAsync(orderPending);
-                }catch( Exception ex )
+                }
+                catch (Exception)
                 {
-                    var errorMessage=ex.Message;
                     throw;
                 }
                 
@@ -82,10 +82,9 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
                     throw new Exception("Not Found Shopping Cart");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                var errorMessage = ex.Message;
-                throw ex;
+                throw;
             }
             
             //if(shoppingCart is not null)
@@ -125,9 +124,9 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
                 {
                     product = await _unitOfWork.Repository<Product>().GetByIdAsync(productId);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
-                    throw new Exception(ex.Message);
+                    throw new InvalidOperationException("Failed to load the product while creating the order.", ex);
                 }
 
                 //string countryName = product!.CountrySell!;
@@ -195,7 +194,7 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
             }
             //var subTotal =Math.Round(shoppingCart!.ShoppingCartItems!.Sum(x => x.Price * x.Quantity), 2);
             //var taxes = Math.Round(subTotal * Convert.ToDecimal(0.18));
-            var pesoGraims = pesosItems.IsNullOrEmpty()? 1000:pesosItems.Sum();
+            var pesoGraims = pesosItems.Count == 0 ? 1000 : pesosItems.Sum();
             var subTotal=montoItems.Sum();
             var taxes=montoTaxes.Sum();
 
@@ -305,10 +304,9 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
             {
                 await _unitOfWork.Repository<Order>().AddAsync(order);
             }
-            catch(Exception ex)
+            catch (Exception)
             {
-                var errorMessage=ex.Message;
-                throw ex;
+                throw;
             }
             
             //Mapping items fron ShoppingCart to Order
@@ -339,11 +337,12 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
             try
             {
                 await _unitOfWork.Repository<ShippingOperator>().AddAsync(newShoppingOperator);
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 Debug.Print("Exception when query ShippingOperator Table: " + ex.Message);
                 Debug.Print(ex.StackTrace);
-                throw ex;
+                throw;
             }
             
 
