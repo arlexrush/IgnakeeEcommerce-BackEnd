@@ -63,7 +63,7 @@ identityBuilder.AddEntityFrameworkStores<EcommerceDbContext>();
 identityBuilder.AddSignInManager<SignInManager<User>>();
 
 
-builder.Services.TryAddSingleton<ISystemClock, SystemClock>();
+builder.Services.TryAddSingleton(TimeProvider.System);
 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:Key"]!));
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt=>

@@ -113,7 +113,7 @@ namespace Ecommerce.Infrastructure
                     throw ex;
                 }
 
-                if (!prop.NameService.Equals("_unitOfWork")|!prop.NameService.Equals("_mapper")|!prop.NameService.Equals("_authService") |!prop.NameService.Equals("_userManager") | !prop.NameService.Equals("_glovoService") | !prop.NameService.Equals("_uberEats") | !prop.NameService.Equals("_catcherMP") | !prop.NameService.Equals("_justEat"))
+                if (!prop.NameService.Equals("_unitOfWork") && !prop.NameService.Equals("_mapper") && !prop.NameService.Equals("_authService") && !prop.NameService.Equals("_userManager") && !prop.NameService.Equals("_glovoService") && !prop.NameService.Equals("_uberEats") && !prop.NameService.Equals("_catcherMP") && !prop.NameService.Equals("_justEat"))
                 {
                     properties.Add(prop);
                 }
@@ -266,6 +266,103 @@ namespace Ecommerce.Infrastructure
     
         public async Task<RespuestaPreRegistroEnvio> DoShipping(PropertyInformation service, User user, OrderAddress address, int? pesograims, Order order)
         {
+            var senderData = new DatosRemitente
+            {
+                Identificacion = new IdentificacionRemitente
+                {
+                    Nombre = "Timoneda",
+                    Apellido1 = string.Empty,
+                    Apellido2 = string.Empty,
+                    Nif = "123456789012345",
+                    Empresa = "zcxvqeeyeye",
+                    PersonaContacto = "agshdjfjfirirjrm"
+                },
+                DatosDireccion = new DatosDireccionRemitente
+                {
+                    Bloque = string.Empty,
+                    Direccion = "San Pio x, 36, San Marcelin",
+                    Escalera = string.Empty,
+                    Localidad = string.Empty,
+                    Numero = string.Empty,
+                    Piso = string.Empty,
+                    Portal = string.Empty,
+                    Provincia = string.Empty,
+                    Puerta = string.Empty,
+                    TipoDireccion = string.Empty
+                },
+                CP = "46017",
+                ZIP = "46017",
+                Pais = "SP",
+                Email = "ignakee@gmail.com",
+                Telefonocontacto = string.Empty,
+                DatosSMS = new DatosSMSRemitente
+                {
+                    Idioma = string.Empty,
+                    NumeroSMS = string.Empty
+                }
+            };
+
+            var recipientData = new DatosDestinatario
+            {
+                Identificacion = new IdentificacionDestinatario
+                {
+                    Nombre = user.Name ?? string.Empty,
+                    Apellido1 = user.LastName ?? string.Empty,
+                    Apellido2 = string.Empty,
+                    Nif = user.IdentityNumber ?? string.Empty,
+                    Empresa = "zcxvqeeyeye",
+                    PersonaContacto = user.Name ?? string.Empty
+                },
+                DatosDireccion = new DatosDireccionDestinatario
+                {
+                    Bloque = string.Empty,
+                    Direccion = address.UserAddress ?? string.Empty,
+                    Escalera = string.Empty,
+                    Localidad = address.City ?? string.Empty,
+                    Numero = string.Empty,
+                    Piso = string.Empty,
+                    Portal = string.Empty,
+                    Provincia = address.Region ?? string.Empty,
+                    Puerta = string.Empty,
+                    TipoDireccion = string.Empty
+                },
+                DatosDireccion2 = new DatosDireccionDestinatario
+                {
+                    Bloque = string.Empty,
+                    Direccion = address.UserAddress ?? string.Empty,
+                    Escalera = string.Empty,
+                    Localidad = address.City ?? string.Empty,
+                    Numero = string.Empty,
+                    Piso = string.Empty,
+                    Portal = string.Empty,
+                    Provincia = address.Region ?? string.Empty,
+                    Puerta = string.Empty,
+                    TipoDireccion = string.Empty
+                },
+                ApartadoPostaldestino = address.PostalCode ?? string.Empty,
+                DestinoApartadoPostalinternacional = "N",
+                CP = address.PostalCode ?? string.Empty,
+                Email = user.Email ?? string.Empty,
+                Pais = address.Country ?? string.Empty,
+                Telefonocontacto = user.PhoneNumber ?? string.Empty,
+                ZIP = address.PostalCode ?? string.Empty,
+                DatosSMS = new DatosSMSDestinatario
+                {
+                    Idioma = string.Empty,
+                    NumeroSMS = string.Empty
+                }
+            };
+
+            var envioData = new DatosEnvio
+            {
+                CodProducto = order.Id?.ToString() ?? string.Empty,
+                TipoFranqueo = "ON",
+                Pesos = new List<Peso>
+                {
+                    new Peso { TipoPeso = TipoPeso.Real, Valor = pesograims ?? 0 }
+                }
+            };
+
             PreRegistroEnvio requestEnvio = new PreRegistroEnvio()
             {
                 FechaOperacion = DateTime.UtcNow,
@@ -275,95 +372,13 @@ namespace Ecommerce.Infrastructure
                 Care = "000000",
                 TotalBultos = 1,
                 ModDevEtiqueta = "PDF",
-                Remitente = {
-                    Identificacion = {
-                        Nombre = "Timoneda",
-                        Apellido1 = "",
-                        Apellido2 = "",
-                        Nif = "123456789012345",
-                        Empresa = "zcxvqeeyeye",
-                        PersonaContacto = "agshdjfjfirirjrm"
-                    },
-                    DatosDireccion = {
-                        Bloque = "",
-                        Direccion = "San Pio x, 36, San Marcelin",
-                        Escalera = "",
-                        Localidad = "",
-                        Numero = "",
-                        Piso = "",
-                        Portal = "",
-                        Provincia = "",
-                        Puerta = "",
-                        TipoDireccion = ""
-                    },
-                    CP = "46017",
-                    ZIP = "46017",
-                    Pais = "SP",
-                    Email = "ignakee@gmail.com",
-                    Telefonocontacto = "",
-                    DatosSMS = {
-                        Idioma = "",
-                        NumeroSMS = ""
-                    }
-                },
-                CodExpedicion = "",
-                CodManifiesto = "",
-                Destinatario = {
-                    Identificacion = {
-                        Nombre=user.Name,
-                        Apellido1=user.LastName,
-                        Apellido2="",
-                        Nif=user.IdentityNumber,
-                        Empresa="zcxvqeeyeye",
-                        PersonaContacto=user.Name
-                    },
-                    DatosDireccion={
-                        Bloque="",
-                        Direccion=address.UserAddress,
-                        Escalera="",
-                        Localidad=address.City,
-                        Numero="",
-                        Piso="",
-                        Portal = "",
-                        Provincia=address.Region,
-                        Puerta="",
-                        TipoDireccion = ""
-                    },
-                    DatosDireccion2 ={
-                        Bloque="",
-                        Direccion=address.UserAddress,
-                        Escalera="",
-                        Localidad=address.City,
-                        Numero="",
-                        Piso="",
-                        Portal = "",
-                        Provincia=address.Region,
-                        Puerta="",
-                        TipoDireccion = ""
-                    },
-                    ApartadoPostaldestino = address.PostalCode,
-                    DestinoApartadoPostalinternacional="N",
-                    CP=address.PostalCode,
-                    Email=user.Email,
-                    Pais=address.Country,
-                    Telefonocontacto=user.PhoneNumber,
-                    ZIP=address.PostalCode,
-                    DatosSMS={ 
-                        Idioma="", 
-                        NumeroSMS="" 
-                    }
-                },
+                Remitente = senderData,
+                CodExpedicion = string.Empty,
+                CodManifiesto = string.Empty,
+                Destinatario = recipientData,
                 EntregaParcial = "N",
-                Envio = {
-                    CodProducto=order.Id.ToString(),
-                    TipoFranqueo="ON",
-                    Pesos = {
-                        new Peso() {
-                            TipoPeso=TipoPeso.Real, Valor=pesograims
-                        }
-                    }
-                },
-                IdiomaErrores = "",
+                Envio = envioData,
+                IdiomaErrores = string.Empty,
             };
 
             RespuestaPreRegistroEnvio response;

@@ -54,7 +54,7 @@ namespace Ecommerce.Infrastructure.ProductTaxes
                     var taxDb = await _unitOfWork!.Repository<Tax>().GetByIdAsync(tax.Id);
                     if (taxDb != null)
                     {
-                        taxDb.Name = tax.Name.IsNullOrEmpty() ? taxDb.Name : tax.Name;
+                        taxDb.Name = string.IsNullOrEmpty(tax.Name) ? taxDb.Name : tax.Name;
                         taxDb.Percentage = tax.Percentage;
                         taxDb.LastModifiedDate = DateTime.UtcNow;
                     }

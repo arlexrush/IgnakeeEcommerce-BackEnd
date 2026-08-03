@@ -1,0 +1,1280 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net8.0",
+    "targetDisplayName": ".NETCoreApp,Version=v8.0"
+  },
+  "analysisStartTime": "2026-08-03T02:04:08.7771842Z",
+  "analysisEndTime": "2026-08-03T02:04:10.8044208Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 4,
+      "issues": 7,
+      "incidents": 45,
+      "effort": 45
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 11,
+        "Optional": 8,
+        "Potential": 26,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 27,
+        "Project": 4,
+        "Api": 14
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj",
+      "startingProject": true,
+      "issues": 4,
+      "storyPoints": 11,
+      "properties": {
+        "appName": "Ecommerce.Api",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net7.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 17,
+        "numberOfCodeFiles": 15,
+        "linesTotal": 1154,
+        "linesOfCode": 1094,
+        "totalApiScanned": 1376,
+        "minLinesOfCodeToChange": 8,
+        "maxLinesOfCodeToChange": 8
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "d5b27c36-715c-4ae8-b554-b92f6454fc5b",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.OpenApi, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 8.0.29",
+              "protected": "Microsoft.AspNetCore.OpenApi, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 8.0.29"
+            },
+            "kind": "File",
+            "path": "src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj",
+            "snippet": "Microsoft.AspNetCore.OpenApi, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 8.0.29",
+            "protectedSnippet": "Microsoft.AspNetCore.OpenApi, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 8.0.29",
+            "label": "Microsoft.AspNetCore.OpenApi 7.0.5",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.OpenApi",
+              "PackageVersion": "7.0.5",
+              "PackageNewVersion": "8.0.29",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "e3f65908-8d5b-4643-8f40-f9fcaed311eb",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Design, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 8.0.29",
+              "protected": "Microsoft.EntityFrameworkCore.Design, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 8.0.29"
+            },
+            "kind": "File",
+            "path": "src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Design, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 8.0.29",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Design, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 8.0.29",
+            "label": "Microsoft.EntityFrameworkCore.Design 7.0.5",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Design",
+              "PackageVersion": "7.0.5",
+              "PackageNewVersion": "8.0.29",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "476e203c-35ae-4d91-a0ac-6a097c33879b",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Marco de destino actual: net7.0\nMarco de destino recomendado: net8.0",
+              "protected": "Marco de destino actual: net7.0\nMarco de destino recomendado: net8.0"
+            },
+            "kind": "File",
+            "path": "src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj",
+            "snippet": "Marco de destino actual: net7.0\nMarco de destino recomendado: net8.0",
+            "protectedSnippet": "Marco de destino actual: net7.0\nMarco de destino recomendado: net8.0",
+            "properties": {
+              "CurrentTargetFramework": "net7.0",
+              "RecommendedTargetFramework": "net8.0"
+            }
+          }
+        },
+        {
+          "incidentId": "4c39a830-9d90-4938-ad56-4d25b26e4ba6",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "opt.TokenValidationParameters=new TokenValidationParameters {\r\n            ValidateIssuerSigningKey= true,\r\n            IssuerSigningKey=key,\r\n            ValidateAudience= false,\r\n            ValidateIssuer=false,\r\n        };",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions.TokenValidationParameters"
+            },
+            "kind": "File",
+            "path": "src\\Api\\Ecommerce.Api\\Program.cs",
+            "snippet": "opt.TokenValidationParameters=new TokenValidationParameters {\r\n            ValidateIssuerSigningKey= true,\r\n            IssuerSigningKey=key,\r\n            ValidateAudience= false,\r\n            ValidateIssuer=false,\r\n        };",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions.TokenValidationParameters",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions.TokenValidationParameters",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 70,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "0d053956-907f-4e42-922c-498d9decd6b9",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt=\u003E\r\n    {\r\n        opt.TokenValidationParameters=new TokenValidationParameters {\r\n            ValidateIssuerSigningKey= true,\r\n            IssuerSigningKey=key,\r\n            ValidateAudience= false,\r\n            ValidateIssuer=false,\r\n        };\r\n    }\r\n);",
+              "protected": "T:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults"
+            },
+            "kind": "File",
+            "path": "src\\Api\\Ecommerce.Api\\Program.cs",
+            "snippet": "builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt=\u003E\r\n    {\r\n        opt.TokenValidationParameters=new TokenValidationParameters {\r\n            ValidateIssuerSigningKey= true,\r\n            IssuerSigningKey=key,\r\n            ValidateAudience= false,\r\n            ValidateIssuer=false,\r\n        };\r\n    }\r\n);",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults",
+            "label": "T:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 68,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "1dd790c6-7343-4f35-b607-c52c5be64141",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt=\u003E\r\n    {\r\n        opt.TokenValidationParameters=new TokenValidationParameters {\r\n            ValidateIssuerSigningKey= true,\r\n            IssuerSigningKey=key,\r\n            ValidateAudience= false,\r\n            ValidateIssuer=false,\r\n        };\r\n    }\r\n);",
+              "protected": "F:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme"
+            },
+            "kind": "File",
+            "path": "src\\Api\\Ecommerce.Api\\Program.cs",
+            "snippet": "builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt=\u003E\r\n    {\r\n        opt.TokenValidationParameters=new TokenValidationParameters {\r\n            ValidateIssuerSigningKey= true,\r\n            IssuerSigningKey=key,\r\n            ValidateAudience= false,\r\n            ValidateIssuer=false,\r\n        };\r\n    }\r\n);",
+            "protectedSnippet": "F:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme",
+            "label": "F:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 68,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "e162e842-e360-4fcd-95cc-eb70f547ad38",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt=\u003E\r\n    {\r\n        opt.TokenValidationParameters=new TokenValidationParameters {\r\n            ValidateIssuerSigningKey= true,\r\n            IssuerSigningKey=key,\r\n            ValidateAudience= false,\r\n            ValidateIssuer=false,\r\n        };\r\n    }\r\n);",
+              "protected": "T:Microsoft.Extensions.DependencyInjection.JwtBearerExtensions"
+            },
+            "kind": "File",
+            "path": "src\\Api\\Ecommerce.Api\\Program.cs",
+            "snippet": "builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt=\u003E\r\n    {\r\n        opt.TokenValidationParameters=new TokenValidationParameters {\r\n            ValidateIssuerSigningKey= true,\r\n            IssuerSigningKey=key,\r\n            ValidateAudience= false,\r\n            ValidateIssuer=false,\r\n        };\r\n    }\r\n);",
+            "protectedSnippet": "T:Microsoft.Extensions.DependencyInjection.JwtBearerExtensions",
+            "label": "T:Microsoft.Extensions.DependencyInjection.JwtBearerExtensions",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 68,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "a371297f-3ab0-4c21-98ea-1ba42e8cfc7e",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt=\u003E\r\n    {\r\n        opt.TokenValidationParameters=new TokenValidationParameters {\r\n            ValidateIssuerSigningKey= true,\r\n            IssuerSigningKey=key,\r\n            ValidateAudience= false,\r\n            ValidateIssuer=false,\r\n        };\r\n    }\r\n);",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.JwtBearerExtensions.AddJwtBearer(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Action{Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions})"
+            },
+            "kind": "File",
+            "path": "src\\Api\\Ecommerce.Api\\Program.cs",
+            "snippet": "builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt=\u003E\r\n    {\r\n        opt.TokenValidationParameters=new TokenValidationParameters {\r\n            ValidateIssuerSigningKey= true,\r\n            IssuerSigningKey=key,\r\n            ValidateAudience= false,\r\n            ValidateIssuer=false,\r\n        };\r\n    }\r\n);",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.JwtBearerExtensions.AddJwtBearer(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Action{Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions})",
+            "label": "M:Microsoft.Extensions.DependencyInjection.JwtBearerExtensions.AddJwtBearer(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Action{Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions})",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 68,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "47acaa33-1b63-4125-a770-93cdeb5ab130",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "identityBuilder.AddEntityFrameworkStores\u003CEcommerceDbContext\u003E();",
+              "protected": "T:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions"
+            },
+            "kind": "File",
+            "path": "src\\Api\\Ecommerce.Api\\Program.cs",
+            "snippet": "identityBuilder.AddEntityFrameworkStores\u003CEcommerceDbContext\u003E();",
+            "protectedSnippet": "T:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions",
+            "label": "T:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 61,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "3ec09834-d440-4fbf-8045-b712bee09a2d",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "identityBuilder.AddEntityFrameworkStores\u003CEcommerceDbContext\u003E();",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions.AddEntityFrameworkStores\u0060\u00601(Microsoft.AspNetCore.Identity.IdentityBuilder)"
+            },
+            "kind": "File",
+            "path": "src\\Api\\Ecommerce.Api\\Program.cs",
+            "snippet": "identityBuilder.AddEntityFrameworkStores\u003CEcommerceDbContext\u003E();",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions.AddEntityFrameworkStores\u0060\u00601(Microsoft.AspNetCore.Identity.IdentityBuilder)",
+            "label": "M:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions.AddEntityFrameworkStores\u0060\u00601(Microsoft.AspNetCore.Identity.IdentityBuilder)",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 61,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "3e3bad4a-5b66-435c-a2ce-506016701ef0",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\Api\\Ecommerce.Api\\Ecommerce.Api.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddMediatR(c =\u003E c.RegisterServicesFromAssembly(typeof(GetProductListQueryHandler).Assembly));",
+              "protected": "T:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions"
+            },
+            "kind": "File",
+            "path": "src\\Api\\Ecommerce.Api\\Program.cs",
+            "snippet": "builder.Services.AddMediatR(c =\u003E c.RegisterServicesFromAssembly(typeof(GetProductListQueryHandler).Assembly));",
+            "protectedSnippet": "T:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions",
+            "label": "T:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions",
+            "line": 31,
+            "column": 0
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+      "startingProject": true,
+      "issues": 4,
+      "storyPoints": 16,
+      "properties": {
+        "appName": "Ecommerce.Application",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net7.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 215,
+        "numberOfCodeFiles": 214,
+        "linesTotal": 7243,
+        "linesOfCode": 7242,
+        "totalApiScanned": 6511,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "10d504bb-2feb-4adf-a025-aea5c3ed140f",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Authentication.JwtBearer, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 8.0.29",
+              "protected": "Microsoft.AspNetCore.Authentication.JwtBearer, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 8.0.29"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+            "snippet": "Microsoft.AspNetCore.Authentication.JwtBearer, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 8.0.29",
+            "protectedSnippet": "Microsoft.AspNetCore.Authentication.JwtBearer, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 8.0.29",
+            "label": "Microsoft.AspNetCore.Authentication.JwtBearer 7.0.5",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageVersion": "7.0.5",
+              "PackageNewVersion": "8.0.29",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "2300ad93-62b6-4afa-bd3c-38282d53b863",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.29",
+              "protected": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.29"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+            "snippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.29",
+            "protectedSnippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.29",
+            "label": "Microsoft.AspNetCore.Identity.EntityFrameworkCore 7.0.5",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageVersion": "7.0.5",
+              "PackageNewVersion": "8.0.29",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "792be4cc-c565-4435-81d3-48f8031a0a53",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.OpenApi, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 8.0.29",
+              "protected": "Microsoft.AspNetCore.OpenApi, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 8.0.29"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+            "snippet": "Microsoft.AspNetCore.OpenApi, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 8.0.29",
+            "protectedSnippet": "Microsoft.AspNetCore.OpenApi, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.OpenApi, and replace with new package Microsoft.AspNetCore.OpenApi 8.0.29",
+            "label": "Microsoft.AspNetCore.OpenApi 7.0.5",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.OpenApi",
+              "PackageVersion": "7.0.5",
+              "PackageNewVersion": "8.0.29",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "65577389-eed8-428d-b849-f46184bfcc5e",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Design, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 8.0.29",
+              "protected": "Microsoft.EntityFrameworkCore.Design, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 8.0.29"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Design, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 8.0.29",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Design, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 8.0.29",
+            "label": "Microsoft.EntityFrameworkCore.Design 7.0.5",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Design",
+              "PackageVersion": "7.0.5",
+              "PackageNewVersion": "8.0.29",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "cafd6f52-ab4e-4f5c-802b-17294ac19653",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.SqlServer, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 8.0.29",
+              "protected": "Microsoft.EntityFrameworkCore.SqlServer, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 8.0.29"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.SqlServer, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 8.0.29",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.SqlServer, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 8.0.29",
+            "label": "Microsoft.EntityFrameworkCore.SqlServer 7.0.5",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.SqlServer",
+              "PackageVersion": "7.0.5",
+              "PackageNewVersion": "8.0.29",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f76f67d7-87c5-42f5-b992-bbb62223ccde",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Tools, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 8.0.29",
+              "protected": "Microsoft.EntityFrameworkCore.Tools, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 8.0.29"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Tools, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 8.0.29",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Tools, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 8.0.29",
+            "label": "Microsoft.EntityFrameworkCore.Tools 7.0.5",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Tools",
+              "PackageVersion": "7.0.5",
+              "PackageNewVersion": "8.0.29",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "e3018f0c-09ec-4c86-a79e-024ddd5b4bf4",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Http, 7.0.0\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.Extensions.Http, and replace with new package Microsoft.Extensions.Http 8.0.1",
+              "protected": "Microsoft.Extensions.Http, 7.0.0\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.Extensions.Http, and replace with new package Microsoft.Extensions.Http 8.0.1"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+            "snippet": "Microsoft.Extensions.Http, 7.0.0\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.Extensions.Http, and replace with new package Microsoft.Extensions.Http 8.0.1",
+            "protectedSnippet": "Microsoft.Extensions.Http, 7.0.0\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.Extensions.Http, and replace with new package Microsoft.Extensions.Http 8.0.1",
+            "label": "Microsoft.Extensions.Http 7.0.0",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Http",
+              "PackageVersion": "7.0.0",
+              "PackageNewVersion": "8.0.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f2288d5e-795d-4186-8f44-197f72828d10",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Logging.Abstractions, 7.0.0\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 8.0.3",
+              "protected": "Microsoft.Extensions.Logging.Abstractions, 7.0.0\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 8.0.3"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+            "snippet": "Microsoft.Extensions.Logging.Abstractions, 7.0.0\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 8.0.3",
+            "protectedSnippet": "Microsoft.Extensions.Logging.Abstractions, 7.0.0\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.Extensions.Logging.Abstractions, and replace with new package Microsoft.Extensions.Logging.Abstractions 8.0.3",
+            "label": "Microsoft.Extensions.Logging.Abstractions 7.0.0",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Logging.Abstractions",
+              "PackageVersion": "7.0.0",
+              "PackageNewVersion": "8.0.3",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "852a29ce-3268-4c66-b87c-1c6f174ba1f0",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Options.ConfigurationExtensions, 7.0.0\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 8.0.0",
+              "protected": "Microsoft.Extensions.Options.ConfigurationExtensions, 7.0.0\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 8.0.0"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+            "snippet": "Microsoft.Extensions.Options.ConfigurationExtensions, 7.0.0\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 8.0.0",
+            "protectedSnippet": "Microsoft.Extensions.Options.ConfigurationExtensions, 7.0.0\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 8.0.0",
+            "label": "Microsoft.Extensions.Options.ConfigurationExtensions 7.0.0",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Options.ConfigurationExtensions",
+              "PackageVersion": "7.0.0",
+              "PackageNewVersion": "8.0.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "8340af9f-660c-417d-a635-6aee81f1dc25",
+          "ruleId": "NuGet.0004",
+          "projectPath": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "AutoMapper, 12.0.1\n\nRecomendaci\u00F3n:\n\nAutoMapper, 16.2.0",
+              "protected": "AutoMapper, 12.0.1\n\nRecomendaci\u00F3n:\n\nAutoMapper, 16.2.0"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+            "snippet": "AutoMapper, 12.0.1\n\nRecomendaci\u00F3n:\n\nAutoMapper, 16.2.0",
+            "protectedSnippet": "AutoMapper, 12.0.1\n\nRecomendaci\u00F3n:\n\nAutoMapper, 16.2.0",
+            "label": "AutoMapper 12.0.1",
+            "properties": {
+              "PackageId": "AutoMapper",
+              "PackageVersion": "12.0.1",
+              "PackageNewVersion": "16.2.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "66c679d1-0ef0-4d6c-948f-b0b31858135a",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1\n\nRecomendaci\u00F3n:\n\nThe functionality of this package is now included directly in AutoMapper.\nRemove AutoMapper.Extensions.Microsoft.DependencyInjection, and replace with new package AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1",
+              "protected": "AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1\n\nRecomendaci\u00F3n:\n\nThe functionality of this package is now included directly in AutoMapper.\nRemove AutoMapper.Extensions.Microsoft.DependencyInjection, and replace with new package AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+            "snippet": "AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1\n\nRecomendaci\u00F3n:\n\nThe functionality of this package is now included directly in AutoMapper.\nRemove AutoMapper.Extensions.Microsoft.DependencyInjection, and replace with new package AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1",
+            "protectedSnippet": "AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1\n\nRecomendaci\u00F3n:\n\nThe functionality of this package is now included directly in AutoMapper.\nRemove AutoMapper.Extensions.Microsoft.DependencyInjection, and replace with new package AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1",
+            "label": "AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1",
+            "properties": {
+              "PackageId": "AutoMapper.Extensions.Microsoft.DependencyInjection",
+              "PackageVersion": "12.0.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "832a4c2d-2436-4200-9dd5-8ceba79ba108",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "FluentValidation.AspNetCore, 11.3.0\n\nRecomendaci\u00F3n:\n\nDebe reemplazarse.\nRemove FluentValidation.AspNetCore, and replace with new package FluentValidation.AspNetCore, 11.3.1",
+              "protected": "FluentValidation.AspNetCore, 11.3.0\n\nRecomendaci\u00F3n:\n\nDebe reemplazarse.\nRemove FluentValidation.AspNetCore, and replace with new package FluentValidation.AspNetCore, 11.3.1"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+            "snippet": "FluentValidation.AspNetCore, 11.3.0\n\nRecomendaci\u00F3n:\n\nDebe reemplazarse.\nRemove FluentValidation.AspNetCore, and replace with new package FluentValidation.AspNetCore, 11.3.1",
+            "protectedSnippet": "FluentValidation.AspNetCore, 11.3.0\n\nRecomendaci\u00F3n:\n\nDebe reemplazarse.\nRemove FluentValidation.AspNetCore, and replace with new package FluentValidation.AspNetCore, 11.3.1",
+            "label": "FluentValidation.AspNetCore 11.3.0",
+            "properties": {
+              "PackageId": "FluentValidation.AspNetCore",
+              "PackageVersion": "11.3.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "bd887dac-58b1-4422-89e7-497203fad4b0",
+          "ruleId": "NuGet.0004",
+          "projectPath": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "MailKit, 3.6.0\n\nRecomendaci\u00F3n:\n\nMailKit, 4.17.0",
+              "protected": "MailKit, 3.6.0\n\nRecomendaci\u00F3n:\n\nMailKit, 4.17.0"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+            "snippet": "MailKit, 3.6.0\n\nRecomendaci\u00F3n:\n\nMailKit, 4.17.0",
+            "protectedSnippet": "MailKit, 3.6.0\n\nRecomendaci\u00F3n:\n\nMailKit, 4.17.0",
+            "label": "MailKit 3.6.0",
+            "properties": {
+              "PackageId": "MailKit",
+              "PackageVersion": "3.6.0",
+              "PackageNewVersion": "4.17.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "8c686522-0989-42db-8e54-4532805512dd",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Identity, 2.2.0\n\nRecomendaci\u00F3n:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Identity, and replace with new package Microsoft.AspNetCore.Identity, 2.3.11",
+              "protected": "Microsoft.AspNetCore.Identity, 2.2.0\n\nRecomendaci\u00F3n:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Identity, and replace with new package Microsoft.AspNetCore.Identity, 2.3.11"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+            "snippet": "Microsoft.AspNetCore.Identity, 2.2.0\n\nRecomendaci\u00F3n:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Identity, and replace with new package Microsoft.AspNetCore.Identity, 2.3.11",
+            "protectedSnippet": "Microsoft.AspNetCore.Identity, 2.2.0\n\nRecomendaci\u00F3n:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Identity, and replace with new package Microsoft.AspNetCore.Identity, 2.3.11",
+            "label": "Microsoft.AspNetCore.Identity 2.2.0",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity",
+              "PackageVersion": "2.2.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "bd9ec890-3fe4-447c-b1dd-3a360e5672ef",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.IdentityModel.Tokens.Jwt, 6.35.0\n\nRecomendaci\u00F3n:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.22.0",
+              "protected": "System.IdentityModel.Tokens.Jwt, 6.35.0\n\nRecomendaci\u00F3n:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.22.0"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+            "snippet": "System.IdentityModel.Tokens.Jwt, 6.35.0\n\nRecomendaci\u00F3n:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.22.0",
+            "protectedSnippet": "System.IdentityModel.Tokens.Jwt, 6.35.0\n\nRecomendaci\u00F3n:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.22.0",
+            "label": "System.IdentityModel.Tokens.Jwt 6.35.0",
+            "properties": {
+              "PackageId": "System.IdentityModel.Tokens.Jwt",
+              "PackageVersion": "6.35.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "9de35008-1526-4aa9-b190-9358d1240b2a",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Marco de destino actual: net7.0\nMarco de destino recomendado: net8.0",
+              "protected": "Marco de destino actual: net7.0\nMarco de destino recomendado: net8.0"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj",
+            "snippet": "Marco de destino actual: net7.0\nMarco de destino recomendado: net8.0",
+            "protectedSnippet": "Marco de destino actual: net7.0\nMarco de destino recomendado: net8.0",
+            "properties": {
+              "CurrentTargetFramework": "net7.0",
+              "RecommendedTargetFramework": "net8.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 3,
+      "properties": {
+        "appName": "Ecommerce.Domain",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net7.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 28,
+        "numberOfCodeFiles": 28,
+        "linesTotal": 781,
+        "linesOfCode": 781,
+        "totalApiScanned": 711,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "511a1b26-0a13-4cfc-b01e-902f94db72dd",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.29",
+              "protected": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.29"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj",
+            "snippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.29",
+            "protectedSnippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.29",
+            "label": "Microsoft.AspNetCore.Identity.EntityFrameworkCore 7.0.5",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageVersion": "7.0.5",
+              "PackageNewVersion": "8.0.29",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f54f6295-484c-4352-8d56-42b0cb101bca",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Identity, 2.2.0\n\nRecomendaci\u00F3n:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Identity, and replace with new package Microsoft.AspNetCore.Identity, 2.3.11",
+              "protected": "Microsoft.AspNetCore.Identity, 2.2.0\n\nRecomendaci\u00F3n:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Identity, and replace with new package Microsoft.AspNetCore.Identity, 2.3.11"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj",
+            "snippet": "Microsoft.AspNetCore.Identity, 2.2.0\n\nRecomendaci\u00F3n:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Identity, and replace with new package Microsoft.AspNetCore.Identity, 2.3.11",
+            "protectedSnippet": "Microsoft.AspNetCore.Identity, 2.2.0\n\nRecomendaci\u00F3n:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Identity, and replace with new package Microsoft.AspNetCore.Identity, 2.3.11",
+            "label": "Microsoft.AspNetCore.Identity 2.2.0",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity",
+              "PackageVersion": "2.2.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "d30b2452-0566-438f-ac8f-9f95b60f5ba3",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Marco de destino actual: net7.0\nMarco de destino recomendado: net8.0",
+              "protected": "Marco de destino actual: net7.0\nMarco de destino recomendado: net8.0"
+            },
+            "kind": "File",
+            "path": "src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj",
+            "snippet": "Marco de destino actual: net7.0\nMarco de destino recomendado: net8.0",
+            "protectedSnippet": "Marco de destino actual: net7.0\nMarco de destino recomendado: net8.0",
+            "properties": {
+              "CurrentTargetFramework": "net7.0",
+              "RecommendedTargetFramework": "net8.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+      "startingProject": true,
+      "issues": 4,
+      "storyPoints": 15,
+      "properties": {
+        "appName": "Ecommerce.Infrastructure",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net7.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 34,
+        "numberOfCodeFiles": 33,
+        "linesTotal": 11133,
+        "linesOfCode": 11132,
+        "totalApiScanned": 15469,
+        "minLinesOfCodeToChange": 6,
+        "maxLinesOfCodeToChange": 6
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "5dfe7289-e5f9-49af-b60a-8b45ea4363f2",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Authentication.OpenIdConnect, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Authentication.OpenIdConnect, and replace with new package Microsoft.AspNetCore.Authentication.OpenIdConnect 8.0.29",
+              "protected": "Microsoft.AspNetCore.Authentication.OpenIdConnect, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Authentication.OpenIdConnect, and replace with new package Microsoft.AspNetCore.Authentication.OpenIdConnect 8.0.29"
+            },
+            "kind": "File",
+            "path": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+            "snippet": "Microsoft.AspNetCore.Authentication.OpenIdConnect, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Authentication.OpenIdConnect, and replace with new package Microsoft.AspNetCore.Authentication.OpenIdConnect 8.0.29",
+            "protectedSnippet": "Microsoft.AspNetCore.Authentication.OpenIdConnect, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Authentication.OpenIdConnect, and replace with new package Microsoft.AspNetCore.Authentication.OpenIdConnect 8.0.29",
+            "label": "Microsoft.AspNetCore.Authentication.OpenIdConnect 7.0.5",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.OpenIdConnect",
+              "PackageVersion": "7.0.5",
+              "PackageNewVersion": "8.0.29",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "34f43f5c-0d6a-44ce-9aed-b16a8ffb4db5",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.29",
+              "protected": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.29"
+            },
+            "kind": "File",
+            "path": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+            "snippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.29",
+            "protectedSnippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.29",
+            "label": "Microsoft.AspNetCore.Identity.EntityFrameworkCore 7.0.5",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageVersion": "7.0.5",
+              "PackageNewVersion": "8.0.29",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "2b8c07f0-d3cd-477c-8e25-5fe6c4230169",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 8.0.29",
+              "protected": "Microsoft.EntityFrameworkCore, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 8.0.29"
+            },
+            "kind": "File",
+            "path": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 8.0.29",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 8.0.29",
+            "label": "Microsoft.EntityFrameworkCore 7.0.5",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore",
+              "PackageVersion": "7.0.5",
+              "PackageNewVersion": "8.0.29",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "8cb7e929-fe47-4d92-849f-3368c4b4ca6b",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.SqlServer, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 8.0.29",
+              "protected": "Microsoft.EntityFrameworkCore.SqlServer, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 8.0.29"
+            },
+            "kind": "File",
+            "path": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.SqlServer, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 8.0.29",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.SqlServer, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 8.0.29",
+            "label": "Microsoft.EntityFrameworkCore.SqlServer 7.0.5",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.SqlServer",
+              "PackageVersion": "7.0.5",
+              "PackageNewVersion": "8.0.29",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "980a6454-6a3e-4aac-ae00-2b36075d0071",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Tools, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 8.0.29",
+              "protected": "Microsoft.EntityFrameworkCore.Tools, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 8.0.29"
+            },
+            "kind": "File",
+            "path": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Tools, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 8.0.29",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Tools, 7.0.5\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 8.0.29",
+            "label": "Microsoft.EntityFrameworkCore.Tools 7.0.5",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Tools",
+              "PackageVersion": "7.0.5",
+              "PackageNewVersion": "8.0.29",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "02a8e33b-9d0f-4ed5-8ebe-ecd77bd5be99",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Options.ConfigurationExtensions, 7.0.0\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 8.0.0",
+              "protected": "Microsoft.Extensions.Options.ConfigurationExtensions, 7.0.0\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 8.0.0"
+            },
+            "kind": "File",
+            "path": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+            "snippet": "Microsoft.Extensions.Options.ConfigurationExtensions, 7.0.0\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 8.0.0",
+            "protectedSnippet": "Microsoft.Extensions.Options.ConfigurationExtensions, 7.0.0\n\nRecomendaci\u00F3n:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 8.0.0",
+            "label": "Microsoft.Extensions.Options.ConfigurationExtensions 7.0.0",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Options.ConfigurationExtensions",
+              "PackageVersion": "7.0.0",
+              "PackageNewVersion": "8.0.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "1a088429-6347-4742-8068-81bfc831dfcd",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Newtonsoft.Json, 13.0.3\n\nRecomendaci\u00F3n:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+              "protected": "Newtonsoft.Json, 13.0.3\n\nRecomendaci\u00F3n:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4"
+            },
+            "kind": "File",
+            "path": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+            "snippet": "Newtonsoft.Json, 13.0.3\n\nRecomendaci\u00F3n:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "protectedSnippet": "Newtonsoft.Json, 13.0.3\n\nRecomendaci\u00F3n:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "label": "Newtonsoft.Json 13.0.3",
+            "properties": {
+              "PackageId": "Newtonsoft.Json",
+              "PackageVersion": "13.0.3",
+              "PackageNewVersion": "13.0.4",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "b47c1de8-6917-4fb0-9021-7754825b3a6c",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.IdentityModel.Tokens.Jwt, 6.35.0\n\nRecomendaci\u00F3n:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.22.0",
+              "protected": "System.IdentityModel.Tokens.Jwt, 6.35.0\n\nRecomendaci\u00F3n:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.22.0"
+            },
+            "kind": "File",
+            "path": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+            "snippet": "System.IdentityModel.Tokens.Jwt, 6.35.0\n\nRecomendaci\u00F3n:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.22.0",
+            "protectedSnippet": "System.IdentityModel.Tokens.Jwt, 6.35.0\n\nRecomendaci\u00F3n:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.22.0",
+            "label": "System.IdentityModel.Tokens.Jwt 6.35.0",
+            "properties": {
+              "PackageId": "System.IdentityModel.Tokens.Jwt",
+              "PackageVersion": "6.35.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "7cf92406-ecc3-4920-b3c6-ca252b5047dc",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Marco de destino actual: net7.0\nMarco de destino recomendado: net8.0",
+              "protected": "Marco de destino actual: net7.0\nMarco de destino recomendado: net8.0"
+            },
+            "kind": "File",
+            "path": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+            "snippet": "Marco de destino actual: net7.0\nMarco de destino recomendado: net8.0",
+            "protectedSnippet": "Marco de destino actual: net7.0\nMarco de destino recomendado: net8.0",
+            "properties": {
+              "CurrentTargetFramework": "net7.0",
+              "RecommendedTargetFramework": "net8.0"
+            }
+          }
+        },
+        {
+          "incidentId": "4a1bfa88-c793-4f1f-8b77-d345381c63bc",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var tokenResponse = tokenHandler.WriteToken(token);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)"
+            },
+            "kind": "File",
+            "path": "src\\Infrastructure\\Ecommerce.Infrastructure\\Services\\Auth\\AuthService.cs",
+            "snippet": "var tokenResponse = tokenHandler.WriteToken(token);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)",
+            "line": 54,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "21dd8691-d83d-4cc2-b32d-ccb6e7a55890",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var token = tokenHandler.CreateToken(tokenDescription);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)"
+            },
+            "kind": "File",
+            "path": "src\\Infrastructure\\Ecommerce.Infrastructure\\Services\\Auth\\AuthService.cs",
+            "snippet": "var token = tokenHandler.CreateToken(tokenDescription);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)",
+            "line": 53,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "27152d7e-f932-4dfc-a3c9-5492e3116f83",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var tokenHandler = new JwtSecurityTokenHandler();",
+              "protected": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler"
+            },
+            "kind": "File",
+            "path": "src\\Infrastructure\\Ecommerce.Infrastructure\\Services\\Auth\\AuthService.cs",
+            "snippet": "var tokenHandler = new JwtSecurityTokenHandler();",
+            "protectedSnippet": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "label": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "line": 52,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "d946fd9a-abcb-4b7e-8e5d-56e88a0ab6a2",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var tokenHandler = new JwtSecurityTokenHandler();",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor"
+            },
+            "kind": "File",
+            "path": "src\\Infrastructure\\Ecommerce.Infrastructure\\Services\\Auth\\AuthService.cs",
+            "snippet": "var tokenHandler = new JwtSecurityTokenHandler();",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "line": 52,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "00d980f4-ad2a-48e3-9b02-9c709164a003",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var claims= new List\u003CClaim\u003E { \r\n                new Claim(JwtRegisteredClaimNames.NameId, user.UserName!),\r\n                new Claim(\u0022userId\u0022, user.Id),\r\n                new Claim(\u0022email\u0022, user.Email!)};",
+              "protected": "T:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames"
+            },
+            "kind": "File",
+            "path": "src\\Infrastructure\\Ecommerce.Infrastructure\\Services\\Auth\\AuthService.cs",
+            "snippet": "var claims= new List\u003CClaim\u003E { \r\n                new Claim(JwtRegisteredClaimNames.NameId, user.UserName!),\r\n                new Claim(\u0022userId\u0022, user.Id),\r\n                new Claim(\u0022email\u0022, user.Email!)};",
+            "protectedSnippet": "T:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames",
+            "label": "T:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames",
+            "line": 31,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "33a9800c-bab8-4f83-9643-7d8a1952ff40",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var claims= new List\u003CClaim\u003E { \r\n                new Claim(JwtRegisteredClaimNames.NameId, user.UserName!),\r\n                new Claim(\u0022userId\u0022, user.Id),\r\n                new Claim(\u0022email\u0022, user.Email!)};",
+              "protected": "F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.NameId"
+            },
+            "kind": "File",
+            "path": "src\\Infrastructure\\Ecommerce.Infrastructure\\Services\\Auth\\AuthService.cs",
+            "snippet": "var claims= new List\u003CClaim\u003E { \r\n                new Claim(JwtRegisteredClaimNames.NameId, user.UserName!),\r\n                new Claim(\u0022userId\u0022, user.Id),\r\n                new Claim(\u0022email\u0022, user.Email!)};",
+            "protectedSnippet": "F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.NameId",
+            "label": "F:System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.NameId",
+            "line": 31,
+            "column": 12
+          }
+        }
+      ],
+      "features": [
+        {
+          "featureId": "IdentityModel",
+          "incidents": [
+            "33a9800c-bab8-4f83-9643-7d8a1952ff40",
+            "00d980f4-ad2a-48e3-9b02-9c709164a003",
+            "d946fd9a-abcb-4b7e-8e5d-56e88a0ab6a2",
+            "27152d7e-f932-4dfc-a3c9-5492e3116f83",
+            "21dd8691-d83d-4cc2-b32d-ccb6e7a55890",
+            "4a1bfa88-c793-4f1f-8b77-d345381c63bc"
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "Se recomienda actualizar el paquete NuGet para la plataforma de destino seleccionada.\n\nSe recomienda que los paquetes .NET est\u00E1ndar tengan versiones que coincidan con la versi\u00F3n de .NET de destino del proyecto.\n\nTambi\u00E9n se sabe que otros paquetes funcionan mejor para las plataformas de destino seleccionadas.",
+      "label": "Se recomienda actualizar el paquete NuGet",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0005": {
+      "id": "NuGet.0005",
+      "isFeature": false,
+      "description": "El paquete NuGet est\u00E1 en desuso.\n\nVaya a su documentaci\u00F3n y compruebe si hay una gu\u00EDa para reemplazar la funcionalidad proporcionada por este paquete.",
+      "label": "El paquete NuGet est\u00E1 en desuso",
+      "severity": "Optional",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262531",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "El marco de destino del proyecto deben cambiarse al nuevo marco de destino que seleccion\u00F3 para esta actualizaci\u00F3n.\n\nDurante la actualizaci\u00F3n, el marco de destino se ajustar\u00E1 a la plataforma correspondiente cuando proceda. En algunos casos, el proyecto dar\u00EDa como resultado varios marcos de destino despu\u00E9s de la actualizaci\u00F3n si usara caracter\u00EDsticas que ahora tienen sus propias plataformas en marcos de .NET modernos (windows, iOS, Android, etc.).",
+      "label": "Es necesario cambiar el marco de destino del proyecto",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Informaci\u00F3n general sobre la portabilidad de .NET Framework a .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": "SDK de proyecto .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0004": {
+      "id": "NuGet.0004",
+      "isFeature": false,
+      "description": "El paquete NuGet contiene vulnerabilidades de seguridad.\n\nEl paquete debe actualizarse a una versi\u00F3n m\u00E1s reciente que solucione vulnerabilidades de seguridad conocidas.",
+      "label": "El paquete NuGet contiene una vulnerabilidad de seguridad.",
+      "severity": "Optional",
+      "effort": 1
+    },
+    "Api.0001": {
+      "id": "Api.0001",
+      "isFeature": false,
+      "description": "La API es binariamente incompatible con la versi\u00F3n de .NET seleccionada: afecta a los archivos binarios existentes y suele requerir recompilaci\u00F3n, porque la API ha cambiado de forma que impide que los binarios antiguos se carguen o ejecuten.",
+      "label": "Binario incompatible para la versi\u00F3n de .NET seleccionada",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Cambios importantes en .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "IdentityModel": {
+      "id": "IdentityModel",
+      "isFeature": false,
+      "description": "Windows Identity Foundation (WIF), SAML, and claims-based authentication APIs that have been replaced by modern identity libraries. WIF was the original identity framework for .NET Framework. Migrate to Microsoft.IdentityModel.* packages (modern identity stack).",
+      "label": "IdentityModel \u0026 Claims-based Security",
+      "severity": "Mandatory",
+      "effort": 4,
+      "links": [
+        {
+          "title": "Microsoft.IdentityModel packages",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2341614",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0002": {
+      "id": "Api.0002",
+      "isFeature": false,
+      "description": "La API es incompatible a nivel de origen para la versi\u00F3n de .NET seleccionada: requiere cambios en el c\u00F3digo para compilarse correctamente cuando se dirige a una nueva versi\u00F3n, como eliminar API obsoletas o cambiar las firmas de los m\u00E9todos.",
+      "label": "El origen no es compatible con la versi\u00F3n de .NET seleccionada",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Cambios importantes en .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}
