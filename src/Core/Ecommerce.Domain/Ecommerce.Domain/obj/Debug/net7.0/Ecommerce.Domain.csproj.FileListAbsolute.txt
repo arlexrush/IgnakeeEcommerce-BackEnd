@@ -11,3 +11,16 @@ C:\Users\arlex\source\REPOS_.NET\ProjectShop\BackEnd\src\Core\Ecommerce.Domain\E
 C:\Users\arlex\source\REPOS_.NET\ProjectShop\BackEnd\src\Core\Ecommerce.Domain\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.pdb
 C:\Users\arlex\source\REPOS_.NET\ProjectShop\BackEnd\src\Core\Ecommerce.Domain\Ecommerce.Domain\obj\Debug\net7.0\ref\Ecommerce.Domain.dll
 C:\Users\arlex\source\REPOS_.NET\ProjectShop\BackEnd\src\Core\Ecommerce.Domain\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.sourcelink.json
+C:\NET_Dev\IgnakeeEcommerce-BackEnd\src\Core\Ecommerce.Domain\Ecommerce.Domain\bin\Debug\net7.0\Ecommerce.Domain.deps.json
+C:\NET_Dev\IgnakeeEcommerce-BackEnd\src\Core\Ecommerce.Domain\Ecommerce.Domain\bin\Debug\net7.0\Ecommerce.Domain.dll
+C:\NET_Dev\IgnakeeEcommerce-BackEnd\src\Core\Ecommerce.Domain\Ecommerce.Domain\bin\Debug\net7.0\Ecommerce.Domain.pdb
+C:\NET_Dev\IgnakeeEcommerce-BackEnd\src\Core\Ecommerce.Domain\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.csproj.AssemblyReference.cache
+C:\NET_Dev\IgnakeeEcommerce-BackEnd\src\Core\Ecommerce.Domain\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\NET_Dev\IgnakeeEcommerce-BackEnd\src\Core\Ecommerce.Domain\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.AssemblyInfoInputs.cache
+C:\NET_Dev\IgnakeeEcommerce-BackEnd\src\Core\Ecommerce.Domain\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.AssemblyInfo.cs
+C:\NET_Dev\IgnakeeEcommerce-BackEnd\src\Core\Ecommerce.Domain\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.csproj.CoreCompileInputs.cache
+C:\NET_Dev\IgnakeeEcommerce-BackEnd\src\Core\Ecommerce.Domain\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.sourcelink.json
+C:\NET_Dev\IgnakeeEcommerce-BackEnd\src\Core\Ecommerce.Domain\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.dll
+C:\NET_Dev\IgnakeeEcommerce-BackEnd\src\Core\Ecommerce.Domain\Ecommerce.Domain\obj\Debug\net7.0\refint\Ecommerce.Domain.dll
+C:\NET_Dev\IgnakeeEcommerce-BackEnd\src\Core\Ecommerce.Domain\Ecommerce.Domain\obj\Debug\net7.0\Ecommerce.Domain.pdb
+C:\NET_Dev\IgnakeeEcommerce-BackEnd\src\Core\Ecommerce.Domain\Ecommerce.Domain\obj\Debug\net7.0\ref\Ecommerce.Domain.dll

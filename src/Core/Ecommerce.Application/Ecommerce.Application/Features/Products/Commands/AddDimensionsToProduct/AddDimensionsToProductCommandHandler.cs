@@ -54,13 +54,10 @@ namespace Ecommerce.Application.Features.Products.Commands.AddDimensionsToProduc
                     var productDimensionResponse = _mapper!.Map<ProductDimensionVm>(productDimensionEntity);
                     return productDimensionResponse;
                 }
-                
-
             }
-            catch(Exception ex)
+            catch (Exception)
             {
-                var errorMesagge=ex.Message;
-                throw ex;
+                throw;
             }
 
             

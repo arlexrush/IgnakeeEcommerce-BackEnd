@@ -1,0 +1,48 @@
+# Development Backlog
+
+## Overview
+This backlog captures the phased modernization plan for the ecommerce backend while keeping the implementation simple, documented, and testable.
+
+## Execution Order
+1. Stabilize the domain and persistence foundation.
+2. Add local containerized infrastructure for development.
+3. Introduce payment, authentication, and shipping flows.
+4. Add messaging, worker processing, and resilience.
+5. Expose MCP and AI orchestration on top of the existing backend.
+6. Prepare the solution for production deployment on Hetzner.
+
+## Backlog
+
+| Id   | Workstream                          | Scope                                                                                                                                                  | Branch                              | Environment| Notes                                                                       |
+| ---- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------- | ---------- | --------------------------------------------------------------------------- |
+| B1   | Domain model stabilization          | Review the core domain model for catalog, cart, checkout, orders, payments, and shipping; keep the architecture modular and simple.                    | feature/domain-model-hardening      | develop    | Preserve the current layered architecture; avoid unnecessary abstraction.   |
+| B2   | PostgreSQL and local infrastructure | Replace SQL Server with PostgreSQL, add Docker Compose, and provide a persistent volume for local development.                                         | feature/postgres-docker             | develop    | Keep the change focused on persistence and developer experience.            |
+| B2.1 | Docker and environment config       | Add Dockerfile, docker-compose.yml, and environment configuration for local development.                                                               | feature/docker-local-env            | develop    | Keep deployment files minimal and deterministic.                            |
+| B3   | Stripe payments and webhooks        | Integrate Stripe Checkout or Payment Intents, persist payment state, and process webhook updates.                                                      | feature/stripe-payments             | develop    | Keep payment logic in application services and domain state transitions.    |
+| B4   | Entra ID authentication             | Introduce Entra ID / OpenID Connect for enterprise sign-in while keeping ecommerce profile data in the application domain.                             | feature/entra-id-auth               | develop    | Use the minimum necessary integration to support enterprise auth.           |
+| B5   | Shipping adapters                   | Refactor shipping into a simple adapter-based model with a domain-facing contract and carrier-specific implementations.                                | feature/shipping-adapters           | develop    | Keep the current checkout flow intact while making shipping extensible.     |
+| B6   | RabbitMQ integration                | Add RabbitMQ for asynchronous messaging and event-driven integration between core services and downstream workers.                                     | feature/rabbitmq-integration        | develop    | Use it for integration events, not as a premature distributed architecture. |
+| B6.1 | Worker and concurrency              | Add a background worker for message processing, idempotent handlers, and concurrency controls.                                                         | feature/worker-concurrency          | develop    | Keep the worker simple, predictable, and resilient.                         |
+| B6.2 | Resilience and retry policy         | Add retry, dead-letter handling, timeouts, and graceful degradation for messaging failures.                                                            | feature/resilience-messaging        | develop    | Protect the platform from transient failures and broker interruptions.      |
+| B6.3 | Versioning and contract evolution   | Define versioned message contracts and a minimal compatibility strategy for future changes.                                                            | feature/message-versioning          | develop    | Keep message evolution simple and explicit.                                 |
+| B7   | MCP API surface                     | Expose core ecommerce capabilities through a thin API endpoint for MCP-compatible agents.                                                              | feature/mcp-api                     | develop    | Keep the MCP layer thin and service-driven.                                 |
+| B7.1 | Gateway layer with YARP             | Add a lightweight API gateway with YARP to route traffic to the backend services, simplify external entry points, and prepare for future expansion. | feature/gateway-yarp                | develop    | Keep the gateway thin and focused on routing, auth passthrough, and observability. |
+| B8   | AI orchestration layer              | Add a separate orchestration layer for AI agents, using Azure AI Foundry / Azure OpenCore / Azure OpenAI or DeepSeek-compatible model providers behind a simple abstraction. | feature/ai-orchestration            | develop    | Keep business logic in the existing backend; let agents orchestrate tasks.  |
+| B9   | Production hardening                | Add health checks, structured logging, telemetry, deployment configuration, and environment-specific settings for production.                          | release/production-hardening        | production | Prepare the solution for Hetzner deployment and operational monitoring.     |
+| B9.1 | Deployment packaging                | Prepare Docker images, container networking, env variables, and release configuration for Hetzner.                                                     | release/deployment-packaging        | production | Keep production deployment simple and repeatable.                           |
+| B9.2 | Observability and security          | Add logging, metrics, traces, secrets management, and basic security hardening for production.                                                         | release/observability-security      | production | Keep operational concerns lightweight but practical.                        |
+
+## Environment Strategy
+- develop: used for feature development, integration testing, and staging-like validation.
+- production: used for release hardening, deployment, and operational readiness.
+
+## Deployment Notes
+- Target platform: Hetzner.
+- Preferred deployment model: containerized services with environment-based configuration.
+- Keep deployment simple: API, PostgreSQL, RabbitMQ, and any required background workers as separate containerized components.
+
+## Principles
+- Keep the code simple, documented, and testable.
+- Preserve the current layered architecture.
+- Prefer thin integration layers over complex abstractions.
+- Use the minimum necessary implementation to support the business workflow.
