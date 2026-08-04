@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Payments.Commands.CreatePayment
 {
-    public class CreatePaymentCommand:IRequest<OrderVm>
+    public class CreatePaymentCommand : IRequest<OrderVm>
     {
         public int OrderId { get; set; }
         public Guid ShoppingCartMasterId { get; set; }

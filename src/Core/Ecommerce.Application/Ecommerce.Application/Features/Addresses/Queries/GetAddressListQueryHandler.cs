@@ -30,7 +30,7 @@ namespace Ecommerce.Application.Features.Addresses.Queries
 
         public async Task<IReadOnlyList<ShippingAddressVm>> Handle(GetAddressListQuery request, CancellationToken cancellationToken)
         {
-            var address=await _unitOfWork!.Repository<Address>().GetAsync(x=>x.UserName!.Equals(_authService!.GetSessionUser()));
+            var address = await _unitOfWork!.Repository<Address>().GetAsync(x => x.UserName!.Equals(_authService!.GetSessionUser()));
             var response = _mapper!.Map<IReadOnlyList<ShippingAddressVm>>(address);
             return response;
         }

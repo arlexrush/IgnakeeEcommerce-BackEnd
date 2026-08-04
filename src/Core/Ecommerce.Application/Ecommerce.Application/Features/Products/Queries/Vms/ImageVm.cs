@@ -13,6 +13,6 @@ namespace Ecommerce.Application.Features.Products.Queries.Vms
 
         public string? PublicCode { get; set; }
 
-        public int? ProductId { get; set; }        
+        public int? ProductId { get; set; }
     }
 }

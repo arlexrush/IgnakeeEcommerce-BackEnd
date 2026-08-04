@@ -34,7 +34,7 @@ namespace Ecommerce.Application.Features.ShoppingCarts.Commands.DeleteItemShoppi
 
             var itemsAfterDelete = await _unitOfWork.Repository<ShoppingCartItem>().GetAsync(x => x.ShoppingCartMasterId == shoppingCartId);
             var itemsAfterDeleteVm = _mapper.Map<List<ShoppingCartItemVm>>(itemsAfterDelete);
-            
+
 
             ShoppingCartVm response = new ShoppingCartVm()
             {
@@ -44,7 +44,7 @@ namespace Ecommerce.Application.Features.ShoppingCarts.Commands.DeleteItemShoppi
 
             return response;
         }
-            
-            
+
+
     }
 }

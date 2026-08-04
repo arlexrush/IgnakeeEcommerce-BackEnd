@@ -13,7 +13,7 @@ namespace Ecommerce.Api.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class ReviewController:ControllerBase
+    public class ReviewController : ControllerBase
     {
         private readonly IMediator? _mediator;
 
@@ -27,7 +27,7 @@ namespace Ecommerce.Api.Controllers
         [ProducesResponseType(typeof(ReviewVm), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<ReviewVm>> CreateReview([FromBody] CreateReviewCommand request)
         {
-            var response=await _mediator!.Send(request);
+            var response = await _mediator!.Send(request);
             return Ok(response);
         }
 
@@ -37,7 +37,7 @@ namespace Ecommerce.Api.Controllers
         public async Task<ActionResult<Unit>> DeleteReview(int id)
         {
             var request = new DeleteReviewCommand(id);
-            var response =await _mediator!.Send(request);
+            var response = await _mediator!.Send(request);
             return response;
         }
 
@@ -46,7 +46,7 @@ namespace Ecommerce.Api.Controllers
         [ProducesResponseType(typeof(PaginationVm<ReviewVm>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<PaginationVm<ReviewVm>>> PaginationReviews([FromQuery] PaginationReviewQuery request)
         {
-            var response=await _mediator!.Send(request);
+            var response = await _mediator!.Send(request);
             return response;
         }
 

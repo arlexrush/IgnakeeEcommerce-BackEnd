@@ -28,9 +28,9 @@ namespace Ecommerce.Api.Controllers
         [ProducesResponseType(typeof(ShoppingCartVm), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<ShoppingCartVm>> GetShoppingCart(Guid id)
         {
-            var shoppingCartId=id==Guid.Empty? Guid.NewGuid():id;
+            var shoppingCartId = id == Guid.Empty ? Guid.NewGuid() : id;
             var request = new Application.Features.ShoppingCarts.Queries.AddItemShoppingCartCommand(shoppingCartId);
-            var response= await _mediator!.Send(request);
+            var response = await _mediator!.Send(request);
             return response;
         }
 
@@ -50,7 +50,7 @@ namespace Ecommerce.Api.Controllers
         [ProducesResponseType(typeof(ShoppingCartVm), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<ShoppingCartVm>> AddItemShoppingCart(Guid id, AddItemShoppingCartCommand request)
         {
-            request.ShoppingCartId = id;            
+            request.ShoppingCartId = id;
             var response = await _mediator!.Send(request);
             return response;
         }
@@ -60,7 +60,7 @@ namespace Ecommerce.Api.Controllers
         [ProducesResponseType(typeof(ShoppingCartVm), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<ShoppingCartVm>> deleteItemShoppingCart(int id)
         {
-            DeleteItemShoppingCartCommand request= new DeleteItemShoppingCartCommand() { Id=id };
+            DeleteItemShoppingCartCommand request = new DeleteItemShoppingCartCommand() { Id = id };
             var response = await _mediator!.Send(request);
             return response;
         }

@@ -29,7 +29,7 @@ namespace Ecommerce.Application.Models.Shipping.Correos
         public string? Pais { get; set; }
 
         // Para envíos internacionales - S: El destino del envío es un apartado postal internacional - Blanco ó N: El destino no es un apartado postal Si el envío es internacional y este campo viene informado a ‘S’, el número de apartado debe indicarse en Destinatario#DatosDireccion#Direccion / 1 espacio
-        public string? DestinoApartadoPostalinternacional { get; set;}
+        public string? DestinoApartadoPostalinternacional { get; set; }
 
         // Si el destino es un apartado postal Nacional. Número de apartado postal del destinatario nacional. /  6 espacios
         public string? ApartadoPostaldestino { get; set; }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Taxes.Queries.GetTaxesByCountry
 {
-    public class GetTaxesByCountryQuery:IRequest<IReadOnlyList<TaxVm>>
+    public class GetTaxesByCountryQuery : IRequest<IReadOnlyList<TaxVm>>
     {
         public int CountryId { get; set; }
     }

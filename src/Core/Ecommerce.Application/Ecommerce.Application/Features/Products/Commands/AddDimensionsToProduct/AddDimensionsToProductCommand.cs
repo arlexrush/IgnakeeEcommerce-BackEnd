@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Products.Commands.AddDimensionsToProduct
 {
-    public class AddDimensionsToProductCommand: IRequest<ProductDimensionVm>
+    public class AddDimensionsToProductCommand : IRequest<ProductDimensionVm>
     {
         public int Length { get; set; }
         //Ancho en cm

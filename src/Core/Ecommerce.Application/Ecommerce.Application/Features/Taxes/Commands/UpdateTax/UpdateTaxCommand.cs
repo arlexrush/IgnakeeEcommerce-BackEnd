@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Taxes.Commands.UpdateTax
 {
-    public class UpdateTaxCommand:IRequest<TaxVm>
+    public class UpdateTaxCommand : IRequest<TaxVm>
     {
         public int TaxId { get; set; }
         public string? Name { get; set; }

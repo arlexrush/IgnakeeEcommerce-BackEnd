@@ -14,22 +14,22 @@ namespace Ecommerce.Infrastructure.Specification
         {
             if (spec.Criteria != null)
             {
-                inputQuery=inputQuery.Where(spec.Criteria);
+                inputQuery = inputQuery.Where(spec.Criteria);
             }
 
-            if (spec.OrderBy!=null)
+            if (spec.OrderBy != null)
             {
-                inputQuery=inputQuery.OrderBy(spec.OrderBy);
+                inputQuery = inputQuery.OrderBy(spec.OrderBy);
             }
 
-            if(spec.OrderByDescending!=null)
+            if (spec.OrderByDescending != null)
             {
                 inputQuery = inputQuery.OrderBy(spec.OrderByDescending);
             }
 
             if (spec.IsPagingEnable)
             {
-                inputQuery=inputQuery.Skip((int)spec.Skip!).Take((int)spec.Take!);
+                inputQuery = inputQuery.Skip((int)spec.Skip!).Take((int)spec.Take!);
             }
 
             inputQuery = spec.Includes!.Aggregate(inputQuery, (current, include) => current.Include(include)).AsSingleQuery().AsNoTracking();

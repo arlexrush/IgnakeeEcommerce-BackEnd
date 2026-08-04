@@ -19,15 +19,15 @@ namespace Ecommerce.Application.Models.Shipping.Correos
 
         //Formato.
 
-         //MDCCCCEEAAAAMMDD00000000
+        //MDCCCCEEAAAAMMDD00000000
 
-           //MD: Manifiesto de deposito
+        //MD: Manifiesto de deposito
 
-           //CCCC: Código Cliente Etiquetador
+        //CCCC: Código Cliente Etiquetador
 
-           //EE: Canal.En este caso 07.
+        //EE: Canal.En este caso 07.
 
-           //AAAAMMDD: Fecha.
+        //AAAAMMDD: Fecha.
 
         //Todos los envíos prerregistrados por un cliente etiquetador(CCCC) en un día serán incluidos en un mismo Manifiesto.
 

@@ -25,7 +25,7 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.ResetPasswprd
 
         public async Task<Unit> Handle(ResetPasswordCommand request, CancellationToken cancellationToken)
         {
-            var updateUser= await _userManager!.FindByNameAsync(_authService!.GetSessionUser());
+            var updateUser = await _userManager!.FindByNameAsync(_authService!.GetSessionUser());
 
             if (updateUser is null)
             {
@@ -33,15 +33,15 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.ResetPasswprd
             }
             var resultValidateOldPassword = _userManager.PasswordHasher.VerifyHashedPassword(updateUser, updateUser.PasswordHash!, request.OldPassword!);
 
-            if(!(resultValidateOldPassword== PasswordVerificationResult.Success))
+            if (!(resultValidateOldPassword == PasswordVerificationResult.Success))
             {
                 throw new BadRequestException("the enter password is incorrect");
             }
 
             var hashedNewPassword = _userManager.PasswordHasher.HashPassword(updateUser, request.NewPassword!);
             updateUser.PasswordHash = hashedNewPassword;
-            var result= await _userManager.UpdateAsync(updateUser);
-            if(!result.Succeeded)
+            var result = await _userManager.UpdateAsync(updateUser);
+            if (!result.Succeeded)
             {
                 throw new Exception("It Can´t to update your password");
             }

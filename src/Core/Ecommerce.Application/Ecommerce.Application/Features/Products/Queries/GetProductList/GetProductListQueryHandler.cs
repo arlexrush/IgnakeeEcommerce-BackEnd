@@ -21,7 +21,7 @@ namespace Ecommerce.Application.Features.Products.Queries.GetProductList
             _unitOfWork = unitOfWork;
         }
 
-        
+
         public async Task<IReadOnlyList<Product>> Handle(GetProductListQuery request, CancellationToken cancellationToken)
         {
             var includes = new List<Expression<Func<Product, object>>>();

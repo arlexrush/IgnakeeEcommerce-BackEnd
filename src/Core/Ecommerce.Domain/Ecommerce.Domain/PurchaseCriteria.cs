@@ -9,9 +9,9 @@ namespace Ecommerce.Domain
 {
     public enum PurchaseCriteria
     {
-        [EnumMember(Value ="Purchase by Stock")]
+        [EnumMember(Value = "Purchase by Stock")]
         Stock,
-        [EnumMember(Value ="Purchace by Order")]
+        [EnumMember(Value = "Purchace by Order")]
         Order
     }
 }

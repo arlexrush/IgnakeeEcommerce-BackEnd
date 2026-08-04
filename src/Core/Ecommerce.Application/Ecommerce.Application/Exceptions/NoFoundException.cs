@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Exceptions
 {
-    public class NoFoundException:ApplicationException
+    public class NoFoundException : ApplicationException
     {
 
-        public NoFoundException(string name, object key):base($"Entity \"{name}\" ({key}) No founded") { }
+        public NoFoundException(string name, object key) : base($"Entity \"{name}\" ({key}) No founded") { }
     }
 }

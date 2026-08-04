@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Domain
 {
-    public class Tax:BaseDomainModel
+    public class Tax : BaseDomainModel
     {
         public string? Name { get; set; }
         public decimal? Percentage { get; set; }

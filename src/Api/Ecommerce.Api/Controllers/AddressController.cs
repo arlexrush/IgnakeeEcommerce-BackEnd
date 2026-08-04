@@ -18,7 +18,7 @@ namespace Ecommerce.Api.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class AddressController:ControllerBase
+    public class AddressController : ControllerBase
     {
         private readonly IMediator? _mediator;
 
@@ -42,7 +42,7 @@ namespace Ecommerce.Api.Controllers
         [ProducesResponseType(typeof(ShippingAddressVm), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<ShippingAddressVm>> CreateAddress([FromForm] CreateAddressCommand request)
         {
-            
+
             var response = await _mediator!.Send(request);
             return Ok(response);
         }
@@ -60,11 +60,11 @@ namespace Ecommerce.Api.Controllers
 
         [Authorize]
         [HttpDelete("deleteAddress/{id}", Name = "DeleteAddress")]
-        [ProducesResponseType(typeof(ShippingAddressVm),(int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(ShippingAddressVm), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<ShippingAddressVm>> DeleteAddress(int id)
         {
-            var request=new DeleteAddressCommand() { Id=id };
-            var response= await _mediator!.Send(request);
+            var request = new DeleteAddressCommand() { Id = id };
+            var response = await _mediator!.Send(request);
             return Ok(response);
         }
     }

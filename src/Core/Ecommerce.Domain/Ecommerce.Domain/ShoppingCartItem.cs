@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Domain
 {
-    public class ShoppingCartItem:BaseDomainModel
+    public class ShoppingCartItem : BaseDomainModel
     {
         public string? ProductName { get; set; }
         [Column(TypeName = "DECIMAL(20,2)")]

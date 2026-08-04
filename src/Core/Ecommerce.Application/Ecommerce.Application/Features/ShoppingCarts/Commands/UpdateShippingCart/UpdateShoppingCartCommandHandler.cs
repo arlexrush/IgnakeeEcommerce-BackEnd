@@ -23,25 +23,26 @@ namespace Ecommerce.Application.Features.ShoppingCarts.Commands.UpdateShoppingCa
         public async Task<ShoppingCartVm> Handle(UpdateShoppingCartCommand request, CancellationToken cancellationToken)
         {
             //verifing if exist Shopping Cart 
-            ShoppingCart shoppingCartUpdate= await _unitOfWork!.Repository<ShoppingCart>().GetEntityAsync(x=>x.ShoppingCartMasterId==request.ShoppingCartId);
+            ShoppingCart shoppingCartUpdate = await _unitOfWork!.Repository<ShoppingCart>().GetEntityAsync(x => x.ShoppingCartMasterId == request.ShoppingCartId);
 
-            if(shoppingCartUpdate is null)
+            if (shoppingCartUpdate is null)
             {
                 throw new NoFoundException(nameof(ShoppingCart), request.ShoppingCartId!);
             }
 
             int result;
             // To get List of items from database where shoppingCartMasterId to match to request
-            var shoppingCartItems = await _unitOfWork.Repository<ShoppingCartItem>().GetAsync(x=>x.ShoppingCartMasterId==request.ShoppingCartId);
+            var shoppingCartItems = await _unitOfWork.Repository<ShoppingCartItem>().GetAsync(x => x.ShoppingCartMasterId == request.ShoppingCartId);
 
             //to get new items from request, them to map ShoppingCartItem type from ShoppingCartItemVM 
             var shoppingCartItemsToAdd = _mapper!.Map<List<ShoppingCartItem>>(request.ShoppingCartItems);
 
-            
-            if (shoppingCartItems.Count==0)
-            {                
+
+            if (shoppingCartItems.Count == 0)
+            {
                 //Setting shopping Cart ids on items of shopping Cart.
-                shoppingCartItemsToAdd.ForEach(x => {
+                shoppingCartItemsToAdd.ForEach(x =>
+                {
                     x.Id = null;
                     x.ShoppingCartId = shoppingCartUpdate.Id;
                     x.ShoppingCartMasterId = request.ShoppingCartId;
@@ -56,7 +57,7 @@ namespace Ecommerce.Application.Features.ShoppingCarts.Commands.UpdateShoppingCa
                 {
                     throw;
                 }
-                
+
                 if (result <= 0)
                 {
                     throw new Exception("Error in Updating ShoppingCart item");
@@ -66,7 +67,8 @@ namespace Ecommerce.Application.Features.ShoppingCarts.Commands.UpdateShoppingCa
             {
                 _unitOfWork.Repository<ShoppingCartItem>().DeleteRange(shoppingCartItems);
                 //Setting shopping Cart ids on items of shopping Cart.
-                shoppingCartItemsToAdd.ForEach(x => {
+                shoppingCartItemsToAdd.ForEach(x =>
+                {
                     x.Id = null;
                     x.ShoppingCartId = shoppingCartUpdate.Id;
                     x.ShoppingCartMasterId = request.ShoppingCartId;
@@ -76,11 +78,11 @@ namespace Ecommerce.Application.Features.ShoppingCarts.Commands.UpdateShoppingCa
             }
 
             // To build response object
-            var includes =new List<Expression<Func<ShoppingCart,object>>>();
+            var includes = new List<Expression<Func<ShoppingCart, object>>>();
             includes.Add(x => x.ShoppingCartItems!.OrderBy(x => x.ProductName));
-            var shoppingCart= await _unitOfWork!.Repository<ShoppingCart>().GetEntityAsync(x=>x.ShoppingCartMasterId==request.ShoppingCartId, includes, true);
-            
-            
+            var shoppingCart = await _unitOfWork!.Repository<ShoppingCart>().GetEntityAsync(x => x.ShoppingCartMasterId == request.ShoppingCartId, includes, true);
+
+
             var response = _mapper.Map<ShoppingCartVm>(shoppingCart);
             return response;
         }

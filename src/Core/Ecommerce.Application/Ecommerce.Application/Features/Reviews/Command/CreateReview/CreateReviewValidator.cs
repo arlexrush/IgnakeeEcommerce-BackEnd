@@ -11,9 +11,9 @@ namespace Ecommerce.Application.Features.Reviews.Command.CreateReview
     {
         public CreateReviewValidator()
         {
-            RuleFor(r=>r.Name).NotNull().WithMessage("The Name can´t be null");
-            RuleFor(r=>r.Comment).NotNull().WithMessage("The Comment can´t be null");
-            RuleFor(r=>r.Rating).NotEmpty().WithMessage("The Rating can´t be empty");
+            RuleFor(r => r.Name).NotNull().WithMessage("The Name can´t be null");
+            RuleFor(r => r.Comment).NotNull().WithMessage("The Comment can´t be null");
+            RuleFor(r => r.Rating).NotEmpty().WithMessage("The Rating can´t be empty");
 
         }
     }

@@ -43,16 +43,16 @@ namespace Ecommerce.Application.Features.Payments.Commands.CreatePayment
             var includes = new List<Expression<Func<Order, object>>>();
             includes.Add(z => z.OrderItems!);
             includes.Add(y => y.ParTaxItems!);
-            Order orderToPay= null!;
+            Order orderToPay = null!;
             orderToPay = await _unitOfWork!.Repository<Order>().GetEntityAsync(x => x.Id == request.OrderId, includes, false);
 
             if (orderToPay == null)
             {
-                
+
                 throw new NoFoundException("Not Found Order Requested", orderToPay!);
             }
-            
-            orderToPay.orderStatus= OrderStatus.Approved;
+
+            orderToPay.orderStatus = OrderStatus.Approved;
 
             await _unitOfWork!.Repository<Order>().UpdateAsync(orderToPay);
 

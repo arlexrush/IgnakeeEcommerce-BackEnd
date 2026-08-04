@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Infrastructure.ShippingUberEats
 {
-    public class UberEatsService: IUberEatsService
+    public class UberEatsService : IUberEatsService
     {
     }
 }

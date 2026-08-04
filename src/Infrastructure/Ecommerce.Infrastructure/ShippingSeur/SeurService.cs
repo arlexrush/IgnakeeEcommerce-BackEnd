@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Infrastructure.ShippingSeur
 {
-    public class SeurService:ISeurService
+    public class SeurService : ISeurService
     {
         public async Task<RespuestaPreRegistroEnvio> PreRegistro(PreRegistroEnvio request)
         {

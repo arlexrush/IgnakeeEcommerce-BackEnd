@@ -57,21 +57,21 @@ namespace Ecommerce.Api.Controllers
         }
 
         [AllowAnonymous]
-        [HttpGet("getOrderById/{id}", Name ="GetOrderById")]
+        [HttpGet("getOrderById/{id}", Name = "GetOrderById")]
         [ProducesResponseType(typeof(OrderVm), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<OrderVm>> GetOrderById(int id)
         {
             var request = new GetOrderByIdQuery(id);
-            var response= await _mediator.Send(request);
+            var response = await _mediator.Send(request);
             return response;
         }
 
-        [Authorize(Roles =Role.ADMIN)]
-        [HttpGet("pagination", Name ="PaginationOrders")]
+        [Authorize(Roles = Role.ADMIN)]
+        [HttpGet("pagination", Name = "PaginationOrders")]
         [ProducesResponseType(typeof(PaginationVm<OrderVm>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<PaginationVm<OrderVm>>> PaginationOrders([FromQuery] PaginationOrdersQuery paginationOrdersQuery)
         {
-            var response=await _mediator.Send(paginationOrdersQuery);
+            var response = await _mediator.Send(paginationOrdersQuery);
             return Ok(response);
         }
 

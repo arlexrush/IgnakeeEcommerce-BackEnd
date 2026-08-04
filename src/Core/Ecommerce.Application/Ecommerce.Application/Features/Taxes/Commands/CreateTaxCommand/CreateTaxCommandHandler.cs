@@ -24,7 +24,7 @@ namespace Ecommerce.Application.Features.Taxes.Commands.CreateTaxCommand
 
         public async Task<TaxVm> Handle(CreateTaxCommand request, CancellationToken cancellationToken)
         {
-            var product= await _unitOfWork!.Repository<Product>().GetByIdAsync(request.ProductId);            
+            var product = await _unitOfWork!.Repository<Product>().GetByIdAsync(request.ProductId);
             if (product is null)
             {
                 throw new Exception("No found Product, search a valid ProductId");
@@ -45,20 +45,20 @@ namespace Ecommerce.Application.Features.Taxes.Commands.CreateTaxCommand
 
             var taxEntity = new Tax()
             {
-                Name = $"{country.Name!.ToUpper()} IVA-{request.Percentage}"?? request.Name,
+                Name = $"{country.Name!.ToUpper()} IVA-{request.Percentage}" ?? request.Name,
                 Percentage = request.Percentage,
                 CountryId = request.CountryId,
-                ApplicationTax=ApplicationTax.Item
+                ApplicationTax = ApplicationTax.Item
             };
 
-            
-            var taxNew=await _unitOfWork!.Repository<Tax>().AddAsync(taxEntity);
-            var taxByProductEntity=new TaxByProduct() { TaxId=taxNew.Id, ProductId=product.Id, IsActivated=true };
-            var taxByProductNew= await _unitOfWork!.Repository<TaxByProduct>().AddAsync(taxByProductEntity);
-            
-            var taxesByProductEntity =new List<TaxByProduct>() { taxByProductNew };
+
+            var taxNew = await _unitOfWork!.Repository<Tax>().AddAsync(taxEntity);
+            var taxByProductEntity = new TaxByProduct() { TaxId = taxNew.Id, ProductId = product.Id, IsActivated = true };
+            var taxByProductNew = await _unitOfWork!.Repository<TaxByProduct>().AddAsync(taxByProductEntity);
+
+            var taxesByProductEntity = new List<TaxByProduct>() { taxByProductNew };
             taxNew.TaxByProducts = taxesByProductEntity;
-            var taxUpdated=await _unitOfWork.Repository<Tax>().UpdateAsync(taxNew);
+            var taxUpdated = await _unitOfWork.Repository<Tax>().UpdateAsync(taxNew);
 
             var taxResponse = _mapper!.Map<TaxVm>(taxUpdated);
 

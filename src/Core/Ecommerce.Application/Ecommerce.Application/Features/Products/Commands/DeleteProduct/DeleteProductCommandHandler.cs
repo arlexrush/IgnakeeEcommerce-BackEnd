@@ -25,12 +25,12 @@ namespace Ecommerce.Application.Features.Products.Commands.DeleteProduct
 
         public async Task<ProductVm> Handle(DeleteProductCommand request, CancellationToken cancellationToken)
         {
-            var productToDelete=await _unitOfWork!.Repository<Product>().GetByIdAsync(request.ProductId);
+            var productToDelete = await _unitOfWork!.Repository<Product>().GetByIdAsync(request.ProductId);
             if (productToDelete is null)
             {
                 throw new BadRequestException("This Product doesn´t exist");
             }
-            if (productToDelete.Status==ProductStatus.Desactive || productToDelete.Status == ProductStatus.Obsolete)
+            if (productToDelete.Status == ProductStatus.Desactive || productToDelete.Status == ProductStatus.Obsolete)
             {
                 throw new Exception("This Product was delected or obsolet");
             }

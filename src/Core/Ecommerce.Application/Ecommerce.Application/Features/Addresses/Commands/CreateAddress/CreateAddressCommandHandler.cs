@@ -30,7 +30,7 @@ namespace Ecommerce.Application.Features.Addresses.Commands.CreateAddress
             //var addressRecord = await _unitOfWork.Repository<Address>().GetEntityAsync(x => x.UserName == _authService.GetSessionUser(), null, false);
             var addressTarget = await _unitOfWork.Repository<Address>().GetAsync(x => x.UserName!.Equals(_authService.GetSessionUser()));
             var addressList = addressTarget.Where(x => x.UserAddress == request.Address && x.City == request.City && x.Region == request.Region && x.Country == request.Country && x.PostalCode == request.PostalCode).ToList();
-            Address newAddress=new Address();
+            Address newAddress = new Address();
             if (!addressList.Any())
             {
                 newAddress.UserName = _authService.GetSessionUser();
@@ -41,7 +41,7 @@ namespace Ecommerce.Application.Features.Addresses.Commands.CreateAddress
                 newAddress.Country = request.Country;
                 newAddress.CreatedBy = _authService.GetSessionUser();
                 newAddress.CreatedDate = DateTime.UtcNow;
-             
+
                 _unitOfWork.Repository<Address>().AddEntity(newAddress);
                 await _unitOfWork.Complete();
                 var response = _mapper.Map<ShippingAddressVm>(newAddress);
@@ -51,8 +51,8 @@ namespace Ecommerce.Application.Features.Addresses.Commands.CreateAddress
             {
                 throw new Exception("there is a similar address, please try with other address");
             }
-            
-            
+
+
         }
     }
 }

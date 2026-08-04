@@ -23,7 +23,7 @@ namespace Ecommerce.Application.Features.Auths.Users.Queries.GetUserById
 
         public async Task<AuthResponse> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
         {
-            var user= await _userManager.FindByIdAsync(request.UserId!);
+            var user = await _userManager.FindByIdAsync(request.UserId!);
             if (user is null)
             {
                 throw new BadRequestException("The user doesn´t exist");

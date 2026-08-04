@@ -15,7 +15,7 @@ namespace Ecommerce.Application.Features.Orders.Vms
         public int Id { get; set; }
         public ShippingAddressVm? ShippingAddress { get; set; }
         public List<OrderItemVm>? OrderItems { get; set; }
-        public IReadOnlyList<ParTaxItem>? ParTaxItems { get; set; }        
+        public IReadOnlyList<ParTaxItem>? ParTaxItems { get; set; }
         public ShippingVm? ShippingServices { get; set; }
         public string? ShippingOperator { get; set; }
         public decimal? SubTotal { get; set; }
@@ -32,33 +32,39 @@ namespace Ecommerce.Application.Features.Orders.Vms
         public string? BuyerUserName { get; set; }
         public string? BuyerName { get; set; }
 
-        public int? Quantity {  get{ return OrderItems!.Sum(x => x.Quantity); }
-                                set{ } 
-                             }
-        public string? StatusLabel {get{
-                                            switch(Status)
-                                            {
-                                                case OrderStatus.Approved:
-                                                {
-                                                    return OrderStatusLabel.APPROVED;
-                                                }
-                                                case OrderStatus.Pending:
-                                                {
-                                                    return OrderStatusLabel.PENDING;
-                                                }
-                                                case OrderStatus.Shipped:
-                                                {
-                                                    return OrderStatusLabel.SHIPPED;
-                                                }
-                                                case OrderStatus.Error:
-                                                {
-                                                    return OrderStatusLabel.ERROR;
-                                                }
-                                                default: return OrderStatusLabel.ERROR;
-                                            }; 
-                                       } 
-                                    set{ } 
-                                   }
-        
+        public int? Quantity
+        {
+            get { return OrderItems!.Sum(x => x.Quantity); }
+            set { }
+        }
+        public string? StatusLabel
+        {
+            get
+            {
+                switch (Status)
+                {
+                    case OrderStatus.Approved:
+                        {
+                            return OrderStatusLabel.APPROVED;
+                        }
+                    case OrderStatus.Pending:
+                        {
+                            return OrderStatusLabel.PENDING;
+                        }
+                    case OrderStatus.Shipped:
+                        {
+                            return OrderStatusLabel.SHIPPED;
+                        }
+                    case OrderStatus.Error:
+                        {
+                            return OrderStatusLabel.ERROR;
+                        }
+                    default: return OrderStatusLabel.ERROR;
+                }
+                ;
+            }
+            set { }
+        }
+
     }
 }

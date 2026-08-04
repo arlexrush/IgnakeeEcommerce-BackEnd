@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Reviews.Command.CreateReview
 {
-    public class CreateReviewCommand:IRequest<ReviewVm>
+    public class CreateReviewCommand : IRequest<ReviewVm>
     {
         public int ProductId { get; set; }
         public string? Name { get; set; }

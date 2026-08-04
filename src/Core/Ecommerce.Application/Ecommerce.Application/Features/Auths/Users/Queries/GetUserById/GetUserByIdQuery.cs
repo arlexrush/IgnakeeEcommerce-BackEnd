@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Auths.Users.Queries.GetUserById
 {
-    public class GetUserByIdQuery:IRequest<AuthResponse>
+    public class GetUserByIdQuery : IRequest<AuthResponse>
     {
         public string? UserId { get; set; }
 

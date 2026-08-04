@@ -46,15 +46,15 @@ namespace Ecommerce.Infrastructure.Persistence
 
             builder.Entity<Category>()
                 .HasMany(c => c.Products)
-                .WithOne(p=>p.Category)
+                .WithOne(p => p.Category)
                 .HasForeignKey(p => p.CategoryId)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<Product>()
-                .HasMany(p=>p.Reviews)
-                .WithOne(r=>r.product)
-                .HasForeignKey(r=>r.ProductId)
+                .HasMany(p => p.Reviews)
+                .WithOne(r => r.product)
+                .HasForeignKey(r => r.ProductId)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Cascade);
 
@@ -68,7 +68,7 @@ namespace Ecommerce.Infrastructure.Persistence
             builder.Entity<Product>()
                 .HasOne(x => x.ProductDimension)
                 .WithOne(d => d.product)
-                .HasForeignKey<ProductDimension>(p=>p.ProductId);
+                .HasForeignKey<ProductDimension>(p => p.ProductId);
 
             builder.Entity<ShoppingCart>()
                 .HasMany(sc => sc.ShoppingCartItems)
@@ -88,7 +88,7 @@ namespace Ecommerce.Infrastructure.Persistence
             builder.Entity<Country>()
                 .HasMany(c => c.Taxes)
                 .WithOne(t => t.Country)
-                .HasForeignKey(x=>x.CountryId);
+                .HasForeignKey(x => x.CountryId);
 
             builder.Entity<TaxByProduct>()
                 .HasKey(pt => new { pt.ProductId, pt.TaxId });
@@ -104,7 +104,7 @@ namespace Ecommerce.Infrastructure.Persistence
                 .HasForeignKey(x => x.ProductId);
 
             builder.Entity<Order>()
-                .HasMany(x=>x.ParTaxItems)
+                .HasMany(x => x.ParTaxItems)
                 .WithOne()
                 .OnDelete(DeleteBehavior.Cascade);
 
@@ -112,24 +112,24 @@ namespace Ecommerce.Infrastructure.Persistence
                 .HasOne(z => z.Shipping)
                 .WithOne();
         }
-        public DbSet<Product>? Products {get; set;}
-        public DbSet<Address>? Addresses {get; set;}
-        public DbSet<Category>? Categories  {get; set;}
+        public DbSet<Product>? Products { get; set; }
+        public DbSet<Address>? Addresses { get; set; }
+        public DbSet<Category>? Categories { get; set; }
         public DbSet<Country>? Countries { get; set; }
-        public DbSet<Image>? Images { get; set;} 
-        public DbSet<Order>? Orders { get;set;}
-        public DbSet<OrderAddress>? OrderAddresses { get; set;}
-        public DbSet<OrderItem>? OrderItems { get; set;} 
-        public DbSet<ProductDimension>? ProductDimensions { get; set;}
-        public DbSet<Review>? Reviews { get; set;}   
-        public DbSet<ShoppingCart>? ShoppingCarts { get;set;}
-        public DbSet<ShoppingCartItem>? ShoppingCartItems { get;set;}
-        public DbSet<Tax>? Taxs { get; set;}
-        public DbSet<TaxByProduct>? TaxByProducts { get; set;}
-        public DbSet<ParTaxItem>? parTaxItems { get; set;}
-        public DbSet<Shipping>? shippings { get; set;}
-        public DbSet<ShippingOperator>? shippingOperators { get; set;} 
-        
+        public DbSet<Image>? Images { get; set; }
+        public DbSet<Order>? Orders { get; set; }
+        public DbSet<OrderAddress>? OrderAddresses { get; set; }
+        public DbSet<OrderItem>? OrderItems { get; set; }
+        public DbSet<ProductDimension>? ProductDimensions { get; set; }
+        public DbSet<Review>? Reviews { get; set; }
+        public DbSet<ShoppingCart>? ShoppingCarts { get; set; }
+        public DbSet<ShoppingCartItem>? ShoppingCartItems { get; set; }
+        public DbSet<Tax>? Taxs { get; set; }
+        public DbSet<TaxByProduct>? TaxByProducts { get; set; }
+        public DbSet<ParTaxItem>? parTaxItems { get; set; }
+        public DbSet<Shipping>? shippings { get; set; }
+        public DbSet<ShippingOperator>? shippingOperators { get; set; }
+
 
 
     }

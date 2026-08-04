@@ -19,11 +19,11 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.LoginUser
         private readonly IMapper _mapper;
         private readonly IUnitOfWork _unitOfWork;
 
-        public LoginUserCommandHandler(UserManager<User> userManager, 
-                                        SignInManager<User> signInManager, 
-                                        RoleManager<IdentityRole> roleManager, 
-                                        IAuthService authService, 
-                                        IMapper mapper, 
+        public LoginUserCommandHandler(UserManager<User> userManager,
+                                        SignInManager<User> signInManager,
+                                        RoleManager<IdentityRole> roleManager,
+                                        IAuthService authService,
+                                        IMapper mapper,
                                         IUnitOfWork unitOfWork)
         {
             _userManager = userManager;
@@ -36,8 +36,8 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.LoginUser
 
         public async Task<AuthResponse> Handle(LoginUserCommand request, CancellationToken cancellationToken)
         {
-            var user=await _userManager.FindByEmailAsync(request.Email!);
-            if (user is null) 
+            var user = await _userManager.FindByEmailAsync(request.Email!);
+            if (user is null)
             {
                 //throw new Exception($"The user {request.Email} NOT EXIST");
                 throw new NoFoundException(nameof(User), request.Email!);
@@ -55,9 +55,9 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.LoginUser
                 throw new Exception($"You Don´t have Credentials to signing. Your Email or password are incorrect");
             }
 
-            var shippingAddress = await _unitOfWork.Repository<Address>().GetEntityAsync(x=>x.UserName==user.UserName);
+            var shippingAddress = await _unitOfWork.Repository<Address>().GetEntityAsync(x => x.UserName == user.UserName);
 
-            var roles=await _userManager.GetRolesAsync(user);
+            var roles = await _userManager.GetRolesAsync(user);
 
             var authResponse = new AuthResponse
             {
@@ -70,7 +70,7 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.LoginUser
                 Roles = roles,
                 Avatar = user.AvatarUrl,
                 ShippingAddress = _mapper.Map<ShippingAddressVm>(shippingAddress),
-                Token = _authService.CreateToken(user, roles)                                          
+                Token = _authService.CreateToken(user, roles)
             };
 
             return authResponse;

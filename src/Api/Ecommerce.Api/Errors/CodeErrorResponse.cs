@@ -4,22 +4,23 @@ namespace Ecommerce.Api.Errors
 {
     public class CodeErrorResponse
     {
-        [JsonProperty(PropertyName="statusCode")]
+        [JsonProperty(PropertyName = "statusCode")]
         public int StatusCode { get; set; }
         [JsonProperty(PropertyName = "message")]
         public string[]? Message { get; set; }
 
-        public CodeErrorResponse(int statusCode, string[]? message=null)
+        public CodeErrorResponse(int statusCode, string[]? message = null)
         {
             StatusCode = statusCode;
-            if (message is null) {
+            if (message is null)
+            {
                 Message = new string[0];
                 var text = GetDefaultMessageStatusCode(statusCode);
             }
             else
             {
                 Message = message;
-            } 
+            }
         }
 
         private string GetDefaultMessageStatusCode(int statusCode)

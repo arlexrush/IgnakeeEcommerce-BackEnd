@@ -15,6 +15,6 @@ namespace Ecommerce.Application.Models.Shipping.Correos
         public string? ReferenciaeAR { get; set; }
 
         // Obligatorio no / Texto para imprimir, en 5 líneas de 70 caracteres cada una, en el pie del aviso de recibo. En desuso. / 350 espacios
-        public string? InfRemitenteEAr { get; set;}
+        public string? InfRemitenteEAr { get; set; }
     }
 }

@@ -18,7 +18,7 @@ namespace Ecommerce.Domain.Configuration
                     .OnDelete(DeleteBehavior.Cascade);
             builder.Property(o => o.orderStatus)
                     .HasConversion(os => os.ToString(), os => (OrderStatus)Enum.Parse(typeof(OrderStatus), os));
-                    
+
         }
     }
 }

@@ -22,7 +22,7 @@ namespace Ecommerce.Application.Features.Auths.Users.Queries.GetUserByUserName
 
         public async Task<AuthResponse> Handle(GetUserByUserNameQuery request, CancellationToken cancellationToken)
         {
-            var user=await _userManager!.FindByNameAsync(request.UserName!);
+            var user = await _userManager!.FindByNameAsync(request.UserName!);
             if (user == null)
             {
                 throw new Exception("doesn´t finds the User");

@@ -26,7 +26,8 @@ namespace Ecommerce.Application.Features.Reviews.Queries.PaginationReview
 
         public async Task<PaginationVm<ReviewVm>> Handle(PaginationReviewQuery request, CancellationToken cancellationToken)
         {
-            var param = new ReviewSpecificationParams {
+            var param = new ReviewSpecificationParams
+            {
                 ProductId = request.ProductId,
                 PageIndex = request.PageIndex,
                 PageSize = request.PageSize,
@@ -35,7 +36,7 @@ namespace Ecommerce.Application.Features.Reviews.Queries.PaginationReview
 
             };
             var spec = new ReviewSpecification(param);
-            var reviews=await _unitOfWork!.Repository<Review>().GetAllByIdWithSpec(spec);
+            var reviews = await _unitOfWork!.Repository<Review>().GetAllByIdWithSpec(spec);
 
             // Specification for counting total registers
             var specCount = new ReviewForCountingSpecification(param);
@@ -44,13 +45,13 @@ namespace Ecommerce.Application.Features.Reviews.Queries.PaginationReview
             var count = await _unitOfWork.Repository<Review>().CountAsync(specCount);
 
             //Number of register for page selected by user
-            var pageSize=request.PageSize;
+            var pageSize = request.PageSize;
 
             //Number of pages
             var pageCount = Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(count) / Convert.ToDecimal(request.PageSize)));
 
             // Current Page
-            var pageIndex=request.PageIndex;
+            var pageIndex = request.PageIndex;
 
             // Number of registers resultings by page
             var resultByPage = reviews.Count;

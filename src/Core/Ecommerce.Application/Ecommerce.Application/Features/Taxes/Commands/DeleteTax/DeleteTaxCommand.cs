@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Taxes.Commands.DeleteTax
 {
-    public class DeleteTaxCommand:IRequest<TaxVm>
+    public class DeleteTaxCommand : IRequest<TaxVm>
     {
         public int Id { get; set; }
     }

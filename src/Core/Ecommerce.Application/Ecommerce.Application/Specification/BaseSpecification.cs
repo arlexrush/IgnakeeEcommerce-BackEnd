@@ -8,19 +8,19 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Specification
 {
-    public class BaseSpecification<T>:ISpecification<T>
+    public class BaseSpecification<T> : ISpecification<T>
     {
         //implementa ISpecification proporcionando las propiedades y métodos base para construir specifications.
         public BaseSpecification() { }
 
         public BaseSpecification(Expression<Func<T, bool>> criteria)
         {
-            Criteria=criteria;
+            Criteria = criteria;
         }
 
         public Expression<Func<T, bool>>? Criteria { get; }
 
-        public List<Expression<Func<T, object>>> Includes { get; } =new List<Expression<Func<T, object>>>();
+        public List<Expression<Func<T, object>>> Includes { get; } = new List<Expression<Func<T, object>>>();
 
         public Expression<Func<T, object>>? OrderBy { get; private set; }
 
@@ -39,14 +39,14 @@ namespace Ecommerce.Application.Specification
 
         protected void AddOrderByDescending(Expression<Func<T, object>>? orderByExpression)
         {
-            OrderByDescending= orderByExpression;
+            OrderByDescending = orderByExpression;
         }
 
         protected void ApplyPaging(int? skip, int? take)
         {
             Take = take;
             Skip = skip;
-            IsPagingEnable= true;
+            IsPagingEnable = true;
 
         }
 

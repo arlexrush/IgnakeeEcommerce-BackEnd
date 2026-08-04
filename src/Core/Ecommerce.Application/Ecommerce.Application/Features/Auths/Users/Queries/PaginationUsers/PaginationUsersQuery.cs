@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Auths.Users.Queries.PaginationUsers
 {
-    public class PaginationUsersQuery: PaginationBaseQuery, IRequest<PaginationVm<User>>
+    public class PaginationUsersQuery : PaginationBaseQuery, IRequest<PaginationVm<User>>
     {
     }
 }

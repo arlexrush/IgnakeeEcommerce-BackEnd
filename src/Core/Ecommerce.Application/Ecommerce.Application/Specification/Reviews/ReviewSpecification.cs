@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Specification.Reviews
 {
-    public class ReviewSpecification: BaseSpecification<Review>
+    public class ReviewSpecification : BaseSpecification<Review>
     {
         public ReviewSpecification(ReviewSpecificationParams reviewParams) : base(r => (!reviewParams.ProductId.HasValue) || (r.ProductId == reviewParams.ProductId))
         {
@@ -36,7 +36,7 @@ namespace Ecommerce.Application.Specification.Reviews
                 AddOrderByDescending(f => f.CreatedDate!);
             }
 
-            
+
 
         }
     }

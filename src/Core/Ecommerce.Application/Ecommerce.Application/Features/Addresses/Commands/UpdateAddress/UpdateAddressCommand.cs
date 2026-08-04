@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Addresses.Commands.UpdateAddress
 {
-    public class UpdateAddressCommand:IRequest<ShippingAddressVm>
+    public class UpdateAddressCommand : IRequest<ShippingAddressVm>
     {
         public int? Id { get; set; }
         public string? Address { get; set; }

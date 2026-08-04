@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Domain
 {
-    public class Address:BaseDomainModel
+    public class Address : BaseDomainModel
     {
         [Column(TypeName = "NVARCHAR(4000)")]
         public string? UserAddress { get; set; }
@@ -28,7 +28,7 @@ namespace Ecommerce.Domain
 
         [Column(TypeName = "NVARCHAR(100)")]
         public string? Country { get; set; }
-        
-    
+
+
     }
 }

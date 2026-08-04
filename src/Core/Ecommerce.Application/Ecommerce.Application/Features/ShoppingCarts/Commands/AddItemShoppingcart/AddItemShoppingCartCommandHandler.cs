@@ -32,7 +32,7 @@ namespace Ecommerce.Application.Features.ShoppingCarts.Commands.AddItemShoppingc
                 throw new ArgumentNullException(nameof(currentShoppingCart));
             }
 
-            var currentItems= currentShoppingCart.ShoppingCartItems!;
+            var currentItems = currentShoppingCart.ShoppingCartItems!;
 
             ShoppingCartItem itemToAdd = _mapper.Map<ShoppingCartItem>(request.ShoppingCartItems);
             itemToAdd.Id = null;
@@ -42,17 +42,17 @@ namespace Ecommerce.Application.Features.ShoppingCarts.Commands.AddItemShoppingc
             try
             {
                 var responseItemEntity = await _unitOfWork.Repository<ShoppingCartItem>().AddAsync(itemToAdd);
-                var responseItemsEntity = await _unitOfWork.Repository<ShoppingCartItem>().GetAsync(x => x.ShoppingCartMasterId == request.ShoppingCartId);                
-                var responseItemsEntityVm = _mapper.Map<List<ShoppingCartItemVm>>(responseItemsEntity);                
-                
-                
+                var responseItemsEntity = await _unitOfWork.Repository<ShoppingCartItem>().GetAsync(x => x.ShoppingCartMasterId == request.ShoppingCartId);
+                var responseItemsEntityVm = _mapper.Map<List<ShoppingCartItemVm>>(responseItemsEntity);
+
+
                 response.ShoppingCartId = currentShoppingCart.Id.ToString();
                 response.Items = responseItemsEntityVm;
-                
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                var message=ex.Message;
+                var message = ex.Message;
             }
 
             return response;

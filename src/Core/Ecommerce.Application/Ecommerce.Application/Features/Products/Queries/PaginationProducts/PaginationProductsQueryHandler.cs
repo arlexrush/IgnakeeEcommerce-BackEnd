@@ -28,22 +28,22 @@ namespace Ecommerce.Application.Features.Products.Queries.PaginationProducts
         public async Task<PaginationVm<ProductVm>> Handle(PaginationProductsQuery request, CancellationToken cancellationToken)
         {
             var productSpecificationParam = new ProductSpecificationParams
-            { 
+            {
                 CategoryId = request.CategoryId,
-                PageIndex=request.PageIndex,
-                PageSize= request.PageSize,
-                PrecioMax= request.MaxPrice,
-                PrecioMin= request.MinPrice,
-                PrecioPrice= request.PrecioPrice,
-                Rating= request.Rating,
-                Search= request.Search,
-                Sort= request.Sort,
-                Status= request.Status,
+                PageIndex = request.PageIndex,
+                PageSize = request.PageSize,
+                PrecioMax = request.MaxPrice,
+                PrecioMin = request.MinPrice,
+                PrecioPrice = request.PrecioPrice,
+                Rating = request.Rating,
+                Search = request.Search,
+                Sort = request.Sort,
+                Status = request.Status,
             };
 
             var spec = new ProductSpecification(productSpecificationParam);
 
-            var productList=await _unitOfWork.Repository<Product>().GetAllByIdWithSpec(spec);
+            var productList = await _unitOfWork.Repository<Product>().GetAllByIdWithSpec(spec);
 
 
             var specCount = new ProductForCountingSpecification(productSpecificationParam);
@@ -55,7 +55,7 @@ namespace Ecommerce.Application.Features.Products.Queries.PaginationProducts
 
             var totalPages = Convert.ToInt32(rounded);
 
-            var data=_mapper.Map<IReadOnlyList<ProductVm>>(productList);
+            var data = _mapper.Map<IReadOnlyList<ProductVm>>(productList);
 
             int productsByPage;
 
@@ -68,7 +68,7 @@ namespace Ecommerce.Application.Features.Products.Queries.PaginationProducts
                 productsByPage = 1;
             }
 
-           
+
 
             var pagination = new PaginationVm<ProductVm>
             {

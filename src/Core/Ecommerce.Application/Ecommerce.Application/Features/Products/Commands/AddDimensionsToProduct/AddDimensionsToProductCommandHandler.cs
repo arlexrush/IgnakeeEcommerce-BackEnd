@@ -37,11 +37,11 @@ namespace Ecommerce.Application.Features.Products.Commands.AddDimensionsToProduc
                 CreatedBy = _authService!.GetSessionUser(),
                 CreatedDate = DateTime.UtcNow
             };
-            
+
             try
             {
-                var tesProductDimension = await _unitOfWork!.Repository<ProductDimension>().GetEntityAsync(x=>x.ProductId==newProductDimension.ProductId,null, true);
-                if(tesProductDimension is null)
+                var tesProductDimension = await _unitOfWork!.Repository<ProductDimension>().GetEntityAsync(x => x.ProductId == newProductDimension.ProductId, null, true);
+                if (tesProductDimension is null)
                 {
                     var productDimensionEntity = await _unitOfWork!.Repository<ProductDimension>().AddAsync(newProductDimension);
                     var productDimensionResponse = _mapper!.Map<ProductDimensionVm>(productDimensionEntity);
@@ -60,7 +60,7 @@ namespace Ecommerce.Application.Features.Products.Commands.AddDimensionsToProduc
                 throw;
             }
 
-            
+
         }
     }
 }

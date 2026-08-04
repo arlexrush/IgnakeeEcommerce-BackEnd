@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Infrastructure.ShippingDhl
 {
-    public class DhlService: IDhlService
+    public class DhlService : IDhlService
     {
         public async Task<RespuestaPreRegistroEnvio> PreRegistro(PreRegistroEnvio request)
         {

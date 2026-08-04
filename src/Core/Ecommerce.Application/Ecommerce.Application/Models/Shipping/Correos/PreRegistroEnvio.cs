@@ -16,7 +16,7 @@ namespace Ecommerce.Application.Models.Shipping.Correos
 
         // Obligatorio si
         // Código que identifica al cliente de Correos. CCCC / 4 espacios
-        public string? CodEtiquetador { get;set; }
+        public string? CodEtiquetador { get; set; }
 
         // Obligatorio si
         // El número de contrato (si corresponde) / 8 espacios
@@ -58,6 +58,6 @@ namespace Ecommerce.Application.Models.Shipping.Correos
 
         //Idioma de Errores, si tiene el valor(EN) y en el envío tiene errores el tag saldrá en la respuesta y los errores estaran en ingles.De lo contrario saldrá el idioma por defecto (español) y el tag IdiomaErrores no saldrá / 2 espacios
         public string? IdiomaErrores { get; set; }
-        
+
     }
 }

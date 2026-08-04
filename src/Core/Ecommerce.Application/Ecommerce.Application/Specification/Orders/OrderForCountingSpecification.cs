@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Specification.Orders
 {
-    public class OrderForCountingSpecification:BaseSpecification<Order>
+    public class OrderForCountingSpecification : BaseSpecification<Order>
     {
-        public OrderForCountingSpecification(OrderSpecificationParams specificationParams) 
-            : base(x=>(string.IsNullOrEmpty(specificationParams.UserName)||x.BuyerName!.Contains(specificationParams.UserName))
-              &&(!specificationParams.Id.HasValue || x.Id==specificationParams.Id))
+        public OrderForCountingSpecification(OrderSpecificationParams specificationParams)
+            : base(x => (string.IsNullOrEmpty(specificationParams.UserName) || x.BuyerName!.Contains(specificationParams.UserName))
+              && (!specificationParams.Id.HasValue || x.Id == specificationParams.Id))
         {
 
         }

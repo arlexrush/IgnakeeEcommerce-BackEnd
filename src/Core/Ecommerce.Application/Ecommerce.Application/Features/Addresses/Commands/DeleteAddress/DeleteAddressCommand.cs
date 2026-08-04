@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Addresses.Commands.DeleteAddress
 {
-    public class DeleteAddressCommand:IRequest<ShippingAddressVm>
+    public class DeleteAddressCommand : IRequest<ShippingAddressVm>
     {
         public int Id { get; set; }
     }
