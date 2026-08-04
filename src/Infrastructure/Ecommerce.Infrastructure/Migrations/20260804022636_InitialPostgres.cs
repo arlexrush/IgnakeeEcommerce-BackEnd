@@ -16,18 +16,18 @@ namespace Ecommerce.Infrastructure.Migrations
                 name: "Addresses",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INT", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    UserAddress = table.Column<string>(type: "NVARCHAR(4000)", nullable: true),
-                    City = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    Region = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    PostalCode = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    UserName = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    Country = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    CreatedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    LastModifiedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true)
+                    UserAddress = table.Column<string>(type: "character varying(4000)", maxLength: 4000, nullable: true),
+                    City = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    Region = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    PostalCode = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    UserName = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    Country = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -82,13 +82,13 @@ namespace Ecommerce.Infrastructure.Migrations
                 name: "Categories",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INT", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Name = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    CreatedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    LastModifiedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true)
+                    Name = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -99,16 +99,16 @@ namespace Ecommerce.Infrastructure.Migrations
                 name: "Countries",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INT", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(type: "text", nullable: true),
                     Iso2 = table.Column<string>(type: "text", nullable: true),
                     Iso3 = table.Column<string>(type: "text", nullable: true),
                     Currency = table.Column<string>(type: "text", nullable: true),
-                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    CreatedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    LastModifiedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true)
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -119,18 +119,18 @@ namespace Ecommerce.Infrastructure.Migrations
                 name: "OrderAddresses",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INT", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    UserAddress = table.Column<string>(type: "NVARCHAR(4000)", nullable: true),
-                    City = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    Region = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    PostalCode = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    UserName = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    Country = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    CreatedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    LastModifiedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true)
+                    UserAddress = table.Column<string>(type: "character varying(4000)", maxLength: 4000, nullable: true),
+                    City = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    Region = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    PostalCode = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    UserName = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    Country = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -141,13 +141,13 @@ namespace Ecommerce.Infrastructure.Migrations
                 name: "ShoppingCarts",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INT", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     ShoppingCartMasterId = table.Column<Guid>(type: "uuid", nullable: true),
-                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    CreatedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    LastModifiedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true)
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -264,39 +264,39 @@ namespace Ecommerce.Infrastructure.Migrations
                 name: "Products",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INT", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    ProductCode = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    ProductName = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    Description = table.Column<string>(type: "NVARCHAR(4000)", nullable: true),
+                    ProductCode = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    ProductName = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    Description = table.Column<string>(type: "character varying(4000)", maxLength: 4000, nullable: true),
                     typeProduct = table.Column<int>(type: "integer", nullable: false),
-                    UnitToSell = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    UnitToBuy = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    UnitToStore = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    UnitToProduction = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    Currency = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    Price = table.Column<decimal>(type: "numeric(20,2)", nullable: true),
-                    Rating = table.Column<int>(type: "INT", nullable: true),
-                    RatingTotal = table.Column<int>(type: "INT", nullable: true),
-                    ProviderName = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    SellerName = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    CountrySell = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
+                    UnitToSell = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    UnitToBuy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    UnitToStore = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    UnitToProduction = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    Currency = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    Price = table.Column<decimal>(type: "numeric(20,2)", precision: 20, scale: 2, nullable: true),
+                    Rating = table.Column<int>(type: "integer", nullable: true),
+                    RatingTotal = table.Column<int>(type: "integer", nullable: true),
+                    ProviderName = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    SellerName = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    CountrySell = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
                     PurchaseCriteria = table.Column<int>(type: "integer", nullable: false),
-                    Stock = table.Column<int>(type: "INT", nullable: true),
-                    PurchaseLot = table.Column<int>(type: "INT", nullable: true),
-                    PurchaseLeadTime = table.Column<int>(type: "INT", nullable: true),
-                    PurchaseLeadTimeUnit = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    ReplenishmentPoint = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    SafetyStock = table.Column<int>(type: "INT", nullable: true),
-                    ProductDimensionId = table.Column<int>(type: "INT", nullable: true),
+                    Stock = table.Column<int>(type: "integer", nullable: true),
+                    PurchaseLot = table.Column<int>(type: "integer", nullable: true),
+                    PurchaseLeadTime = table.Column<int>(type: "integer", nullable: true),
+                    PurchaseLeadTimeUnit = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    ReplenishmentPoint = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    SafetyStock = table.Column<int>(type: "integer", nullable: true),
+                    ProductDimensionId = table.Column<int>(type: "integer", nullable: true),
                     Status = table.Column<int>(type: "integer", nullable: false),
-                    CategoryId = table.Column<int>(type: "INT", nullable: false),
-                    BarCode = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    QrCode = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    CreatedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    LastModifiedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true)
+                    CategoryId = table.Column<int>(type: "integer", nullable: false),
+                    BarCode = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    QrCode = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -313,20 +313,20 @@ namespace Ecommerce.Infrastructure.Migrations
                 name: "shippingOperators",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INT", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     NameService = table.Column<string>(type: "text", nullable: true),
                     Type = table.Column<string>(type: "text", nullable: true),
                     OrderId = table.Column<int>(type: "integer", nullable: true),
-                    TarifaShipping = table.Column<decimal>(type: "numeric(20,2)", nullable: true),
+                    TarifaShipping = table.Column<decimal>(type: "numeric(20,2)", precision: 20, scale: 2, nullable: true),
                     NameShippingOperator = table.Column<string>(type: "text", nullable: true),
                     OperatorStatus = table.Column<bool>(type: "boolean", nullable: true),
                     CountryName = table.Column<string>(type: "text", nullable: true),
-                    CountryId = table.Column<int>(type: "INT", nullable: true),
-                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    CreatedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    LastModifiedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true)
+                    CountryId = table.Column<int>(type: "integer", nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -342,16 +342,16 @@ namespace Ecommerce.Infrastructure.Migrations
                 name: "Taxs",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INT", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(type: "text", nullable: true),
-                    Percentage = table.Column<decimal>(type: "numeric(18,2)", nullable: true),
-                    CountryId = table.Column<int>(type: "INT", nullable: false),
+                    Percentage = table.Column<decimal>(type: "numeric(18,2)", precision: 18, scale: 2, nullable: true),
+                    CountryId = table.Column<int>(type: "integer", nullable: false),
                     ApplicationTax = table.Column<int>(type: "integer", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    CreatedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    LastModifiedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true)
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -368,25 +368,25 @@ namespace Ecommerce.Infrastructure.Migrations
                 name: "Orders",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INT", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     BuyerName = table.Column<string>(type: "text", nullable: true),
                     BuyerUserName = table.Column<string>(type: "text", nullable: true),
-                    OrderAddressId = table.Column<int>(type: "INT", nullable: true),
-                    SubTotal = table.Column<decimal>(type: "numeric(20,2)", nullable: true),
+                    OrderAddressId = table.Column<int>(type: "integer", nullable: true),
+                    SubTotal = table.Column<decimal>(type: "numeric(20,2)", precision: 20, scale: 2, nullable: true),
                     orderStatus = table.Column<int>(type: "integer", nullable: false),
-                    Total = table.Column<decimal>(type: "numeric(20,2)", nullable: true),
-                    PriceTax = table.Column<decimal>(type: "numeric(20,2)", nullable: true),
-                    WeightOrder = table.Column<int>(type: "INT", nullable: true),
+                    Total = table.Column<decimal>(type: "numeric(20,2)", precision: 20, scale: 2, nullable: true),
+                    PriceTax = table.Column<decimal>(type: "numeric(20,2)", precision: 20, scale: 2, nullable: true),
+                    WeightOrder = table.Column<int>(type: "integer", nullable: true),
                     ShippingOperator = table.Column<string>(type: "text", nullable: true),
-                    ShippingCost = table.Column<decimal>(type: "numeric(20,2)", nullable: true),
+                    ShippingCost = table.Column<decimal>(type: "numeric(20,2)", precision: 20, scale: 2, nullable: true),
                     PaymentIntentId = table.Column<string>(type: "text", nullable: true),
                     ClientSecret = table.Column<string>(type: "text", nullable: true),
                     StripeApiKey = table.Column<string>(type: "text", nullable: true),
-                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    CreatedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    LastModifiedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true)
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -402,21 +402,21 @@ namespace Ecommerce.Infrastructure.Migrations
                 name: "ShoppingCartItems",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INT", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     ProductName = table.Column<string>(type: "text", nullable: true),
-                    Price = table.Column<decimal>(type: "numeric(20,2)", nullable: false),
+                    Price = table.Column<decimal>(type: "numeric(20,2)", precision: 20, scale: 2, nullable: false),
                     Quantity = table.Column<int>(type: "integer", nullable: false),
                     ProductPicture = table.Column<string>(type: "text", nullable: true),
                     Category = table.Column<string>(type: "text", nullable: true),
                     ShoppingCartMasterId = table.Column<Guid>(type: "uuid", nullable: true),
-                    ShoppingCartId = table.Column<int>(type: "INT", nullable: false),
+                    ShoppingCartId = table.Column<int>(type: "integer", nullable: false),
                     ProductId = table.Column<int>(type: "integer", nullable: false),
                     Stock = table.Column<int>(type: "integer", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    CreatedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    LastModifiedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true)
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -433,15 +433,15 @@ namespace Ecommerce.Infrastructure.Migrations
                 name: "Images",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INT", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Url = table.Column<string>(type: "NVARCHAR(4000)", nullable: true),
+                    Url = table.Column<string>(type: "character varying(4000)", maxLength: 4000, nullable: true),
                     PublicCode = table.Column<string>(type: "text", nullable: true),
-                    ProductId = table.Column<int>(type: "INT", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    CreatedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    LastModifiedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true)
+                    ProductId = table.Column<int>(type: "integer", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -458,17 +458,17 @@ namespace Ecommerce.Infrastructure.Migrations
                 name: "ProductDimensions",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INT", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Length = table.Column<int>(type: "integer", nullable: false),
                     Width = table.Column<int>(type: "integer", nullable: false),
                     Depth = table.Column<int>(type: "integer", nullable: false),
                     Weight = table.Column<int>(type: "integer", nullable: false),
-                    ProductId = table.Column<int>(type: "INT", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    CreatedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    LastModifiedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true)
+                    ProductId = table.Column<int>(type: "integer", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -485,16 +485,16 @@ namespace Ecommerce.Infrastructure.Migrations
                 name: "Reviews",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INT", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Name = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
+                    Name = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
                     Rating = table.Column<int>(type: "integer", nullable: false),
-                    Comment = table.Column<string>(type: "NVARCHAR(4000)", nullable: true),
-                    ProductId = table.Column<int>(type: "INT", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    CreatedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    LastModifiedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true)
+                    Comment = table.Column<string>(type: "character varying(4000)", maxLength: 4000, nullable: true),
+                    ProductId = table.Column<int>(type: "integer", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -511,14 +511,14 @@ namespace Ecommerce.Infrastructure.Migrations
                 name: "TaxByProducts",
                 columns: table => new
                 {
-                    ProductId = table.Column<int>(type: "INT", nullable: false),
-                    TaxId = table.Column<int>(type: "INT", nullable: false),
+                    ProductId = table.Column<int>(type: "integer", nullable: false),
+                    TaxId = table.Column<int>(type: "integer", nullable: false),
                     IsActivated = table.Column<bool>(type: "boolean", nullable: false),
-                    Id = table.Column<int>(type: "INT", nullable: true),
-                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    CreatedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    LastModifiedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true)
+                    Id = table.Column<int>(type: "integer", nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -541,19 +541,19 @@ namespace Ecommerce.Infrastructure.Migrations
                 name: "OrderItems",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INT", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    ProductId = table.Column<int>(type: "INT", nullable: false),
-                    Price = table.Column<decimal>(type: "numeric(20,2)", nullable: true),
+                    ProductId = table.Column<int>(type: "integer", nullable: false),
+                    Price = table.Column<decimal>(type: "numeric(20,2)", precision: 20, scale: 2, nullable: true),
                     Quantity = table.Column<int>(type: "integer", nullable: false),
-                    OrderId = table.Column<int>(type: "INT", nullable: false),
+                    OrderId = table.Column<int>(type: "integer", nullable: false),
                     ProductItemId = table.Column<int>(type: "integer", nullable: false),
                     productName = table.Column<string>(type: "text", nullable: true),
                     ImageUrl = table.Column<string>(type: "text", nullable: true),
-                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    CreatedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    LastModifiedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true)
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -576,17 +576,17 @@ namespace Ecommerce.Infrastructure.Migrations
                 name: "parTaxItems",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INT", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     TaxName = table.Column<string>(type: "text", nullable: true),
-                    TaxPercentage = table.Column<decimal>(type: "numeric(20,2)", nullable: true),
-                    MontoItem = table.Column<decimal>(type: "numeric(20,2)", nullable: true),
-                    TotalMontoItem = table.Column<decimal>(type: "numeric(20,2)", nullable: true),
-                    OrderId = table.Column<int>(type: "INT", nullable: true),
-                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    CreatedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    LastModifiedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true)
+                    TaxPercentage = table.Column<decimal>(type: "numeric(20,2)", precision: 20, scale: 2, nullable: true),
+                    MontoItem = table.Column<decimal>(type: "numeric(20,2)", precision: 20, scale: 2, nullable: true),
+                    TotalMontoItem = table.Column<decimal>(type: "numeric(20,2)", precision: 20, scale: 2, nullable: true),
+                    OrderId = table.Column<int>(type: "integer", nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -603,15 +603,15 @@ namespace Ecommerce.Infrastructure.Migrations
                 name: "shippings",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INT", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    OrderId = table.Column<int>(type: "INT", nullable: true),
-                    OperatorId = table.Column<int>(type: "INT", nullable: true),
-                    TotalShipping = table.Column<decimal>(type: "numeric(20,2)", nullable: true),
-                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    CreatedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true),
-                    LastModifiedDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
-                    LastModifiedBy = table.Column<string>(type: "NVARCHAR(100)", nullable: true)
+                    OrderId = table.Column<int>(type: "integer", nullable: true),
+                    OperatorId = table.Column<int>(type: "integer", nullable: true),
+                    TotalShipping = table.Column<decimal>(type: "numeric(20,2)", precision: 20, scale: 2, nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {

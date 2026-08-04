@@ -67,7 +67,7 @@ namespace Ecommerce.Infrastructure.Persistence
 
                 if (!context.Categories!.Any())
                 {
-                    var categoriesData = File.ReadAllText(@"C:\Users\arlex\source\REPOS_.NET\ProjectShop\BackEnd\src\Infrastructure\Ecommerce.Infrastructure\Data\category.json");
+                    var categoriesData = File.ReadAllText(GetDataFilePath("category.json"));
                     var categories = JsonConvert.DeserializeObject<List<Category>>(categoriesData);
                     await context.Categories!.AddRangeAsync(categories!);
                     await context.SaveChangesAsync();
@@ -75,7 +75,7 @@ namespace Ecommerce.Infrastructure.Persistence
 
                 if (!context.Products!.Any())
                 {
-                    var productsData = File.ReadAllText(@"C:\Users\arlex\source\REPOS_.NET\ProjectShop\BackEnd\src\Infrastructure\Ecommerce.Infrastructure\Data\product.json");
+                    var productsData = File.ReadAllText(GetDataFilePath("product.json"));
                     var products = JsonConvert.DeserializeObject<List<Product>>(productsData);
                     await context.Products!.AddRangeAsync(products!);
                     await context.SaveChangesAsync();
@@ -83,7 +83,7 @@ namespace Ecommerce.Infrastructure.Persistence
 
                 if (!context.Images!.Any())
                 {
-                    var imagesData = File.ReadAllText(@"C:\Users\arlex\source\REPOS_.NET\ProjectShop\BackEnd\src\Infrastructure\Ecommerce.Infrastructure\Data\image.json");
+                    var imagesData = File.ReadAllText(GetDataFilePath("image.json"));
                     var images = JsonConvert.DeserializeObject<List<Image>>(imagesData);
                     await context.Images!.AddRangeAsync(images!);
                     await context.SaveChangesAsync();
@@ -91,7 +91,7 @@ namespace Ecommerce.Infrastructure.Persistence
 
                 if (!context.Reviews!.Any())
                 {
-                    var reviewData = File.ReadAllText(@"C:\Users\arlex\source\REPOS_.NET\ProjectShop\BackEnd\src\Infrastructure\Ecommerce.Infrastructure\Data\review.json");
+                    var reviewData = File.ReadAllText(GetDataFilePath("review.json"));
                     var reviews = JsonConvert.DeserializeObject<List<Review>>(reviewData);
                     await context.Reviews!.AddRangeAsync(reviews!);
                     await context.SaveChangesAsync();
@@ -99,7 +99,7 @@ namespace Ecommerce.Infrastructure.Persistence
 
                 if (!context.Countries!.Any())
                 {
-                    var countryData = File.ReadAllText(@"C:\Users\arlex\source\REPOS_.NET\ProjectShop\BackEnd\src\Infrastructure\Ecommerce.Infrastructure\Data\countries.json");
+                    var countryData = File.ReadAllText(GetDataFilePath("countries.json"));
                     var countries = JsonConvert.DeserializeObject<List<Country>>(countryData);
                     await context.Countries!.AddRangeAsync(countries!);
                     await context.SaveChangesAsync();
@@ -111,6 +111,11 @@ namespace Ecommerce.Infrastructure.Persistence
                 var logger = loggerFactory.CreateLogger<EcommerceDbContextData>();
                 logger.LogError(ex.Message);
             }
+        }
+
+        private static string GetDataFilePath(string fileName)
+        {
+            return Path.Combine(AppContext.BaseDirectory, "Data", fileName);
         }
 
         //public static Task LoadDataAsync(EcommerceDbContext context, ILoggerFactory loggerFactory, UserManager<User> userManager, RoleManager<IdentityRole> roleManager)

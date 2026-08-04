@@ -8,3 +8,4 @@ README*
 *.suo
 *.swp
 node_modules/
+.env*
