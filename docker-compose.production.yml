@@ -1,0 +1,49 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: ecommerce-postgres-production
+    env_file:
+      - .env.production
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - postgres-production-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4:8
+    container_name: ecommerce-pgadmin-production
+    depends_on:
+      postgres:
+        condition: service_healthy
+    env_file:
+      - .env.production
+    ports:
+      - "127.0.0.1:5051:80"
+    volumes:
+      - pgadmin-production-data:/var/lib/pgadmin
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ecommerce-api-production
+    depends_on:
+      postgres:
+        condition: service_healthy
+    env_file:
+      - .env.production
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+    ports:
+      - "127.0.0.1:8080:8080"
+    restart: unless-stopped
+
+volumes:
+  postgres-production-data:
+  pgadmin-production-data:

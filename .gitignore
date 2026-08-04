@@ -19,8 +19,8 @@ out/
 .env
 .env.*
 !.env.example
+!.env.production.example
 appsettings.Development.json
-appsettings.Production.json
 
 ## Docker local data
 postgres-data/

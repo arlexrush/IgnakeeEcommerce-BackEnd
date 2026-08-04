@@ -13,7 +13,7 @@ namespace Ecommerce.Domain.Configuration
         public void Configure(EntityTypeBuilder<OrderItem> builder)
         {
             builder.Property(oi => oi.Price)
-                    .HasColumnType("decimal(20,2)");
+                    .HasPrecision(20, 2);
         }
     }
 }

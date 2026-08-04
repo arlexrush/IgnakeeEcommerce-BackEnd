@@ -28,7 +28,10 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\*.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties data_4category_1json__JsonSchema="https://beaujs.com/schema.json" /></VisualStudio></ProjectExtensions>

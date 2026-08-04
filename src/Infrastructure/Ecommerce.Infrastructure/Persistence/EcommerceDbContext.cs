@@ -22,12 +22,12 @@ namespace Ecommerce.Infrastructure.Persistence
                 switch (entry.State)
                 {
                     case EntityState.Added:
-                        entry.Entity.CreatedDate = DateTime.Now;
+                        entry.Entity.CreatedDate = DateTime.UtcNow;
                         entry.Entity.CreatedBy = userName;
                         break;
 
                     case EntityState.Modified:
-                        entry.Entity.LastModifiedDate = DateTime.Now;
+                        entry.Entity.LastModifiedDate = DateTime.UtcNow;
                         entry.Entity.LastModifiedBy = userName;
                         break;
                 }
@@ -83,7 +83,7 @@ namespace Ecommerce.Infrastructure.Persistence
 
             builder.Entity<Tax>()
                 .Property(t => t.Percentage)
-                .HasColumnType("decimal(18,2)");
+                .HasPrecision(18, 2);
 
             builder.Entity<Country>()
                 .HasMany(c => c.Taxes)
