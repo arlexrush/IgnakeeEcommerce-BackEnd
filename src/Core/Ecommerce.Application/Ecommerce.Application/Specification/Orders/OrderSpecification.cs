@@ -16,7 +16,7 @@ namespace Ecommerce.Application.Specification.Orders
             AddInclude(o => o.OrderItems!);
             AddInclude(o => o.ParTaxItems!);
             ApplyPaging(specificationParams.PageSize * (specificationParams.PageIndex - 1), specificationParams.PageSize);
-            if(!string.IsNullOrEmpty(specificationParams.Sort)) 
+            if (!string.IsNullOrEmpty(specificationParams.Sort))
             {
                 switch (specificationParams.Sort)
                 {
@@ -24,7 +24,7 @@ namespace Ecommerce.Application.Specification.Orders
                         AddOrderBy(x => x.CreatedDate!);
                         break;
                     case "createDateDesc":
-                        AddOrderByDescending(x => x.CreatedDate!); 
+                        AddOrderByDescending(x => x.CreatedDate!);
                         break;
                     default:
                         AddOrderBy(x => x.CreatedDate!);

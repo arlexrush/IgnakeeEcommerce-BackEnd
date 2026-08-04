@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Categories.Queries.GetCategoryList
 {
-    public class GetCategoryListQuery: IRequest<IReadOnlyList<CategoryVm>>
+    public class GetCategoryListQuery : IRequest<IReadOnlyList<CategoryVm>>
     {
 
     }

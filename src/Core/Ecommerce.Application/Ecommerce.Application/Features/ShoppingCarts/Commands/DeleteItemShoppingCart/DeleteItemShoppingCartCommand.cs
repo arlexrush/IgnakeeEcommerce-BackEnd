@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.ShoppingCarts.Commands.DeleteItemShoppingCart
 {
-    public class DeleteItemShoppingCartCommand:IRequest<ShoppingCartVm>
+    public class DeleteItemShoppingCartCommand : IRequest<ShoppingCartVm>
     {
         public int Id { get; set; }
     }

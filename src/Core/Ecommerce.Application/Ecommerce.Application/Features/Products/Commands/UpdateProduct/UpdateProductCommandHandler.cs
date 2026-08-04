@@ -25,15 +25,15 @@ namespace Ecommerce.Application.Features.Products.Commands.UpdateProduct
 
         public async Task<ProductVm> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
         {
-            var findProduct= await _unitOfWork!.Repository<Product>().GetByIdAsync(request.Id);
-            if(findProduct is null)
+            var findProduct = await _unitOfWork!.Repository<Product>().GetByIdAsync(request.Id);
+            if (findProduct is null)
             {
                 throw new NotFoundException(nameof(Product));
             }
 
             _mapper!.Map(request, findProduct, typeof(UpdateProductCommand), typeof(Product));
 
-            var productUpdated=await _unitOfWork.Repository<Product>().UpdateAsync(findProduct);
+            var productUpdated = await _unitOfWork.Repository<Product>().UpdateAsync(findProduct);
 
             if ((request.ImageUrls is not null) || (request.ImageUrls!.Count > 0))
             {
@@ -41,13 +41,13 @@ namespace Ecommerce.Application.Features.Products.Commands.UpdateProduct
                 _unitOfWork.Repository<Image>().DeleteRange(imagesToRemove);
 
                 request.ImageUrls.Select(x => { x.ProductId = request.Id; return x; }).ToList();
-                var newImages=_mapper.Map<List<Image>>(request.ImageUrls);
+                var newImages = _mapper.Map<List<Image>>(request.ImageUrls);
                 _unitOfWork.Repository<Image>().AddRange(newImages);
 
             }
             await _unitOfWork.Complete();
 
-            var response =_mapper.Map<ProductVm>(findProduct);
+            var response = _mapper.Map<ProductVm>(findProduct);
             return response;
         }
     }

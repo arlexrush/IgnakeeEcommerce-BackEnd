@@ -9,7 +9,7 @@ namespace Ecommerce.Domain
 {
     public enum OrderStatus
     {
-        [EnumMember(Value ="Order Pending")]
+        [EnumMember(Value = "Order Pending")]
         Pending,
         [EnumMember(Value = "Order Completed and Approved")]
         Approved,

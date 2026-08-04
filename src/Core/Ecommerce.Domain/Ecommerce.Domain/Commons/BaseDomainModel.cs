@@ -23,7 +23,7 @@ namespace Ecommerce.Domain.Commons
         public DateTime? LastModifiedDate { get; set; }
 
         [Column(TypeName = "NVARCHAR(100)")]
-        public string? LastModifiedBy { get; set;}
+        public string? LastModifiedBy { get; set; }
 
     }
 }

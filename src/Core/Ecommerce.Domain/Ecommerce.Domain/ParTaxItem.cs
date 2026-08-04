@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Ecommerce.Domain
 {
-    public class ParTaxItem:BaseDomainModel
+    public class ParTaxItem : BaseDomainModel
     {
         public string? TaxName { get; set; }
         [Column(TypeName = "DECIMAL(20,2)")]

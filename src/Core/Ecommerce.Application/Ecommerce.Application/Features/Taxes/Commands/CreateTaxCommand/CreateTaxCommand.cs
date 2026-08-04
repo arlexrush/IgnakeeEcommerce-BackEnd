@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Taxes.Commands.CreateTaxCommand
 {
-    public class CreateTaxCommand:IRequest<TaxVm>
+    public class CreateTaxCommand : IRequest<TaxVm>
     {
         public string? Name { get; set; }
         public decimal? Percentage { get; set; }

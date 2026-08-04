@@ -23,9 +23,10 @@ namespace Ecommerce.Application.Behaviors
             {
                 return await next();
 
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
-                var requestName=typeof(TRequest).Name;
+                var requestName = typeof(TRequest).Name;
                 _logger.LogError(ex, "Application Request: have happened an exception for the request: {Name} {@Request}", requestName, request);
                 throw new Exception("Application Request has errors");
             }

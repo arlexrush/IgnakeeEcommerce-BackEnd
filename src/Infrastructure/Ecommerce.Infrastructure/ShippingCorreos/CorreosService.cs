@@ -22,12 +22,12 @@ namespace Ecommerce.Infrastructure.ShippingCorreos
 
         public async Task<RespuestaCalculaTarifa> CalculaTarifaAsync(CalculaTarifa request)
         {
-            var client=_httpClient.CreateClient();
+            var client = _httpClient.CreateClient();
 
             // Configura la llamada HTTP
             var requestMessage = new HttpRequestMessage(HttpMethod.Post, "https://preregistroenvios.correos.es/preregistroenvios/CalculaTarifa");
             requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _setting.CertificadoDigital);
-            
+
             // Serializa el objeto request
             XmlSerializer xlmSerializer = new XmlSerializer(typeof(CalculaTarifa));
             using (var writer = new StringWriter())
@@ -37,7 +37,7 @@ namespace Ecommerce.Infrastructure.ShippingCorreos
 
                 // Establece el contenido de la solicitud
                 requestMessage.Content = new StringContent(xml, Encoding.UTF8, "application/xml");
-               
+
             }
             // Realiza la llamada HTTP
             HttpResponseMessage responseMessage = await client.SendAsync(requestMessage);
@@ -63,7 +63,7 @@ namespace Ecommerce.Infrastructure.ShippingCorreos
             {
                 // Manejo de errores HTTP
                 HandleHttpException(responseMessage.StatusCode, responseMessage.ReasonPhrase!);
-                
+
             }
             return null!;
         }
@@ -81,7 +81,7 @@ namespace Ecommerce.Infrastructure.ShippingCorreos
 
         public async Task<RespuestaPreRegistroEnvio> PreRegistro(PreRegistroEnvio request)
         {
-            var client=_httpClient.CreateClient();
+            var client = _httpClient.CreateClient();
 
             // Configura la llamada HTTP
             var requestMessage = new HttpRequestMessage(HttpMethod.Post, "https://preregistroenvios.correos.es/preregistroenvios/PreRegistro");
@@ -176,7 +176,7 @@ namespace Ecommerce.Infrastructure.ShippingCorreos
 
             }
             return null!;
-            
+
         }
     }
 }

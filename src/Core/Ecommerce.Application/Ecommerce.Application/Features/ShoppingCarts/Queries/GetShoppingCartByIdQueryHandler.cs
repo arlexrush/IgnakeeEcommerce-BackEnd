@@ -25,11 +25,11 @@ namespace Ecommerce.Application.Features.ShoppingCarts.Queries
 
         public async Task<ShoppingCartVm> Handle(AddItemShoppingCartCommand request, CancellationToken cancellationToken)
         {
-            var includes= new  List<Expression<Func<ShoppingCart, object>>>();
-            includes.Add(x => x.ShoppingCartItems!.OrderBy(i=>i.ProductName));
+            var includes = new List<Expression<Func<ShoppingCart, object>>>();
+            includes.Add(x => x.ShoppingCartItems!.OrderBy(i => i.ProductName));
 
-            var shoppingCart=await _unitOfWork!.Repository<ShoppingCart>().GetEntityAsync(x=>x.ShoppingCartMasterId==request.ShoppingCartId, includes, true);
-            if (shoppingCart==null)
+            var shoppingCart = await _unitOfWork!.Repository<ShoppingCart>().GetEntityAsync(x => x.ShoppingCartMasterId == request.ShoppingCartId, includes, true);
+            if (shoppingCart == null)
             {
                 shoppingCart = new ShoppingCart
                 {

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Products.Commands.UpdateProduct
 {
-    public class UpdateProductCommand:IRequest<ProductVm>
+    public class UpdateProductCommand : IRequest<ProductVm>
     {
         public int Id { get; set; }
         public string? ProductName { get; set; }

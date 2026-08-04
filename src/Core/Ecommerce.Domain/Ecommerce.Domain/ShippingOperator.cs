@@ -17,7 +17,7 @@ namespace Ecommerce.Domain
         [Column(TypeName = "DECIMAL(20,2)")]
         public decimal? TarifaShipping { get; set; }
         public string? NameShippingOperator { get; set; }
-        public bool? OperatorStatus { get; set; }        
+        public bool? OperatorStatus { get; set; }
         public string? CountryName { get; set; }
         public virtual Country? Country { get; set; }
     }

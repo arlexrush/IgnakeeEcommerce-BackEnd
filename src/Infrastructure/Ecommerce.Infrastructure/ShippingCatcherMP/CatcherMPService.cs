@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Infrastructure.ShippingCatcherMP
 {
-    public class CatcherMPService: ICatcherMPService
+    public class CatcherMPService : ICatcherMPService
     {
     }
 }

@@ -28,7 +28,7 @@ namespace Ecommerce.Api.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class UserController:ControllerBase
+    public class UserController : ControllerBase
     {
         private IMediator? _mediator;
         private IManageImageService? _manageImageService;
@@ -40,7 +40,7 @@ namespace Ecommerce.Api.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("login", Name ="login")]
+        [HttpPost("login", Name = "login")]
         [ProducesResponseType(typeof(AuthResponse), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<AuthResponse>> Login([FromBody] LoginUserCommand request)
         {
@@ -54,30 +54,30 @@ namespace Ecommerce.Api.Controllers
         [ProducesResponseType(typeof(AuthResponse), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<AuthResponse>> Register([FromForm] RegisterUserCommand request)
         {
-            if(request.ImageUser is not null)
+            if (request.ImageUser is not null)
             {
-                
+
                 var resultImage = await _manageImageService!.UploadImage(new ImageData
                 {
-                     ImageStream=request.ImageUser!.OpenReadStream(),
-                     Name=request.ImageUser.Name,
+                    ImageStream = request.ImageUser!.OpenReadStream(),
+                    Name = request.ImageUser.Name,
                 });
 
                 request.ImageUserId = resultImage.PublicId;
                 request.ImageUserUrl = resultImage.Url;
             }
 
-            var response= await _mediator!.Send(request);
+            var response = await _mediator!.Send(request);
             return Ok(response);
         }
 
         [AllowAnonymous]
-        [HttpPost("forgotPassword", Name ="ForgotPassword")]
+        [HttpPost("forgotPassword", Name = "ForgotPassword")]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<string>> ForgotPassword([FromBody] SendPasswordCommand request)
         {
-            var email=request.Email;
-            var response=await _mediator!.Send(request);
+            var email = request.Email;
+            var response = await _mediator!.Send(request);
             return Ok(response);
         }
 
@@ -86,7 +86,7 @@ namespace Ecommerce.Api.Controllers
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<string>> ResetPassword([FromBody] ResetPasswordByTokenCommand request)
         {
-            var response=await _mediator!.Send(request);
+            var response = await _mediator!.Send(request);
             return Ok(response);
         }
 
@@ -104,7 +104,7 @@ namespace Ecommerce.Api.Controllers
         [ProducesResponseType(typeof(AuthResponse), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<AuthResponse>> UpdateUser([FromForm] UpdateUserCommand request)
         {
-            if(request.Photo is not null)
+            if (request.Photo is not null)
             {
                 var resultImage = await _manageImageService!.UploadImage(new ImageData
                 {
@@ -113,19 +113,19 @@ namespace Ecommerce.Api.Controllers
                 });
 
                 request.PhotoId = resultImage.PublicId;
-                request.PhotoUrl= resultImage.Url;
+                request.PhotoUrl = resultImage.Url;
             }
 
             var response = await _mediator!.Send(request);
             return Ok(response);
         }
 
-        [Authorize(Roles =Role.ADMIN)]
-        [HttpPut("updateAdminUser", Name ="UpdateAdminUser")]
+        [Authorize(Roles = Role.ADMIN)]
+        [HttpPut("updateAdminUser", Name = "UpdateAdminUser")]
         [ProducesResponseType(typeof(User), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<User>> UpdateAdminUser([FromBody] UpdateAdminUserCommand request)
         {
-            var response= await _mediator!.Send(request);
+            var response = await _mediator!.Send(request);
             return Ok(response);
         }
 
@@ -143,7 +143,7 @@ namespace Ecommerce.Api.Controllers
         [ProducesResponseType(typeof(AuthResponse), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<AuthResponse>> GetUserById(string id)
         {
-            var request=new GetUserByIdQuery(id);
+            var request = new GetUserByIdQuery(id);
             var response = await _mediator!.Send(request);
             return Ok(response);
         }
@@ -174,7 +174,7 @@ namespace Ecommerce.Api.Controllers
         [ProducesResponseType(typeof(PaginationVm<User>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<PaginationVm<User>>> PaginationAdmin([FromQuery] PaginationUsersQuery paginationUsersQuery)
         {
-            
+
             var PaginationProducts = await _mediator!.Send(paginationUsersQuery);
             return Ok(PaginationProducts);
 
@@ -182,15 +182,15 @@ namespace Ecommerce.Api.Controllers
 
         [AllowAnonymous]
         [HttpGet("getRolesList", Name = "GetRolesList")]
-        [ProducesResponseType(typeof(List<string>),(int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(List<string>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<List<string>>> GetRolesList()
         {
             var query = new GetRolesQuery();
-            var response= await _mediator!.Send(query);
+            var response = await _mediator!.Send(query);
             return Ok(response);
         }
 
-       
+
 
     }
 }

@@ -37,21 +37,24 @@ namespace Ecommerce.Application.Features.Orders.Queries.PaginationOrders
                 UserName = request.UserName
             };
 
-            var spec=new OrderSpecification(orderSpecificationParams);
-            var orders=await _unitOfWork!.Repository<Order>().GetAllByIdWithSpec(spec);
+            var spec = new OrderSpecification(orderSpecificationParams);
+            var orders = await _unitOfWork!.Repository<Order>().GetAllByIdWithSpec(spec);
 
-            var specCount=new OrderForCountingSpecification(orderSpecificationParams);
+            var specCount = new OrderForCountingSpecification(orderSpecificationParams);
             var totalOrders = await _unitOfWork.Repository<Order>().CountAsync(specCount);
             var rounded = Math.Ceiling((Convert.ToDecimal(totalOrders)) / (Convert.ToDecimal(request.PageSize)));
             var totalPage = Convert.ToInt32(rounded);
             var data = _mapper!.Map<IReadOnlyList<Order>, IReadOnlyList<OrderVm>>(orders);
             var ordersByPage = orders.Count();
-            var responsePagination= new PaginationVm<OrderVm>() { Count=totalOrders, 
-                                                Data=data, 
-                                                PageIndex=request.PageIndex, 
-                                                PageSize=request.PageSize, 
-                                                PageCount=totalPage, 
-                                                ResultByPage=ordersByPage };
+            var responsePagination = new PaginationVm<OrderVm>()
+            {
+                Count = totalOrders,
+                Data = data,
+                PageIndex = request.PageIndex,
+                PageSize = request.PageSize,
+                PageCount = totalPage,
+                ResultByPage = ordersByPage
+            };
             return responsePagination;
         }
     }

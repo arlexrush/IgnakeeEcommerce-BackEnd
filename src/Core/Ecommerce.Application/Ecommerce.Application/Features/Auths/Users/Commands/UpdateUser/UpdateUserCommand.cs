@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Auths.Users.Commands.UpdateUser
 {
-    public class UpdateUserCommand:IRequest<AuthResponse>
+    public class UpdateUserCommand : IRequest<AuthResponse>
     {
         public string? Name { get; set; }
         public string? LastName { get; set; }

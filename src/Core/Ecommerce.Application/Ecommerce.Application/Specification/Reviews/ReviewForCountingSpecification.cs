@@ -9,7 +9,7 @@ namespace Ecommerce.Application.Specification.Reviews
 {
     public class ReviewForCountingSpecification : BaseSpecification<Review>
     {
-        public ReviewForCountingSpecification(ReviewSpecificationParams reviewParams) : base(r => (!reviewParams.ProductId.HasValue)||(r.ProductId == reviewParams.ProductId))
+        public ReviewForCountingSpecification(ReviewSpecificationParams reviewParams) : base(r => (!reviewParams.ProductId.HasValue) || (r.ProductId == reviewParams.ProductId))
         {
 
         }

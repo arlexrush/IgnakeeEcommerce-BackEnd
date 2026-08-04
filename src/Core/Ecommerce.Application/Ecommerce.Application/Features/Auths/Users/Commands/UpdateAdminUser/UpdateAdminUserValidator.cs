@@ -11,7 +11,7 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.UpdateAdminUser
     {
         public UpdateAdminUserValidator()
         {
-            RuleFor(x=>x.Name).NotEmpty().WithMessage("The Name Can´t be empty");
+            RuleFor(x => x.Name).NotEmpty().WithMessage("The Name Can´t be empty");
             RuleFor(x => x.LastName).NotEmpty().WithMessage("The Last Name Can´t be empty");
             RuleFor(x => x.Phone).NotEmpty().WithMessage("The Phone Can´t be empty");
         }

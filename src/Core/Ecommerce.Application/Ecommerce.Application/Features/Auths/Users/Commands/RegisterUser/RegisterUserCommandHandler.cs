@@ -23,11 +23,11 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.RegisterUser
         private readonly IMapper _mapper;
         private readonly IUnitOfWork _unitOfWork;
 
-        public RegisterUserCommandHandler(UserManager<User> userManager, 
-                                            SignInManager<User> signInManager, 
-                                            RoleManager<IdentityRole> roleManager, 
-                                            IAuthService authService, 
-                                            IMapper mapper, 
+        public RegisterUserCommandHandler(UserManager<User> userManager,
+                                            SignInManager<User> signInManager,
+                                            RoleManager<IdentityRole> roleManager,
+                                            IAuthService authService,
+                                            IMapper mapper,
                                             IUnitOfWork unitOfWork)
         {
             _userManager = userManager;
@@ -59,11 +59,11 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.RegisterUser
                 PhoneNumber = request.Phone,
                 AvatarUrl = request.ImageUserUrl,
             };
-            var result =    await _userManager.CreateAsync(user, request.Password!);
+            var result = await _userManager.CreateAsync(user, request.Password!);
             if (result.Succeeded)
             {
                 await _userManager.AddToRoleAsync(user, AppRole.GeneryUser);
-                var roles=await _userManager.GetRolesAsync(user);
+                var roles = await _userManager.GetRolesAsync(user);
                 var authResponse = new AuthResponse
                 {
                     Id = user.Id,

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Products.Commands.UpdateProduct
 {
-    public class UpdateProductCommandValidator: AbstractValidator<UpdateProductCommand>
+    public class UpdateProductCommandValidator : AbstractValidator<UpdateProductCommand>
     {
-        public UpdateProductCommandValidator() 
+        public UpdateProductCommandValidator()
         {
             RuleFor(x => x.ProductName)
                 .NotEmpty()

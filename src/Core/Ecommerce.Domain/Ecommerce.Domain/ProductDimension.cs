@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Domain
 {
-    public class ProductDimension:BaseDomainModel
+    public class ProductDimension : BaseDomainModel
     {
         //Largo en cm
         public int Length { get; set; }
@@ -17,7 +17,7 @@ namespace Ecommerce.Domain
         public int Depth { get; set; }
         //Peso en gramos
         public int Weight { get; set; }
-        public int ProductId { get; set; }   
+        public int ProductId { get; set; }
         public virtual Product? product { get; set; }
     }
 }

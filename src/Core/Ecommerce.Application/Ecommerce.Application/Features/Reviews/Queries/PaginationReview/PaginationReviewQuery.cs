@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Reviews.Queries.PaginationReview
 {
-    public class PaginationReviewQuery: PaginationBaseQuery, IRequest<PaginationVm<ReviewVm>>
+    public class PaginationReviewQuery : PaginationBaseQuery, IRequest<PaginationVm<ReviewVm>>
     {
         public int? ProductId { get; set; }
     }

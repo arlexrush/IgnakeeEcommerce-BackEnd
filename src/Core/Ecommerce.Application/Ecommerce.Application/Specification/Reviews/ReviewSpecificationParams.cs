@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Specification.Reviews
 {
-    public class ReviewSpecificationParams: SpecificationParams
+    public class ReviewSpecificationParams : SpecificationParams
     {
         public int? ProductId { get; set; }
     }

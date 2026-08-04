@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Auths.Users.Commands.UpdateAdminUser
 {
-    public class UpdateAdminUserCommand:IRequest<User>
+    public class UpdateAdminUserCommand : IRequest<User>
     {
         public string? Id { get; set; }
         public string? Name { get; set; }

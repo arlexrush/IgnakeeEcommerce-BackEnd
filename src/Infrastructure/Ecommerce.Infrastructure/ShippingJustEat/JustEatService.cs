@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Infrastructure.ShippingJustEat
 {
-    public class JustEatService: IJustEatService
+    public class JustEatService : IJustEatService
     {
     }
 }

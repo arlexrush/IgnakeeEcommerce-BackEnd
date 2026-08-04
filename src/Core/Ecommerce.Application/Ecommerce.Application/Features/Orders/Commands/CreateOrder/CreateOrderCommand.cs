@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
 {
-    public class CreateOrderCommand:IRequest<OrderVm>
+    public class CreateOrderCommand : IRequest<OrderVm>
     {
         public Guid? ShoppingCartId { get; set; }
-        public ShippingAddressVm? AddressVm { get; set; }    
+        public ShippingAddressVm? AddressVm { get; set; }
 
     }
 }

@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Domain
 {
-    public class Review:BaseDomainModel
+    public class Review : BaseDomainModel
     {
-        [Column(TypeName="NVARCHAR(100)")]
+        [Column(TypeName = "NVARCHAR(100)")]
         public string? Name { get; set; }
         public int Rating { get; set; }
         [Column(TypeName = "NVARCHAR(4000)")]

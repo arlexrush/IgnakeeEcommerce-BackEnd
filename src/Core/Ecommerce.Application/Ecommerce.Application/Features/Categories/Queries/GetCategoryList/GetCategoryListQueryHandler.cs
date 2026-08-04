@@ -24,7 +24,7 @@ namespace Ecommerce.Application.Features.Categories.Queries.GetCategoryList
 
         public async Task<IReadOnlyList<CategoryVm>> Handle(GetCategoryListQuery request, CancellationToken cancellationToken)
         {
-            var categories= await _unitOfWork!.Repository<Category>().GetAsync(null, x=>x.OrderBy(y=>y.Name), string.Empty, false);
+            var categories = await _unitOfWork!.Repository<Category>().GetAsync(null, x => x.OrderBy(y => y.Name), string.Empty, false);
             var response = _mapper!.Map<IReadOnlyList<CategoryVm>>(categories);
             return response;
         }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Addresses.Commands.CreateAddress
 {
-    public class CreateAddressCommand:IRequest<ShippingAddressVm>
+    public class CreateAddressCommand : IRequest<ShippingAddressVm>
     {
         public string? Address { get; set; }
         public string? City { get; set; }

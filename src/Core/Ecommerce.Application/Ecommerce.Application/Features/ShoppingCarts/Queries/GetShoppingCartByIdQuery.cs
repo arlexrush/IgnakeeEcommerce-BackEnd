@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.ShoppingCarts.Queries
 {
-    public class AddItemShoppingCartCommand:IRequest<ShoppingCartVm>
+    public class AddItemShoppingCartCommand : IRequest<ShoppingCartVm>
     {
         public Guid? ShoppingCartId { get; set; }
 
         public AddItemShoppingCartCommand(Guid? shoppingCartId)
         {
-            ShoppingCartId = shoppingCartId?? throw new ArgumentNullException(nameof(shoppingCartId));
+            ShoppingCartId = shoppingCartId ?? throw new ArgumentNullException(nameof(shoppingCartId));
         }
     }
 }

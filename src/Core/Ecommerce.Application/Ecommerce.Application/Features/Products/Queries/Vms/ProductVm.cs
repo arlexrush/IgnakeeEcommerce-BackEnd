@@ -101,8 +101,10 @@ namespace Ecommerce.Application.Features.Products.Queries.Vms
 
         public ProductStatus Status { get; set; }
 
-        public string StatusLabel {
-            get {
+        public string StatusLabel
+        {
+            get
+            {
                 switch (Status)
                 {
                     case ProductStatus.Active:

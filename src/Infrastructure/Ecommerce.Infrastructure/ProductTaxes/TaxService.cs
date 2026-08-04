@@ -27,17 +27,17 @@ namespace Ecommerce.Infrastructure.ProductTaxes
         public async Task<List<Tax>> AddTaxes(List<Tax> taxesIn)
         {
             var allTaxes = await _unitOfWork!.Repository<Tax>().GetAllAsync();
-            var newTaxes=new List<Tax>();
-            foreach (Tax tax in taxesIn) 
-            { 
-                if(!allTaxes.Contains(tax))
+            var newTaxes = new List<Tax>();
+            foreach (Tax tax in taxesIn)
+            {
+                if (!allTaxes.Contains(tax))
                 {
                     newTaxes.Add(tax);
                 }
             }
-            
-            allTaxes.ToList().AddRange(newTaxes);             
-            
+
+            allTaxes.ToList().AddRange(newTaxes);
+
             _unitOfWork.Repository<Tax>().AddRange(allTaxes.ToList());
             await _unitOfWork.Complete();
 
@@ -61,12 +61,12 @@ namespace Ecommerce.Infrastructure.ProductTaxes
                     newTaxes.Add(taxDb!);
                     await _unitOfWork.Repository<Tax>().UpdateAsync(taxDb!);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     throw;
                 }
             }
-                        
+
             return newTaxes;
         }
 
@@ -106,10 +106,10 @@ namespace Ecommerce.Infrastructure.ProductTaxes
             }
             catch (Exception ex)
             {
-                var errorMessage=ex.Message;
-                taxesEntity=new List<Tax>();
+                var errorMessage = ex.Message;
+                taxesEntity = new List<Tax>();
             }
-            
+
             return taxesEntity;
         }
 
@@ -120,28 +120,28 @@ namespace Ecommerce.Infrastructure.ProductTaxes
                 throw new Exception("Not Found taxes in his Country");
             }
             var taxesResponse = new List<Tax>();
-            foreach(Tax itemTax in taxes)
+            foreach (Tax itemTax in taxes)
             {
-                var taxByProductTarget=itemTax.TaxByProducts!.Where(x => x.ProductId == productId && x.IsActivated==true).ToList();
-                foreach(TaxByProduct itemProduct in taxByProductTarget)
+                var taxByProductTarget = itemTax.TaxByProducts!.Where(x => x.ProductId == productId && x.IsActivated == true).ToList();
+                foreach (TaxByProduct itemProduct in taxByProductTarget)
                 {
-                    var newItem= await _unitOfWork!.Repository<Tax>().GetByIdAsync(itemProduct.TaxId);
+                    var newItem = await _unitOfWork!.Repository<Tax>().GetByIdAsync(itemProduct.TaxId);
                     taxesResponse.Add(newItem);
                 }
             }
-            Tax taxResponse=new Tax();
+            Tax taxResponse = new Tax();
             if (taxesResponse.Count() > 1)
             {
-                var taxesSorted=taxesResponse.OrderBy(x => x.Percentage).ToList();
-                foreach(Tax tax in taxesSorted)
+                var taxesSorted = taxesResponse.OrderBy(x => x.Percentage).ToList();
+                foreach (Tax tax in taxesSorted)
                 {
-                    foreach(TaxByProduct t in tax.TaxByProducts!)
+                    foreach (TaxByProduct t in tax.TaxByProducts!)
                     {
                         t.IsActivated = false;
                     }
                 }
-                taxResponse= taxesSorted.Last();
-                foreach(TaxByProduct i in taxResponse.TaxByProducts!)
+                taxResponse = taxesSorted.Last();
+                foreach (TaxByProduct i in taxResponse.TaxByProducts!)
                 {
                     i.IsActivated = true;
                 }
@@ -149,26 +149,26 @@ namespace Ecommerce.Infrastructure.ProductTaxes
             }
             if (taxesResponse.Count() == 1)
             {
-                taxResponse=taxesResponse.First();
+                taxResponse = taxesResponse.First();
             }
             if (!taxesResponse.Any())
             {
                 var country = await _unitOfWork!.Repository<Country>().GetByIdAsync(countryId);
                 var taxName = country.Name;
                 taxResponse.Percentage = 0;
-                taxResponse.Name = $"{taxName!.ToUpper()} IVA-{taxResponse.Percentage}";                
+                taxResponse.Name = $"{taxName!.ToUpper()} IVA-{taxResponse.Percentage}";
                 Tax taxStored;
                 try
                 {
                     taxStored = await _unitOfWork.Repository<Tax>().AddAsync(taxResponse);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
-                    var errorMessage=ex.Message;
+                    var errorMessage = ex.Message;
                     throw;
-                }                
-                var taxByProductNew= new TaxByProduct();
-                taxByProductNew.TaxId=taxStored.Id;
+                }
+                var taxByProductNew = new TaxByProduct();
+                taxByProductNew.TaxId = taxStored.Id;
                 taxByProductNew.ProductId = productId;
                 taxByProductNew.IsActivated = true;
                 taxStored.TaxByProducts!.Add(taxByProductNew);
@@ -178,7 +178,7 @@ namespace Ecommerce.Infrastructure.ProductTaxes
                 _unitOfWork.Repository<Tax>().UpdateEntity(taxResponse);
                 await _unitOfWork!.Complete();
             }
-            
+
             return taxResponse;
         }
 

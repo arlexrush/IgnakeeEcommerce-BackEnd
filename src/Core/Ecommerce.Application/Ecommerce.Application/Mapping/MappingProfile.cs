@@ -37,7 +37,7 @@ namespace Ecommerce.Application.Mapping
                 .ForMember(d => d.Price, x => x.MapFrom(o => o.ProductPrice))
                 .ForMember(d => d.Description, x => x.MapFrom(o => o.ProductDescription))
                 .ForMember(d => d.SellerName, x => x.MapFrom(o => o.ProductSeller))
-                .ForMember(d=>d.CountrySell, x=>x.MapFrom(p=> p.CountrySell))
+                .ForMember(d => d.CountrySell, x => x.MapFrom(p => p.CountrySell))
                 .ForMember(d => d.Stock, x => x.MapFrom(o => o.Stock))
                 .ForMember(d => d.CategoryId, x => x.MapFrom(o => o.CategoryId));
             CreateMap<UpdateProductCommand, Product>()
@@ -51,17 +51,17 @@ namespace Ecommerce.Application.Mapping
                 .ForMember(d => d.CategoryId, x => x.MapFrom(o => o.CategoryId));
             CreateMap<CreateReviewCommand, Review>();
             CreateMap<ShoppingCart, ShoppingCartVm>()
-                .ForMember(d=>d.ShoppingCartId, x=>x.MapFrom(o=>o.ShoppingCartMasterId))
-                .ForMember(d=>d.Items, x=>x.MapFrom(o=>o.ShoppingCartItems));
+                .ForMember(d => d.ShoppingCartId, x => x.MapFrom(o => o.ShoppingCartMasterId))
+                .ForMember(d => d.Items, x => x.MapFrom(o => o.ShoppingCartItems));
             CreateMap<ShoppingCartItem, ShoppingCartItemVm>();
             CreateMap<ShoppingCartItemVm, ShoppingCartItem>();
             CreateMap<Address, ShippingAddressVm>()
-                .ForMember(d=>d.Address, sr=>sr.MapFrom(s=>s.UserAddress));
+                .ForMember(d => d.Address, sr => sr.MapFrom(s => s.UserAddress));
             CreateMap<Order, OrderVm>()
                 .ForMember(x => x.ShippingAddress, y => y.MapFrom(z => z.OrderAddress))
                 .ForMember(x => x.Taxes, y => y.MapFrom(z => z.PriceTax))
-                .ForMember(x => x.Shipping, y=>y.MapFrom(z=>z.ShippingCost))
-                .ForMember(x=>x.Status, y=>y.MapFrom(z=>z.orderStatus));
+                .ForMember(x => x.Shipping, y => y.MapFrom(z => z.ShippingCost))
+                .ForMember(x => x.Status, y => y.MapFrom(z => z.orderStatus));
             CreateMap<OrderVm, Order>()
                 .ForMember(x => x.OrderAddress, y => y.MapFrom(z => z.ShippingAddress))
                 .ForMember(x => x.PriceTax, y => y.MapFrom(z => z.Taxes))
@@ -70,7 +70,7 @@ namespace Ecommerce.Application.Mapping
             CreateMap<OrderItem, OrderItemVm>();
             CreateMap<OrderItemVm, OrderItemVm>();
             CreateMap<OrderAddress, ShippingAddressVm>()
-                .ForMember(x=>x.Address, y=>y.MapFrom(z=>z.UserAddress));
+                .ForMember(x => x.Address, y => y.MapFrom(z => z.UserAddress));
             CreateMap<ShippingAddressVm, OrderAddress>()
                 .ForMember(x => x.UserAddress, y => y.MapFrom(z => z.Address));
             CreateMap<Address, ShippingAddressVm>()
@@ -83,7 +83,7 @@ namespace Ecommerce.Application.Mapping
             CreateMap<TaxVm, Tax>();
             CreateMap<TaxByProduct, TaxByProductVm>();
             CreateMap<TaxByProductVm, TaxByProduct>();
-            CreateMap<ProductDimension,ProductDimensionVm>();
+            CreateMap<ProductDimension, ProductDimensionVm>();
             CreateMap<ProductDimensionVm, ProductDimension>();
             CreateMap<ParTaxItem, ParTaxItemVm>();
             CreateMap<ParTaxItemVm, ParTaxItem>();

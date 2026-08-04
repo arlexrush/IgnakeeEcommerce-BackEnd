@@ -18,8 +18,8 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.UpdateUser
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IAuthService _authService;
 
-        public UpdateUserCommandHandler(UserManager<User> userManager, 
-                                        RoleManager<IdentityRole> roleManager, 
+        public UpdateUserCommandHandler(UserManager<User> userManager,
+                                        RoleManager<IdentityRole> roleManager,
                                         IAuthService authService)
         {
             _userManager = userManager;
@@ -29,19 +29,19 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.UpdateUser
 
         public async Task<AuthResponse> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
         {
-            var updateUser= await _userManager.FindByNameAsync(_authService.GetSessionUser());
+            var updateUser = await _userManager.FindByNameAsync(_authService.GetSessionUser());
             if (updateUser is null)
             {
                 throw new BadRequestException("The User don´t Exist");
             }
 
-            updateUser.Name= request.Name;
-            updateUser.LastName= request.LastName;
-            updateUser.Email= request.Email;
+            updateUser.Name = request.Name;
+            updateUser.LastName = request.LastName;
+            updateUser.Email = request.Email;
             updateUser.PhoneNumber = request.Phone;
             updateUser.AvatarUrl = request.PhotoUrl ?? updateUser.AvatarUrl;
 
-            var result= await _userManager.UpdateAsync(updateUser);
+            var result = await _userManager.UpdateAsync(updateUser);
 
             if (!result.Succeeded)
             {
@@ -49,7 +49,7 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.UpdateUser
             }
 
             var userByEmail = await _userManager.FindByEmailAsync(request.Email!);
-            var roles= await _userManager.GetRolesAsync(userByEmail!);
+            var roles = await _userManager.GetRolesAsync(userByEmail!);
             var response = new AuthResponse
             {
                 Id = userByEmail!.Id,
@@ -62,7 +62,7 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.UpdateUser
                 Token = _authService.CreateToken(userByEmail, roles),
                 Roles = roles
             };
-            return response;    
+            return response;
 
         }
     }

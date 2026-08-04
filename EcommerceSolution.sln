@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 18
+VisualStudioVersion = 18.7.11903.348
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Domain", "src\Core\Ecommerce.Domain\Ecommerce.Domain\Ecommerce.Domain.csproj", "{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}"
 EndProject
@@ -22,31 +22,182 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Infrastructure", 
 		{E0702AF8-D044-407F-ABE9-E258E03AEE0C} = {E0702AF8-D044-407F-ABE9-E258E03AEE0C}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{32F7003D-3F6F-496C-8095-F72B46285156}"
+	ProjectSection(SolutionItems) = preProject
+		docs\development-backlog.md = docs\development-backlog.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "github", "github", "{7536ECEA-AF9D-4097-8F90-6A13465805B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "upgrades", "upgrades", "{8A7E0669-1C8B-4129-96D3-C80489347D69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{B1175157-8A14-4C05-9915-FA5D4C91B9FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scenarios", "scenarios", "{8F0E0A3A-9C6E-4BD6-8461-240DB0421FC7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dotnet-version-upgrade", "dotnet-version-upgrade", "{510B296D-11B3-4FFF-8D44-D5A1035B10A5}"
+	ProjectSection(SolutionItems) = preProject
+		.github\upgrades\scenarios\dotnet-version-upgrade\assessment.csv = .github\upgrades\scenarios\dotnet-version-upgrade\assessment.csv
+		.github\upgrades\scenarios\dotnet-version-upgrade\assessment.json = .github\upgrades\scenarios\dotnet-version-upgrade\assessment.json
+		.github\upgrades\scenarios\dotnet-version-upgrade\assessment.md = .github\upgrades\scenarios\dotnet-version-upgrade\assessment.md
+		.github\upgrades\scenarios\dotnet-version-upgrade\dependencies-health.json = .github\upgrades\scenarios\dotnet-version-upgrade\dependencies-health.json
+		.github\upgrades\scenarios\dotnet-version-upgrade\plan.md = .github\upgrades\scenarios\dotnet-version-upgrade\plan.md
+		.github\upgrades\scenarios\dotnet-version-upgrade\scenario-instructions.md = .github\upgrades\scenarios\dotnet-version-upgrade\scenario-instructions.md
+		.github\upgrades\scenarios\dotnet-version-upgrade\scenario.json = .github\upgrades\scenarios\dotnet-version-upgrade\scenario.json
+		.github\upgrades\scenarios\dotnet-version-upgrade\tasks.md = .github\upgrades\scenarios\dotnet-version-upgrade\tasks.md
+		.github\upgrades\scenarios\dotnet-version-upgrade\upgrade-options.md = .github\upgrades\scenarios\dotnet-version-upgrade\upgrade-options.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task", "task", "{806F5559-4AD9-4736-AB02-D3C5FCBFE85A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-upgrade-project-targeting", "01-upgrade-project-targeting", "{87949714-62A6-4C7A-8B67-6488B26D669E}"
+	ProjectSection(SolutionItems) = preProject
+		.github\upgrades\scenarios\dotnet-version-upgrade\tasks\01-upgrade-project-targeting\task.md = .github\upgrades\scenarios\dotnet-version-upgrade\tasks\01-upgrade-project-targeting\task.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-fix-build-and-compatibility-issues", "02-fix-build-and-compatibility-issues", "{EF6FD77B-3659-4E12-AE1E-458647DC2206}"
+	ProjectSection(SolutionItems) = preProject
+		.github\upgrades\scenarios\dotnet-version-upgrade\tasks\02-fix-build-and-compatibility-issues\task.md = .github\upgrades\scenarios\dotnet-version-upgrade\tasks\02-fix-build-and-compatibility-issues\task.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-validate-and-document", "03-validate-and-document", "{2DE1BA3D-B341-4701-B0D6-2D41CC17BCFB}"
+	ProjectSection(SolutionItems) = preProject
+		.github\upgrades\scenarios\dotnet-version-upgrade\tasks\03-validate-and-document\task.md = .github\upgrades\scenarios\dotnet-version-upgrade\tasks\03-validate-and-document\task.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0AB3BF05-4346-4AA6-1389-037BE0695223}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.UnitTests", "tests\Ecommerce.UnitTests\Ecommerce.UnitTests.csproj", "{776D13B6-1F8E-4E7E-B2F6-E7E380711663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.ArchitectureTests", "tests\Ecommerce.ArchitectureTests\Ecommerce.ArchitectureTests.csproj", "{B39F1212-026C-404D-8363-D31A648B2F5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.IntegrationTests", "tests\Ecommerce.IntegrationTests\Ecommerce.IntegrationTests.csproj", "{57E806FC-750D-408A-8160-4CFBE2DAA159}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{DFC51C71-779C-49A0-8BC0-401EDFC1D784}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		docker-compose.yml = docker-compose.yml
+		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuraciones", "Configuraciones", "{09CDA99D-5946-4751-8449-2BDCC08D8AEF}"
+	ProjectSection(SolutionItems) = preProject
+		.env = .env
+		.env.example = .env.example
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}.Debug|x64.Build.0 = Debug|Any CPU
+		{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}.Debug|x86.Build.0 = Debug|Any CPU
 		{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}.Release|x64.ActiveCfg = Release|Any CPU
+		{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}.Release|x64.Build.0 = Release|Any CPU
+		{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}.Release|x86.ActiveCfg = Release|Any CPU
+		{1761C1D3-44FB-4CA1-9722-5779E92A3DD8}.Release|x86.Build.0 = Release|Any CPU
 		{E0702AF8-D044-407F-ABE9-E258E03AEE0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E0702AF8-D044-407F-ABE9-E258E03AEE0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0702AF8-D044-407F-ABE9-E258E03AEE0C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E0702AF8-D044-407F-ABE9-E258E03AEE0C}.Debug|x64.Build.0 = Debug|Any CPU
+		{E0702AF8-D044-407F-ABE9-E258E03AEE0C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E0702AF8-D044-407F-ABE9-E258E03AEE0C}.Debug|x86.Build.0 = Debug|Any CPU
 		{E0702AF8-D044-407F-ABE9-E258E03AEE0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0702AF8-D044-407F-ABE9-E258E03AEE0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0702AF8-D044-407F-ABE9-E258E03AEE0C}.Release|x64.ActiveCfg = Release|Any CPU
+		{E0702AF8-D044-407F-ABE9-E258E03AEE0C}.Release|x64.Build.0 = Release|Any CPU
+		{E0702AF8-D044-407F-ABE9-E258E03AEE0C}.Release|x86.ActiveCfg = Release|Any CPU
+		{E0702AF8-D044-407F-ABE9-E258E03AEE0C}.Release|x86.Build.0 = Release|Any CPU
 		{59348839-450A-4B27-A72D-4CF72B09145F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{59348839-450A-4B27-A72D-4CF72B09145F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59348839-450A-4B27-A72D-4CF72B09145F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{59348839-450A-4B27-A72D-4CF72B09145F}.Debug|x64.Build.0 = Debug|Any CPU
+		{59348839-450A-4B27-A72D-4CF72B09145F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{59348839-450A-4B27-A72D-4CF72B09145F}.Debug|x86.Build.0 = Debug|Any CPU
 		{59348839-450A-4B27-A72D-4CF72B09145F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59348839-450A-4B27-A72D-4CF72B09145F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59348839-450A-4B27-A72D-4CF72B09145F}.Release|x64.ActiveCfg = Release|Any CPU
+		{59348839-450A-4B27-A72D-4CF72B09145F}.Release|x64.Build.0 = Release|Any CPU
+		{59348839-450A-4B27-A72D-4CF72B09145F}.Release|x86.ActiveCfg = Release|Any CPU
+		{59348839-450A-4B27-A72D-4CF72B09145F}.Release|x86.Build.0 = Release|Any CPU
 		{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}.Debug|x64.Build.0 = Debug|Any CPU
+		{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}.Debug|x86.Build.0 = Debug|Any CPU
 		{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}.Release|x64.ActiveCfg = Release|Any CPU
+		{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}.Release|x64.Build.0 = Release|Any CPU
+		{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}.Release|x86.ActiveCfg = Release|Any CPU
+		{ACE3E1A8-4670-4835-91B8-26B766CEDAB3}.Release|x86.Build.0 = Release|Any CPU
+		{776D13B6-1F8E-4E7E-B2F6-E7E380711663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{776D13B6-1F8E-4E7E-B2F6-E7E380711663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{776D13B6-1F8E-4E7E-B2F6-E7E380711663}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{776D13B6-1F8E-4E7E-B2F6-E7E380711663}.Debug|x64.Build.0 = Debug|Any CPU
+		{776D13B6-1F8E-4E7E-B2F6-E7E380711663}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{776D13B6-1F8E-4E7E-B2F6-E7E380711663}.Debug|x86.Build.0 = Debug|Any CPU
+		{776D13B6-1F8E-4E7E-B2F6-E7E380711663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{776D13B6-1F8E-4E7E-B2F6-E7E380711663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{776D13B6-1F8E-4E7E-B2F6-E7E380711663}.Release|x64.ActiveCfg = Release|Any CPU
+		{776D13B6-1F8E-4E7E-B2F6-E7E380711663}.Release|x64.Build.0 = Release|Any CPU
+		{776D13B6-1F8E-4E7E-B2F6-E7E380711663}.Release|x86.ActiveCfg = Release|Any CPU
+		{776D13B6-1F8E-4E7E-B2F6-E7E380711663}.Release|x86.Build.0 = Release|Any CPU
+		{B39F1212-026C-404D-8363-D31A648B2F5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B39F1212-026C-404D-8363-D31A648B2F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B39F1212-026C-404D-8363-D31A648B2F5A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B39F1212-026C-404D-8363-D31A648B2F5A}.Debug|x64.Build.0 = Debug|Any CPU
+		{B39F1212-026C-404D-8363-D31A648B2F5A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B39F1212-026C-404D-8363-D31A648B2F5A}.Debug|x86.Build.0 = Debug|Any CPU
+		{B39F1212-026C-404D-8363-D31A648B2F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B39F1212-026C-404D-8363-D31A648B2F5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B39F1212-026C-404D-8363-D31A648B2F5A}.Release|x64.ActiveCfg = Release|Any CPU
+		{B39F1212-026C-404D-8363-D31A648B2F5A}.Release|x64.Build.0 = Release|Any CPU
+		{B39F1212-026C-404D-8363-D31A648B2F5A}.Release|x86.ActiveCfg = Release|Any CPU
+		{B39F1212-026C-404D-8363-D31A648B2F5A}.Release|x86.Build.0 = Release|Any CPU
+		{57E806FC-750D-408A-8160-4CFBE2DAA159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E806FC-750D-408A-8160-4CFBE2DAA159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57E806FC-750D-408A-8160-4CFBE2DAA159}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{57E806FC-750D-408A-8160-4CFBE2DAA159}.Debug|x64.Build.0 = Debug|Any CPU
+		{57E806FC-750D-408A-8160-4CFBE2DAA159}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{57E806FC-750D-408A-8160-4CFBE2DAA159}.Debug|x86.Build.0 = Debug|Any CPU
+		{57E806FC-750D-408A-8160-4CFBE2DAA159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57E806FC-750D-408A-8160-4CFBE2DAA159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57E806FC-750D-408A-8160-4CFBE2DAA159}.Release|x64.ActiveCfg = Release|Any CPU
+		{57E806FC-750D-408A-8160-4CFBE2DAA159}.Release|x64.Build.0 = Release|Any CPU
+		{57E806FC-750D-408A-8160-4CFBE2DAA159}.Release|x86.ActiveCfg = Release|Any CPU
+		{57E806FC-750D-408A-8160-4CFBE2DAA159}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8A7E0669-1C8B-4129-96D3-C80489347D69} = {7536ECEA-AF9D-4097-8F90-6A13465805B3}
+		{B1175157-8A14-4C05-9915-FA5D4C91B9FA} = {7536ECEA-AF9D-4097-8F90-6A13465805B3}
+		{8F0E0A3A-9C6E-4BD6-8461-240DB0421FC7} = {8A7E0669-1C8B-4129-96D3-C80489347D69}
+		{510B296D-11B3-4FFF-8D44-D5A1035B10A5} = {8F0E0A3A-9C6E-4BD6-8461-240DB0421FC7}
+		{806F5559-4AD9-4736-AB02-D3C5FCBFE85A} = {510B296D-11B3-4FFF-8D44-D5A1035B10A5}
+		{87949714-62A6-4C7A-8B67-6488B26D669E} = {806F5559-4AD9-4736-AB02-D3C5FCBFE85A}
+		{EF6FD77B-3659-4E12-AE1E-458647DC2206} = {806F5559-4AD9-4736-AB02-D3C5FCBFE85A}
+		{2DE1BA3D-B341-4701-B0D6-2D41CC17BCFB} = {806F5559-4AD9-4736-AB02-D3C5FCBFE85A}
+		{776D13B6-1F8E-4E7E-B2F6-E7E380711663} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{B39F1212-026C-404D-8363-D31A648B2F5A} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{57E806FC-750D-408A-8160-4CFBE2DAA159} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{DFC51C71-779C-49A0-8BC0-401EDFC1D784} = {B1175157-8A14-4C05-9915-FA5D4C91B9FA}
+		{09CDA99D-5946-4751-8449-2BDCC08D8AEF} = {B1175157-8A14-4C05-9915-FA5D4C91B9FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7EC0D5D3-0DB7-49D6-969E-C5496DD2E740}

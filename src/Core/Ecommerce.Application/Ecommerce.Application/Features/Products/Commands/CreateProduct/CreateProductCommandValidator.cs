@@ -11,7 +11,7 @@ namespace Ecommerce.Application.Features.Products.Commands.CreateProduct
     {
         public CreateProductCommandValidator()
         {
-            RuleFor(x=>x.ProductName)
+            RuleFor(x => x.ProductName)
                 .NotEmpty()
                 .WithMessage("The name of Product can´t be empty")
                 .MaximumLength(100)

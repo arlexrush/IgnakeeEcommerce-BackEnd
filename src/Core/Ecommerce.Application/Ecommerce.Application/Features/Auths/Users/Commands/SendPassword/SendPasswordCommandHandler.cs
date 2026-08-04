@@ -25,14 +25,14 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.SendPassword
 
         public async Task<string> Handle(SendPasswordCommand request, CancellationToken cancellationToken)
         {
-            var user=await _userManager!.FindByEmailAsync(request.Email!);
+            var user = await _userManager!.FindByEmailAsync(request.Email!);
             if (user == null)
             {
                 throw new BadRequestException("This User Not Exist");
             }
-            var token=await _userManager.GeneratePasswordResetTokenAsync(user);
-            var plainTextBytes=Encoding.UTF8.GetBytes(token);
-            token=Convert.ToBase64String(plainTextBytes);
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var plainTextBytes = Encoding.UTF8.GetBytes(token);
+            token = Convert.ToBase64String(plainTextBytes);
 
             var emailMessage = new EmailMessage
             {
@@ -41,16 +41,16 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.SendPassword
                 To = request.Email,
             };
 
-            var result=await _emailService!.SendEmail(emailMessage, token);
+            var result = await _emailService!.SendEmail(emailMessage, token);
 
-            if(!result)
+            if (!result)
             {
                 throw new Exception("Can´t send Email");
             }
 
             var response = $"Email {request.Email} was sent successfully";
 
-            return response ;
+            return response;
         }
     }
 }

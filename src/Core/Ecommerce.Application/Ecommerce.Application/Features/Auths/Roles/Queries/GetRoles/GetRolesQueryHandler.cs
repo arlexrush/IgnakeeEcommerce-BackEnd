@@ -23,7 +23,7 @@ namespace Ecommerce.Application.Features.Auths.Roles.Queries.GetRoles
         {
             var roles = await _roleManager.Roles.ToListAsync();
 
-            var rolesResponse=roles.OrderBy(x=> x.Name).Select(x=>x.Name).ToList();
+            var rolesResponse = roles.OrderBy(x => x.Name).Select(x => x.Name).ToList();
             return rolesResponse!;
         }
     }

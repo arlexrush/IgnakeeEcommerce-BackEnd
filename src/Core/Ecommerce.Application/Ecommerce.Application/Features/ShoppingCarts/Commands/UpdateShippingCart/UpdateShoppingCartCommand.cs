@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.ShoppingCarts.Commands.UpdateShoppingCart
 {
-    public class UpdateShoppingCartCommand:IRequest<ShoppingCartVm>
+    public class UpdateShoppingCartCommand : IRequest<ShoppingCartVm>
     {
         public Guid? ShoppingCartId { get; set; }
 
-        public List<ShoppingCartItemVm>? ShoppingCartItems { get;set; }
+        public List<ShoppingCartItemVm>? ShoppingCartItems { get; set; }
 
     }
 }

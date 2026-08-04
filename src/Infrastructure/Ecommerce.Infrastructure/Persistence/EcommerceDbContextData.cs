@@ -22,7 +22,7 @@ namespace Ecommerce.Infrastructure.Persistence
         {
             try
             {
-                if(!roleManager.Roles.Any())
+                if (!roleManager.Roles.Any())
                 {
                     await roleManager.CreateAsync(new IdentityRole(Role.ADMIN));
                     await roleManager.CreateAsync(new IdentityRole(Role.USER));
@@ -32,20 +32,20 @@ namespace Ecommerce.Infrastructure.Persistence
                 {
                     var userAdmin = new User
                     {
-                        Name= "Arlex",
-                        LastName="Guzman",
-                        Email="arlexrush@gmail.com",
-                        UserName= "arlexrush",
-                        PhoneNumber="+34672245944",
-                        AvatarUrl= "https://pixabay.com/es/vectors/hombre-persona-avatar-rostro-156584/"
+                        Name = "Arlex",
+                        LastName = "Guzman",
+                        Email = "arlexrush@gmail.com",
+                        UserName = "arlexrush",
+                        PhoneNumber = "+34672245944",
+                        AvatarUrl = "https://pixabay.com/es/vectors/hombre-persona-avatar-rostro-156584/"
                     };
 
                     if (!userManager.Users!.Contains(userAdmin))
                     {
-                        var addData1=await userManager.CreateAsync(userAdmin, "Audir8lemas#");
+                        var addData1 = await userManager.CreateAsync(userAdmin, "Audir8lemas#");
                         await userManager.AddToRoleAsync(userAdmin, Role.ADMIN);
                     }
-                    
+
                     var userData = new User
                     {
                         Name = "Jose",
@@ -57,15 +57,15 @@ namespace Ecommerce.Infrastructure.Persistence
                     };
 
                     var ifContain = userManager.Users!.Contains(userData);
-                    if (!userManager.Users!.Contains(userData))                    
+                    if (!userManager.Users!.Contains(userData))
                     {
-                        var addData2=await userManager.CreateAsync(userData, "Playgirl01#");
+                        var addData2 = await userManager.CreateAsync(userData, "Playgirl01#");
                         await userManager.AddToRoleAsync(userData, Role.USER);
                     }
-                    
+
                 }
 
-                if(!context.Categories!.Any())
+                if (!context.Categories!.Any())
                 {
                     var categoriesData = File.ReadAllText(@"C:\Users\arlex\source\REPOS_.NET\ProjectShop\BackEnd\src\Infrastructure\Ecommerce.Infrastructure\Data\category.json");
                     var categories = JsonConvert.DeserializeObject<List<Category>>(categoriesData);
@@ -106,10 +106,10 @@ namespace Ecommerce.Infrastructure.Persistence
                 }
 
             }
-            catch( Exception ex )
+            catch (Exception ex)
             {
-                var logger=loggerFactory.CreateLogger<EcommerceDbContextData>();
-                logger.LogError(ex.Message );
+                var logger = loggerFactory.CreateLogger<EcommerceDbContextData>();
+                logger.LogError(ex.Message);
             }
         }
 

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Orders.Commands.UpdateOrder
 {
-    public class UpdateOrderCommand:IRequest<OrderVm>
+    public class UpdateOrderCommand : IRequest<OrderVm>
     {
         public int orderId { get; set; }
         public OrderStatus status { get; set; }

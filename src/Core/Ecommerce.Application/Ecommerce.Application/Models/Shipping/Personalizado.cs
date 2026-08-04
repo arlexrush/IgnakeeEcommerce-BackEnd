@@ -11,6 +11,6 @@ namespace Ecommerce.Application.Models.Shipping
     {
         //Obligatorio no
         public TipoPersonalizado? TipoPersonalizado { get; set; }
-        
+
     }
 }

@@ -9,11 +9,11 @@ namespace Ecommerce.Domain
 {
     public enum ProductStatus
     {
-        [EnumMember(Value="Active Product")]
+        [EnumMember(Value = "Active Product")]
         Active,
         [EnumMember(Value = "Desactive Product")]
         Desactive,
-        [EnumMember(Value ="Obsolete Product")]
+        [EnumMember(Value = "Obsolete Product")]
         Obsolete
     }
 }

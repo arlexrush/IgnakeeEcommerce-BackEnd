@@ -30,13 +30,13 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
         private readonly UserManager<User>? _userManager;
         private readonly StripeSettings? _stripeSettings;
 
-        public CreateOrderCommandHandler(IUnitOfWork? unitOfWork, 
-                                        IMapper? mapper, 
-                                        IAuthService? authService, 
+        public CreateOrderCommandHandler(IUnitOfWork? unitOfWork,
+                                        IMapper? mapper,
+                                        IAuthService? authService,
                                         ICorreosService? correosService,
                                         IShippingManagementService shippingManagementService,
-                                        UserManager<User>? userManager, 
-                                        ITaxService? taxService, 
+                                        UserManager<User>? userManager,
+                                        ITaxService? taxService,
                                         IOptions<StripeSettings>? stripeSettings)
         {
             _unitOfWork = unitOfWork;
@@ -45,18 +45,18 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
             _userManager = userManager;
             _correosService = correosService;
             _stripeSettings = stripeSettings!.Value;
-            _taxService= taxService;
+            _taxService = taxService;
             _shippingManagementService = shippingManagementService;
         }
 
         public async Task<OrderVm> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
         {
-            var orderPending = await _unitOfWork!.Repository<Order>().GetEntityAsync(x=>x.BuyerUserName==_authService!.GetSessionUser() && x.orderStatus==OrderStatus.Pending,
+            var orderPending = await _unitOfWork!.Repository<Order>().GetEntityAsync(x => x.BuyerUserName == _authService!.GetSessionUser() && x.orderStatus == OrderStatus.Pending,
                                                                                         null,
                                                                                         false
                                                                                     );
 
-            if(orderPending is not null)
+            if (orderPending is not null)
             {
                 try
                 {
@@ -66,11 +66,11 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
                 {
                     throw;
                 }
-                
+
             }
 
             var includes = new List<Expression<Func<ShoppingCart, object>>>();
-            includes.Add(x=>x.ShoppingCartItems!.OrderBy(x=>x.ProductName));
+            includes.Add(x => x.ShoppingCartItems!.OrderBy(x => x.ProductName));
             ShoppingCart shoppingCart;
             try
             {
@@ -86,40 +86,42 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
             {
                 throw;
             }
-            
+
             //if(shoppingCart is not null)
             //{
             //    throw new InvalidOperationException("Exist an shopping Cart with similar id");
             //}
 
-            var user=await _userManager!.FindByNameAsync(_authService!.GetSessionUser());
-            if(user is null)
+            var user = await _userManager!.FindByNameAsync(_authService!.GetSessionUser());
+            if (user is null)
             {
                 throw new InvalidOperationException("User without authentication");
             }
 
-            var address = await _unitOfWork.Repository<Address>().GetEntityAsync(u=>u.UserName==user.UserName, null, false);
-            OrderAddress orderAddress=new OrderAddress() { 
-                 UserName= user.UserName,
-                 City= request.AddressVm!.City??address.City,
-                 Country= request.AddressVm.Country??address.Country,
-                 CreatedBy= _authService.GetSessionUser(),
-                 CreatedDate= DateTime.UtcNow,
-                 PostalCode= request.AddressVm.PostalCode??address.PostalCode,
-                 Region=  request.AddressVm.Region??address.Region,
-                 UserAddress= request.AddressVm.Address??address.UserAddress
+            var address = await _unitOfWork.Repository<Address>().GetEntityAsync(u => u.UserName == user.UserName, null, false);
+            OrderAddress orderAddress = new OrderAddress()
+            {
+                UserName = user.UserName,
+                City = request.AddressVm!.City ?? address.City,
+                Country = request.AddressVm.Country ?? address.Country,
+                CreatedBy = _authService.GetSessionUser(),
+                CreatedDate = DateTime.UtcNow,
+                PostalCode = request.AddressVm.PostalCode ?? address.PostalCode,
+                Region = request.AddressVm.Region ?? address.Region,
+                UserAddress = request.AddressVm.Address ?? address.UserAddress
             };
-            
-            
-            List<decimal> montoItems=new List<decimal>(); 
-            List<decimal> montoTaxes=new List<decimal>();
-            List<int>pesosItems=new List<int>();
+
+
+            List<decimal> montoItems = new List<decimal>();
+            List<decimal> montoTaxes = new List<decimal>();
+            List<int> pesosItems = new List<int>();
             List<ParTaxItem> parTaxItems = new List<ParTaxItem>();
             List<ParTaxItem> taxSubTotals = new List<ParTaxItem>();
             Product product;
-            foreach (ShoppingCartItem item in shoppingCart!.ShoppingCartItems!) {
-                int productId=item.ProductId;
-                
+            foreach (ShoppingCartItem item in shoppingCart!.ShoppingCartItems!)
+            {
+                int productId = item.ProductId;
+
                 try
                 {
                     product = await _unitOfWork.Repository<Product>().GetByIdAsync(productId);
@@ -130,7 +132,7 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
                 }
 
                 //string countryName = product!.CountrySell!;
-                string countryName = orderAddress.Country!;                                
+                string countryName = orderAddress.Country!;
                 var includesDimensions = new List<Expression<Func<Product, object>>>();
                 includesDimensions.Add(x => x.ProductDimension!);
                 var productDimension = await _unitOfWork!.Repository<Product>().GetEntityAsync(x => x.Id == productId,
@@ -139,24 +141,25 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
                 int pesoItem = productDimension.ProductDimension!.Weight;
 
                 pesosItems.Add(pesoItem);
-                Country country = await _unitOfWork.Repository<Country>().GetEntityAsync(x => x.Name!.Equals(countryName),null, false);
-                int? countryId=country.Id;
-                string currency=country.Currency!;
-                List<Tax>? tasasTaxRequest=new List<Tax>();
+                Country country = await _unitOfWork.Repository<Country>().GetEntityAsync(x => x.Name!.Equals(countryName), null, false);
+                int? countryId = country.Id;
+                string currency = country.Currency!;
+                List<Tax>? tasasTaxRequest = new List<Tax>();
                 try
                 {
                     tasasTaxRequest = await _taxService!.GetTaxesByCountryByProduct(countryId, productId);
-                }catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
-                   
+
                 }
 
-                Tax selectTaxRequest=new Tax();
+                Tax selectTaxRequest = new Tax();
                 try
                 {
                     selectTaxRequest = await _taxService!.SelectTax(tasasTaxRequest, productId, (int)countryId!);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
 
                 }
@@ -177,26 +180,26 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
                 //    tasasTax.Add(selectTaxRequest);
                 //}
 
-                List<Tax> tasasTax = new List<Tax>();                                
+                List<Tax> tasasTax = new List<Tax>();
                 tasasTax.Add(selectTaxRequest);
-                var montoItem=Math.Round(item.Price*item.Quantity,2);
+                var montoItem = Math.Round(item.Price * item.Quantity, 2);
                 montoItems.Add(montoItem);
-                var montoWithTax=tasasTax.Select(x => ((x.Percentage/100) * montoItem)).ToList().Sum();
+                var montoWithTax = tasasTax.Select(x => ((x.Percentage / 100) * montoItem)).ToList().Sum();
                 var montotax = Math.Round((decimal)((montoWithTax!)), 2);
                 montoTaxes.Add(montotax);
-                ParTaxItem parTaxItem = new ParTaxItem() { TaxName = tasasTax.ElementAt(0).Name, TaxPercentage=tasasTax.ElementAt(0).Percentage, MontoItem=montoItem, TotalMontoItem= Math.Round((decimal)((tasasTax.ElementAt(0).Percentage! / 100) * montoItem!), 2) };
+                ParTaxItem parTaxItem = new ParTaxItem() { TaxName = tasasTax.ElementAt(0).Name, TaxPercentage = tasasTax.ElementAt(0).Percentage, MontoItem = montoItem, TotalMontoItem = Math.Round((decimal)((tasasTax.ElementAt(0).Percentage! / 100) * montoItem!), 2) };
                 parTaxItems.Add(parTaxItem);
             }
-            var taxesGrouped=parTaxItems.GroupBy(x => x.TaxName).Select(g=>new { TaxName=g.Key, SubTotal=g.Sum(z=>z.TotalMontoItem)}).ToList();
-            foreach(var tax in taxesGrouped)
+            var taxesGrouped = parTaxItems.GroupBy(x => x.TaxName).Select(g => new { TaxName = g.Key, SubTotal = g.Sum(z => z.TotalMontoItem) }).ToList();
+            foreach (var tax in taxesGrouped)
             {
-                taxSubTotals.Add(new ParTaxItem() { TaxName = tax.TaxName, MontoItem=null, TaxPercentage=null, TotalMontoItem=tax.SubTotal });
+                taxSubTotals.Add(new ParTaxItem() { TaxName = tax.TaxName, MontoItem = null, TaxPercentage = null, TotalMontoItem = tax.SubTotal });
             }
             //var subTotal =Math.Round(shoppingCart!.ShoppingCartItems!.Sum(x => x.Price * x.Quantity), 2);
             //var taxes = Math.Round(subTotal * Convert.ToDecimal(0.18));
             var pesoGraims = pesosItems.Count == 0 ? 1000 : pesosItems.Sum();
-            var subTotal=montoItems.Sum();
-            var taxes=montoTaxes.Sum();
+            var subTotal = montoItems.Sum();
+            var taxes = montoTaxes.Sum();
 
 
             // Selecting tarifa
@@ -207,40 +210,40 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
             {
                 tarifaShipping = await _shippingManagementService.SelectShippingTarifa(address, pesoGraims, shoppingCart);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                throw ex;
+                throw;
             }
-            
+
 
             // Correos Shipping Service
 
-                                //var calculaTarifaRequest = new CalculaTarifa()
-                                //{
-                                //    CodEtiquetador = "",
-                                //    CPDestinatario = address.PostalCode,
-                                //    CPRemitente = "46017",
-                                //    FechaOperacion = DateTime.UtcNow,
-                                //    IdiomaErrores = "SP",
-                                //    TipoPeso = "R",
-                                //    Valor = pesoGraims,
-                                //    CodProducto = shoppingCart.Id.ToString()
-                                //};
-                                //RespuestaCalculaTarifa tarifaCorreosResponse;
-                                //decimal shipping;
-                                //try
-                                //{
-                                //    tarifaCorreosResponse = await _correosService!.CalculaTarifaAsync(calculaTarifaRequest);
-                
-                                //}
-                                //catch(Exception ex)
-                                //{
-                                //    tarifaCorreosResponse = new RespuestaCalculaTarifa() { Tarifa="0" };
-                                //}
+            //var calculaTarifaRequest = new CalculaTarifa()
+            //{
+            //    CodEtiquetador = "",
+            //    CPDestinatario = address.PostalCode,
+            //    CPRemitente = "46017",
+            //    FechaOperacion = DateTime.UtcNow,
+            //    IdiomaErrores = "SP",
+            //    TipoPeso = "R",
+            //    Valor = pesoGraims,
+            //    CodProducto = shoppingCart.Id.ToString()
+            //};
+            //RespuestaCalculaTarifa tarifaCorreosResponse;
+            //decimal shipping;
+            //try
+            //{
+            //    tarifaCorreosResponse = await _correosService!.CalculaTarifaAsync(calculaTarifaRequest);
 
-                                //// get Operator
+            //}
+            //catch(Exception ex)
+            //{
+            //    tarifaCorreosResponse = new RespuestaCalculaTarifa() { Tarifa="0" };
+            //}
 
-                                //var shippingOperators = await _unitOfWork.Repository<ShippingOperator>().GetAsync(x=>x.Country!.Name==address.Country);
+            //// get Operator
+
+            //var shippingOperators = await _unitOfWork.Repository<ShippingOperator>().GetAsync(x=>x.Country!.Name==address.Country);
 
 
             // Cost Calculations By Correos Shipping Service
@@ -249,15 +252,15 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
             var shipping = shippingCorreos == 0 ? 10 : shippingCorreos;
             var total = subTotal + taxes + shipping;
 
-           
+
 
             // Creating or setting address to shipping
 
-            var buyerName=$"{user.Name} {user.LastName}";
+            var buyerName = $"{user.Name} {user.LastName}";
 
             var addressUserList = await _unitOfWork.Repository<Address>().GetAsync(u => u.UserName == user.UserName);
-            Address newAddress=new Address();
-            List<Address> newAddresses = new List<Address>();  
+            Address newAddress = new Address();
+            List<Address> newAddresses = new List<Address>();
             foreach (var x in addressUserList)
             {
 
@@ -290,25 +293,27 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
 
             // Creating Order to store to BBDD
 
-            var order = new Order() { BuyerName=buyerName, 
-                                        BuyerUserName=user.UserName, 
-                                        OrderAddress= orderAddress, 
-                                        SubTotal=subTotal, 
-                                        PriceTax=taxes,
-                                        ShippingCost=shipping,
-                                        Total=total, 
-                                        ParTaxItems=taxSubTotals,
-                                        WeightOrder= pesoGraims,
-                                        ShippingOperator=tarifaShipping.OperatorName};
+            var order = new Order()
+            {
+                BuyerName = buyerName,
+                BuyerUserName = user.UserName,
+                OrderAddress = orderAddress,
+                ParTaxItems = taxSubTotals,
+                WeightOrder = pesoGraims,
+            };
+            order.ApplyPricing(subTotal, taxes, shipping);
+            order.SetShippingDetails(tarifaShipping.OperatorName, shipping, pesoGraims);
+
             try
             {
                 await _unitOfWork.Repository<Order>().AddAsync(order);
+                await _unitOfWork.Complete();
             }
             catch (Exception)
             {
                 throw;
             }
-            
+
             //Mapping items fron ShoppingCart to Order
 
             var items = new List<OrderItem>();
@@ -321,9 +326,10 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
                     ImageUrl = shoppingElement.ProductPicture,
                     Price = shoppingElement.Price,
                     Quantity = shoppingElement.Quantity,
-                    OrderId=(int)order.Id!,
+                    OrderId = order.Id ?? 0,
                     //Id = shoppingElement.Id,
                 };
+                order.AddItem(orderItem);
                 items.Add(orderItem);
             }
 
@@ -344,11 +350,11 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
                 Debug.Print(ex.StackTrace);
                 throw;
             }
-            
+
 
             _unitOfWork.Repository<OrderItem>().AddRange(items);
-            var result=await _unitOfWork.Complete();
-            if(result<=0)
+            var result = await _unitOfWork.Complete();
+            if (result <= 0)
             {
                 throw new Exception("There is an error into Create Order Operation");
             }
@@ -362,15 +368,15 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
             Country countryPayment = await _unitOfWork.Repository<Country>().GetEntityAsync(x => x.Name!.Equals(countryNamePayment), null, false);
             if (String.IsNullOrEmpty(order.PaymentIntentId))
             {
-                var options= new PaymentIntentCreateOptions() 
+                var options = new PaymentIntentCreateOptions()
                 {
-                    Amount= (long)order.Total!,
-                    Currency= countryPayment.Currency==null? "usd": countryPayment.Currency,
-                    PaymentMethodTypes= new List<string>(){ "card" },
+                    Amount = (long)order.Total!,
+                    Currency = countryPayment.Currency == null ? "usd" : countryPayment.Currency,
+                    PaymentMethodTypes = new List<string>() { "card" },
                 };
-                intent= await service.CreateAsync(options);
+                intent = await service.CreateAsync(options);
                 order.PaymentIntentId = intent.Id;
-                order.ClientSecret= intent.ClientSecret;
+                order.ClientSecret = intent.ClientSecret;
                 order.StripeApiKey = _stripeSettings.Publishablekey;
             }
             else
@@ -383,8 +389,8 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
             }
 
             _unitOfWork.Repository<Order>().UpdateEntity(order);
-            var orderResult=await _unitOfWork.Complete();
-            if (orderResult<=0)
+            var orderResult = await _unitOfWork.Complete();
+            if (orderResult <= 0)
             {
                 throw new Exception("Error while to creating strype intent of payment");
             }

@@ -24,7 +24,7 @@ namespace Ecommerce.Application.Features.Countries.Queries.GetCountryList
 
         public async Task<IReadOnlyList<CountryVm>> Handle(GetCountryListQuery request, CancellationToken cancellationToken)
         {
-            var countries=await _unitOfWork!.Repository<Country>().GetAsync(null, x=>x.OrderBy(y=>y.Name), string.Empty, false);
+            var countries = await _unitOfWork!.Repository<Country>().GetAsync(null, x => x.OrderBy(y => y.Name), string.Empty, false);
 
             var response = _mapper!.Map<IReadOnlyList<CountryVm>>(countries);
             return response;

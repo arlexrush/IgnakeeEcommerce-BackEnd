@@ -5,6 +5,7 @@ using Ecommerce.Application.Mapping;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging.Abstractions;
 using Stripe;
 using System;
 using System.Collections.Generic;
@@ -18,10 +19,9 @@ namespace Ecommerce.Application
     {
         public static IServiceCollection AddApplicationService(this IServiceCollection services, IConfiguration configuration)
         {
-            var mapperConfig=new MapperConfiguration(mc => { mc.AddProfile(new MappingProfile()); });
-
-            IMapper mapper=mapperConfig.CreateMapper();
-            services.AddSingleton(mapper);
+            services.AddSingleton<IMapper>(_ => new MapperConfiguration(
+                cfg => cfg.AddProfile<MappingProfile>(),
+                NullLoggerFactory.Instance).CreateMapper());
 
             services.AddHttpClient();
 
