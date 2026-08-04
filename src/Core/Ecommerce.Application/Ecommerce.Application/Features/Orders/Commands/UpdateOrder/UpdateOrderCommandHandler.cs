@@ -22,12 +22,12 @@ namespace Ecommerce.Application.Features.Orders.Commands.UpdateOrder
         {
             var includes = new List<Expression<Func<Order, object>>>();
             includes.Add(x => x.OrderItems!.OrderBy(x => x.productName));
-            var order = await _unitOfWork!.Repository<Order>().GetEntityAsync(x=>x.Id==request.orderId, includes, false);
+            var order = await _unitOfWork!.Repository<Order>().GetEntityAsync(x => x.Id == request.orderId, includes, false);
             order.orderStatus = request.status;
 
             _unitOfWork.Repository<Order>().UpdateEntity(order);
-            var result=await _unitOfWork.Complete();
-            if (result<=0)
+            var result = await _unitOfWork.Complete();
+            if (result <= 0)
             {
                 throw new Exception("Can´t update order");
             }

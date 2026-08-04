@@ -1,9 +1,4 @@
-﻿using Azure;
-using CloudinaryDotNet.Actions;
-using EllipticCurve.Utils;
-using Org.BouncyCastle.Asn1.IsisMtt.X509;
-using Stripe;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -232,7 +227,7 @@ namespace Ecommerce.Application.Models.Shipping.Correos
 
         // Obligatorio NO, excepto (2). (2) Datos obligatorios si el producto es PAQ ESTÁNDAR INTERNACIONAL o PAQ PREMIUM INTERNACIONAL, destino BRASIL y concentrador SINBRA.
         // Modalidad de impuesto para el sistema SINERLOG - 1: DDP - 2: DDU / 1 espacio
-        public string? ModalidadImpuestos { get; set;}
+        public string? ModalidadImpuestos { get; set; }
 
     }
 }

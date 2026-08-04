@@ -21,7 +21,7 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.ResetPasswordByTok
 
         public async Task<string> Handle(ResetPasswordByTokenCommand request, CancellationToken cancellationToken)
         {
-            if(!string.Equals(request.Password, request.ConfirmPassword))
+            if (!string.Equals(request.Password, request.ConfirmPassword))
             {
                 throw new BadRequestException("Your new Passwoord don´t has been confirmed successfully");
             }
@@ -32,10 +32,10 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.ResetPasswordByTok
                 throw new BadRequestException("The User don´t exist or your Email don´t exist");
             }
 
-            var token=Convert.FromBase64String(request.Token!);
-            var tokenResult= Encoding.UTF8.GetString(token);
-            var resetResult= await _userManager.ResetPasswordAsync(userToUpdate, tokenResult, request.Password!);
-            if(!resetResult.Succeeded)
+            var token = Convert.FromBase64String(request.Token!);
+            var tokenResult = Encoding.UTF8.GetString(token);
+            var resetResult = await _userManager.ResetPasswordAsync(userToUpdate, tokenResult, request.Password!);
+            if (!resetResult.Succeeded)
             {
                 throw new Exception("Can´t to reset your password");
             }

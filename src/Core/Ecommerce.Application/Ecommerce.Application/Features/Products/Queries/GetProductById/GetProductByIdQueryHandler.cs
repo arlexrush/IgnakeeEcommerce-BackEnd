@@ -27,11 +27,11 @@ namespace Ecommerce.Application.Features.Products.Queries.GetProductById
         public async Task<ProductVm> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
         {
             var includes = new List<Expression<Func<Product, object>>>();
-            includes.Add(p => p.ProductImages!);            
-            includes.Add(p => p.Reviews!.OrderByDescending(x=>x.CreatedDate));
+            includes.Add(p => p.ProductImages!);
+            includes.Add(p => p.Reviews!.OrderByDescending(x => x.CreatedDate));
 
             var product = await _unitOfWork.Repository<Product>().GetEntityAsync(x => x.Id == request.ProductId, includes, true);
-            var productVm= _mapper.Map<ProductVm>(product);
+            var productVm = _mapper.Map<ProductVm>(product);
             return productVm;
         }
     }

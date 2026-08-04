@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Auths.Users.Commands.UpdateUser
 {
-    public class UpdateUserCommandValidator: AbstractValidator<UpdateUserCommand>
+    public class UpdateUserCommandValidator : AbstractValidator<UpdateUserCommand>
     {
-        public UpdateUserCommandValidator() 
-        { 
-            RuleFor(x=> x.Name).NotEmpty().WithMessage("The Name can´t be empty");
+        public UpdateUserCommandValidator()
+        {
+            RuleFor(x => x.Name).NotEmpty().WithMessage("The Name can´t be empty");
 
             RuleFor(x => x.LastName).NotEmpty().WithMessage("The LastName can´t be empty");
         }

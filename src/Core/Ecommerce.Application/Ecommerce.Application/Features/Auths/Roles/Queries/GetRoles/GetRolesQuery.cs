@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Auths.Roles.Queries.GetRoles
 {
-    public class GetRolesQuery:IRequest<List<string>>
+    public class GetRolesQuery : IRequest<List<string>>
     {
 
     }

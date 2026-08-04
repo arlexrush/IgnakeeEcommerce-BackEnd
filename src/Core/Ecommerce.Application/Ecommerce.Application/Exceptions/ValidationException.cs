@@ -1,5 +1,4 @@
 ﻿using FluentValidation.Results;
-using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +12,11 @@ namespace Ecommerce.Application.Exceptions
         public IDictionary<string, string[]> errors { get; }
         public ValidationException() : base("Errors occurred from validation")
         {
-            errors= new Dictionary<string, string[]>(); 
+            errors = new Dictionary<string, string[]>();
         }
 
-        public ValidationException(IEnumerable<ValidationFailure> failures):this() {
+        public ValidationException(IEnumerable<ValidationFailure> failures) : this()
+        {
             errors = failures.GroupBy(e => e.PropertyName, e => e.ErrorMessage).ToDictionary(failureGroup => failureGroup.Key, failureGroup => failureGroup.ToArray());
         }
     }

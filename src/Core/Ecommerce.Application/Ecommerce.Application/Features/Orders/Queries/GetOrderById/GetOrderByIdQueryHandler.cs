@@ -28,11 +28,11 @@ namespace Ecommerce.Application.Features.Orders.Queries.GetOrderById
         public async Task<OrderVm> Handle(GetOrderByIdQuery request, CancellationToken cancellationToken)
         {
             var includes = new List<Expression<Func<Order, object>>>();
-            includes.Add(x=>x.OrderAddress!);
+            includes.Add(x => x.OrderAddress!);
             includes.Add(x => x.OrderItems!);
-            includes.Add(x=>x.ParTaxItems!);
+            includes.Add(x => x.ParTaxItems!);
 
-            Order order=null;
+            Order order = null;
 
             try
             {
@@ -40,11 +40,11 @@ namespace Ecommerce.Application.Features.Orders.Queries.GetOrderById
             }
             catch (Exception ex)
             {
-                var errorMessage=ex.Message;
+                var errorMessage = ex.Message;
             }
 
             var response = _mapper!.Map<OrderVm>(order);
-            
+
             return response;
         }
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Specification.Products
 {
-    public class ProductSpecification:BaseSpecification<Product>
+    public class ProductSpecification : BaseSpecification<Product>
     {
         public ProductSpecification(ProductSpecificationParams specificationParams)
             : base(x => (string.IsNullOrEmpty(specificationParams.Search) || (x.ProductName!.Contains(specificationParams.Search)) || (x.Description!.Contains(specificationParams.Search)))
@@ -25,7 +25,7 @@ namespace Ecommerce.Application.Specification.Products
 
             if (!string.IsNullOrEmpty(specificationParams.Sort))
             {
-                switch(specificationParams.Sort)
+                switch (specificationParams.Sort)
                 {
                     case "nombreAsc":
                         AddOrderBy(p => p.ProductName!);

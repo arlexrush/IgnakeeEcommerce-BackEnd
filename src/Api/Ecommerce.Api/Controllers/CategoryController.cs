@@ -12,7 +12,7 @@ namespace Ecommerce.Api.Controllers
 
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class CategoryController:ControllerBase
+    public class CategoryController : ControllerBase
     {
         private readonly IMediator? _mediator;
 

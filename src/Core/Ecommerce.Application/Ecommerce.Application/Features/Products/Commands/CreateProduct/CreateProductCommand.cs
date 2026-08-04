@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Products.Commands.CreateProduct
 {
-    public class CreateProductCommand:IRequest<ProductVm>
+    public class CreateProductCommand : IRequest<ProductVm>
     {
-        public string? ProductName { get; set;}
-        public decimal ProductPrice { get; set;}
-        public string? ProductDescription { get; set;}
-        public string? ProductSeller { get; set;}
+        public string? ProductName { get; set; }
+        public decimal ProductPrice { get; set; }
+        public string? ProductDescription { get; set; }
+        public string? ProductSeller { get; set; }
         public string? CountrySell { get; set; }
-        public int Stock { get; set;}
-        public string? CategoryId { get; set;}
-        public IReadOnlyList<IFormFile>? ProductRequestImages { get; set;}
-        public IReadOnlyList<CreateProductImageCommand>? ImageUrls { get; set;}
+        public int Stock { get; set; }
+        public string? CategoryId { get; set; }
+        public IReadOnlyList<IFormFile>? ProductRequestImages { get; set; }
+        public IReadOnlyList<CreateProductImageCommand>? ImageUrls { get; set; }
 
 
     }

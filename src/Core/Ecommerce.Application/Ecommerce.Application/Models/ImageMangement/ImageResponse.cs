@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Models.ImageMangement
 {
-    public  class ImageResponse
+    public class ImageResponse
     {
 
         public string? Url { get; set; }

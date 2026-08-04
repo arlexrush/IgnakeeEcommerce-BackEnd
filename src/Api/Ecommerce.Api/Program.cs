@@ -19,14 +19,20 @@ using System.Text;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
+LoadDotEnv(builder.Configuration, builder.Environment.ContentRootPath);
 
 builder.Services.AddInfrastructureService(builder.Configuration);
 builder.Services.AddApplicationService(builder.Configuration);
 
 // Add DB Configurations and connection string
-builder.Services.AddDbContext<EcommerceDbContext>(options=>
-        options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString"), b=>b.MigrationsAssembly(typeof(EcommerceDbContext).Assembly.FullName))); //2d parameter is for to write in console each command and query with Database.
+builder.Services.AddDbContext<EcommerceDbContext>(options =>
+{
+    var connectionString = builder.Configuration.GetConnectionString("PostgresConnection")
+        ?? builder.Configuration.GetConnectionString("ConnectionString")
+        ?? throw new InvalidOperationException("A PostgreSQL connection string is required.");
 
+    options.UseNpgsql(connectionString, b => b.MigrationsAssembly(typeof(EcommerceDbContext).Assembly.FullName));
+});
 
 // Add services to CQRS implementation by Mediatr lybrary
 builder.Services.AddMediatR(c => c.RegisterServicesFromAssembly(typeof(GetProductListQueryHandler).Assembly));
@@ -46,8 +52,7 @@ builder.Services.AddControllers(opt =>
     // Sevice to Authorize
     opt.Filters.Add(new AuthorizeFilter(policy));
 
-}).AddJsonOptions(x=>x.JsonSerializerOptions.ReferenceHandler=ReferenceHandler.IgnoreCycles);
-
+}).AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 
 
@@ -64,20 +69,23 @@ identityBuilder.AddSignInManager<SignInManager<User>>();
 
 
 builder.Services.TryAddSingleton(TimeProvider.System);
-var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:Key"]!));
+var jwtKey = builder.Configuration["JwtSettings:Key"]
+    ?? throw new InvalidOperationException("JwtSettings:Key is required.");
+var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
 
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt=>
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
     {
-        opt.TokenValidationParameters=new TokenValidationParameters {
-            ValidateIssuerSigningKey= true,
-            IssuerSigningKey=key,
-            ValidateAudience= false,
-            ValidateIssuer=false,
+        opt.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = key,
+            ValidateAudience = false,
+            ValidateIssuer = false,
         };
     }
 );
 
-builder.Services.AddCors(options=>
+builder.Services.AddCors(options =>
     {
         options.AddPolicy("CorsPolicy", builder =>
             builder
@@ -109,25 +117,69 @@ app.UseCors("CorsPolicy");
 app.MapControllers();
 
 // upload Initial Data to BD
-using (var scope=app.Services.CreateScope())
+using (var scope = app.Services.CreateScope())
 {
-    var service=scope.ServiceProvider;
-    var loggerFactory=service.GetRequiredService<ILoggerFactory>();
+    var service = scope.ServiceProvider;
+    var loggerFactory = service.GetRequiredService<ILoggerFactory>();
 
     try
     {
         var context = service.GetRequiredService<EcommerceDbContext>();
         var userManager = service.GetRequiredService<UserManager<User>>();
-        var roleManager=service.GetRequiredService<RoleManager<IdentityRole>>();
+        var roleManager = service.GetRequiredService<RoleManager<IdentityRole>>();
         await context.Database.MigrateAsync();
         await EcommerceDbContextData.LoadDataAsync(context, userManager, roleManager, loggerFactory);
-    }catch(Exception ex)
+    }
+    catch (Exception ex)
     {
         var logger = loggerFactory.CreateLogger<Program>();
-        logger.LogError(ex, "Migration Error");        
+        logger.LogError(ex, "Migration Error");
     }
 
 }
 
 
 app.Run();
+
+static void LoadDotEnv(IConfigurationManager configuration, string contentRootPath)
+{
+    var directory = new DirectoryInfo(contentRootPath);
+    while (directory is not null)
+    {
+        var envFile = Path.Combine(directory.FullName, ".env");
+        if (File.Exists(envFile))
+        {
+            foreach (var line in File.ReadLines(envFile))
+            {
+                var valueLine = line.Trim();
+                if (valueLine.Length == 0 || valueLine.StartsWith('#'))
+                {
+                    continue;
+                }
+
+                var separatorIndex = valueLine.IndexOf('=');
+                if (separatorIndex <= 0)
+                {
+                    continue;
+                }
+
+                var key = valueLine[..separatorIndex].Trim();
+                var value = valueLine[(separatorIndex + 1)..].Trim();
+                if (value.Length >= 2 && value[0] == '"' && value[^1] == '"')
+                {
+                    value = value[1..^1];
+                }
+
+                if (Environment.GetEnvironmentVariable(key) is null)
+                {
+                    Environment.SetEnvironmentVariable(key, value);
+                }
+            }
+
+            configuration.AddEnvironmentVariables();
+            return;
+        }
+
+        directory = directory.Parent;
+    }
+}

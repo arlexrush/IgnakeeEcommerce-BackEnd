@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Auths.Users.Commands.RegisterUser
 {
-    public class RegisterUserCommand:IRequest<AuthResponse>
+    public class RegisterUserCommand : IRequest<AuthResponse>
     {
         public string? Name { get; set; }
         public string? LastName { get; set; }

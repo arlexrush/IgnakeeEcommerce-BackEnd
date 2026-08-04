@@ -17,8 +17,8 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.UpdateAdminUser
         private readonly RoleManager<IdentityRole>? _roleManager;
         private readonly IAuthService? _authService;
 
-        public UpdateAdminUserCommandHandler(UserManager<User>? userManager, 
-                                                RoleManager<IdentityRole>? roleManager, 
+        public UpdateAdminUserCommandHandler(UserManager<User>? userManager,
+                                                RoleManager<IdentityRole>? roleManager,
                                                 IAuthService? authService)
         {
             _userManager = userManager;
@@ -28,17 +28,17 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.UpdateAdminUser
 
         public async Task<User> Handle(UpdateAdminUserCommand request, CancellationToken cancellationToken)
         {
-            var updateUser=await _userManager!.FindByIdAsync(request.Id!);
-            if(updateUser is null)
+            var updateUser = await _userManager!.FindByIdAsync(request.Id!);
+            if (updateUser is null)
             {
                 throw new BadRequestException("There are not this User");
             }
 
-            updateUser.Name= request.Name;
-            updateUser.LastName= request.LastName;
+            updateUser.Name = request.Name;
+            updateUser.LastName = request.LastName;
             updateUser.PhoneNumber = request.Phone;
 
-            var result= await _userManager.UpdateAsync(updateUser);
+            var result = await _userManager.UpdateAsync(updateUser);
 
             if (!result.Succeeded)
             {
@@ -46,7 +46,7 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.UpdateAdminUser
             }
 
             var role = await _roleManager!.FindByNameAsync(request.Role!);
-            if(role is null)
+            if (role is null)
             {
                 throw new Exception("Assigned Role does not Exist");
             }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Exceptions
 {
-    public class UnprocessableEntityException:Exception
+    public class UnprocessableEntityException : Exception
     {
         public UnprocessableEntityException()
         {

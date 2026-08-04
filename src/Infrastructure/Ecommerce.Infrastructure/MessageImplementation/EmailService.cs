@@ -15,7 +15,7 @@ namespace Ecommerce.Infrastructure.MessageImplementation
     public class EmailService : IEmailService
     {
 
-        public EmailSettings EmailSettings { get; }    
+        public EmailSettings EmailSettings { get; }
 
         public ILogger<EmailSettings> Logger { get; }
 
@@ -32,16 +32,17 @@ namespace Ecommerce.Infrastructure.MessageImplementation
                 var client = new SendGridClient(EmailSettings.AppAPIKey);
                 var from = new EmailAddress(EmailSettings.Email);
                 var subject = email.Subject;
-                var to=new EmailAddress(email.To, email.To);
+                var to = new EmailAddress(email.To, email.To);
 
                 var plainTextContent = email.Body;
                 var htmlContent = $"{email.Body} {EmailSettings.BaseUrlClient}/password/reset/{token}";
-                var msg=MailHelper.CreateSingleEmail(from,to,subject,plainTextContent,htmlContent);
-                var response=await client.SendEmailAsync(msg);
+                var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+                var response = await client.SendEmailAsync(msg);
 
                 return response.IsSuccessStatusCode;
 
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 Logger.LogError("The Email wasn´t sended, there are errors");
                 return false;

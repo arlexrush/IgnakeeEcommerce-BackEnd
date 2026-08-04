@@ -15,6 +15,6 @@ namespace Ecommerce.Application.Models.Shipping.Correos
 
         // Obligatorio, SI, si Modo=1
         public TipoDatosEtiquetaXml? Etiqueta_xml { get; set; }
-        
+
     }
 }

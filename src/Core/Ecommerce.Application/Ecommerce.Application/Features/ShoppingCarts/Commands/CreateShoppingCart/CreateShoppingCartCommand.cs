@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.ShoppingCarts.Commands.CreateShoppingCart
 {
-    public class CreateShoppingCartCommand:IRequest<ShoppingCartVm>
+    public class CreateShoppingCartCommand : IRequest<ShoppingCartVm>
     {
     }
 }

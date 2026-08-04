@@ -25,8 +25,8 @@ namespace Ecommerce.Infrastructure.ImageCloudinary
         public async Task<ImageResponse> UploadImage(ImageData imageStream)
         {
             //initialize the cloudinay account
-            var account=new Account(cloudinarySettings.CloudName, 
-                                    cloudinarySettings.ApiKey, 
+            var account = new Account(cloudinarySettings.CloudName,
+                                    cloudinarySettings.ApiKey,
                                     cloudinarySettings.ApiSecret);
 
             //Cloudinary Client
@@ -37,18 +37,19 @@ namespace Ecommerce.Infrastructure.ImageCloudinary
 
             var uploadImage = new ImageUploadParams()
             {
-                File=new FileDescription(imageStream.Name, imageStream.ImageStream)
+                File = new FileDescription(imageStream.Name, imageStream.ImageStream)
             };
 
-            var uploadResult=await cloudinary.UploadAsync(uploadImage);
+            var uploadResult = await cloudinary.UploadAsync(uploadImage);
 
-            if (uploadResult.StatusCode==HttpStatusCode.OK)
+            if (uploadResult.StatusCode == HttpStatusCode.OK)
             {
-                var response= new ImageResponse() { 
-                    PublicId=uploadResult.PublicId,
-                     Url=uploadResult.Url.ToString(),
+                var response = new ImageResponse()
+                {
+                    PublicId = uploadResult.PublicId,
+                    Url = uploadResult.Url.ToString(),
                 };
-                return response; 
+                return response;
             }
 
             throw new Exception("Couldn´t to image upload");

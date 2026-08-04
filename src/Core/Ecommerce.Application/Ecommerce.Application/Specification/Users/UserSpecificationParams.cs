@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Specification.Users
 {
-    public class UserSpecificationParams:SpecificationParams
+    public class UserSpecificationParams : SpecificationParams
     {
 
     }

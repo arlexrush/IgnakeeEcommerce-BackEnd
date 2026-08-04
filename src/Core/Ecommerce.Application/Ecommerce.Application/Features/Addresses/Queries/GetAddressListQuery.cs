@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Addresses.Queries
 {
-    public class GetAddressListQuery:IRequest<IReadOnlyList<ShippingAddressVm>>
+    public class GetAddressListQuery : IRequest<IReadOnlyList<ShippingAddressVm>>
     {
 
     }

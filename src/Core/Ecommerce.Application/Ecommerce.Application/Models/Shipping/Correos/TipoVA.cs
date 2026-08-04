@@ -15,28 +15,28 @@ namespace Ecommerce.Application.Models.Shipping.Correos
     {
         // Obligatorio no / Si el envío lleva Seguro. Importe del seguro en cántimos de euro.
 
-            //900,50 = 090050.
+        //900,50 = 090050.
 
-            //Envíos Nacionales:
+        //Envíos Nacionales:
 
-            //Mínimo 0,6 €; Máximo 3000 €
+        //Mínimo 0,6 €; Máximo 3000 €
 
-            //Envíos Internacionales:
+        //Envíos Internacionales:
 
-            //Depende del País de destino.
+        //Depende del País de destino.
 
-            // 6 espacios
+        // 6 espacios
         public string? ImporteSeguro { get; set; }
 
         // Obligatorio no /
         public Reembolso? Reembolso { get; set; }
 
         // Obligatorio no / Solo en envíos Nacionales.
- 
-            //- N ó en blanco: Sin entrega exclusiva
 
-            //- S: Con entrega exclusiva
-            // 1 espacios
+        //- N ó en blanco: Sin entrega exclusiva
+
+        //- S: Con entrega exclusiva
+        // 1 espacios
         public string? EntregaExclusivaDestinatario { get; set; }
 
         // Obligatorio no /
@@ -73,9 +73,9 @@ namespace Ecommerce.Application.Models.Shipping.Correos
 
         // Obligatorio no / Solo en envíos Nacionales. 
 
-            //- N ó en blanco: Sin entrega con recogida
+        //- N ó en blanco: Sin entrega con recogida
 
-            //- S: Con entrega con recogida
+        //- S: Con entrega con recogida
 
         //Valor añadido no compatible con ComplejidadGestion.
         // 1 espacios
@@ -84,10 +84,10 @@ namespace Ecommerce.Application.Models.Shipping.Correos
 
         // Obligatorio no / Indica si hay que imprimir la etiqueta LI en la admisión en SGIE. 
 
-                //1: Si hay que imprimir la etiqueta.
+        //1: Si hay que imprimir la etiqueta.
 
-                //0: No hay que imprimir la etiqueta.
-                // 1 espacios
+        //0: No hay que imprimir la etiqueta.
+        // 1 espacios
         public string? IndImprimirEtiqueta { get; set; }
 
 

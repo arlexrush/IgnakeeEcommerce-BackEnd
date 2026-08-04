@@ -19,9 +19,9 @@ namespace Ecommerce.Application.Models.Shipping.Correos
         public string? Apellido2 { get; set; }
 
         // obligatorio:
-            //Remitente: envíos con origen Península/Baleares y destino Canarias, Ceuta o Melilla.También para envíos con origen Canarias, Ceuta y Melilla que vayan fuera de su territorio
+        //Remitente: envíos con origen Península/Baleares y destino Canarias, Ceuta o Melilla.También para envíos con origen Canarias, Ceuta y Melilla que vayan fuera de su territorio
 
-            //Destinatario: recomendable para envíos con origen/destino Canarias, Ceuta y Melilla con terceros
+        //Destinatario: recomendable para envíos con origen/destino Canarias, Ceuta y Melilla con terceros
 
         //Número de identificación Fiscal o CIF
         // 15 espacios

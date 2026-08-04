@@ -23,7 +23,7 @@ namespace Ecommerce.Application.Features.Addresses.Commands.UpdateAddress
         public async Task<ShippingAddressVm> Handle(UpdateAddressCommand request, CancellationToken cancellationToken)
         {
             //var addressRecord = await _unitOfWork!.Repository<Address>().GetEntityAsync(x => x.UserName == _authService!.GetSessionUser(), null, false);
-            var addressTarget = await _unitOfWork!.Repository<Address>().GetByIdAsync(request.Id);           
+            var addressTarget = await _unitOfWork!.Repository<Address>().GetByIdAsync(request.Id);
             if (addressTarget is not null)
             {
                 addressTarget!.UserName = _authService!.GetSessionUser();
@@ -34,13 +34,13 @@ namespace Ecommerce.Application.Features.Addresses.Commands.UpdateAddress
                 addressTarget.UserAddress = request.Address;
                 addressTarget.LastModifiedBy = addressTarget.UserName;
                 addressTarget.LastModifiedDate = DateTime.UtcNow;
-                var addressUpdated=await _unitOfWork.Repository<Address>().UpdateAsync(addressTarget);
+                var addressUpdated = await _unitOfWork.Repository<Address>().UpdateAsync(addressTarget);
 
             }
             else
             {
                 throw new InvalidOperationException("Not found Address to update");
-            }           
+            }
 
             var response = _mapper!.Map<ShippingAddressVm>(addressTarget);
 

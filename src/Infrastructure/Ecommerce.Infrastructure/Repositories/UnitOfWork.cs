@@ -25,11 +25,11 @@ namespace Ecommerce.Infrastructure.Repositories
             {
                 return await _context.SaveChangesAsync();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message, ex);
             }
-            
+
         }
 
         public void Dispose()

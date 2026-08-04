@@ -16,7 +16,7 @@ using Ecommerce.Domain;
 namespace Ecommerce.Infrastructure.ShippingGlovo
 {
     // Este servicio de Glovo, my ecommerce de alimentos recibe la orden de Glovo app y se prepara y se sube a la plataforma de glovo para que la app se encargue del cobro y del shipping.
-    public class GlovoService:IGlovoService
+    public class GlovoService : IGlovoService
     {
         private readonly GlovoSettings? _glovoSettings;
         private readonly Configuration? _config;
@@ -26,10 +26,10 @@ namespace Ecommerce.Infrastructure.ShippingGlovo
         {
             _glovoSettings = glovoSettings!.Value;
             _config = config;
-            
+
             config!.BasePath = _glovoSettings.UrlPath;
             config!.ApiKey.Add("Authorization", _glovoSettings.GlovoApiKey);
-            _menuApi = new MenuApi(config);            
+            _menuApi = new MenuApi(config);
         }
 
         public async Task<string> UploadMenu(Domain.Order order)
@@ -52,10 +52,10 @@ namespace Ecommerce.Infrastructure.ShippingGlovo
                 Debug.Print("Exception when calling MenuApi.UploadMenu: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
-                throw e;
+                throw;
             }
-            
-            
+
+
         }
 
     }

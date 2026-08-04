@@ -10,7 +10,7 @@ namespace Ecommerce.Api.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class CountryController:ControllerBase
+    public class CountryController : ControllerBase
     {
         private readonly IMediator? _mediator;
 
@@ -21,7 +21,7 @@ namespace Ecommerce.Api.Controllers
 
 
         [AllowAnonymous]
-        [HttpGet("getCountries", Name ="GetCountries")]
+        [HttpGet("getCountries", Name = "GetCountries")]
         [ProducesResponseType(typeof(IReadOnlyCollection<CountryVm>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<IReadOnlyCollection<CountryVm>>> GetCountries()
         {

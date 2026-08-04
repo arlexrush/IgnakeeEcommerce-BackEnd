@@ -16,9 +16,9 @@ namespace Ecommerce.Application.Features.Auths.Users.Queries.GetUserByToken
         private readonly IUnitOfWork? _unitOfWork;
         private readonly IMapper? _mapper;
 
-        public GetUserByTokenQueryHandler(UserManager<User>? userManager, 
-                                            IAuthService? authService, 
-                                            IUnitOfWork? unitOfWork, 
+        public GetUserByTokenQueryHandler(UserManager<User>? userManager,
+                                            IAuthService? authService,
+                                            IUnitOfWork? unitOfWork,
                                             IMapper? mapper)
         {
             _userManager = userManager;
@@ -29,17 +29,17 @@ namespace Ecommerce.Application.Features.Auths.Users.Queries.GetUserByToken
 
         public async Task<AuthResponse> Handle(GetUserByTokenQuery request, CancellationToken cancellationToken)
         {
-            var user=await _userManager!.FindByNameAsync(_authService!.GetSessionUser());
+            var user = await _userManager!.FindByNameAsync(_authService!.GetSessionUser());
             if (user is null)
             {
                 throw new Exception("The User haven´t enough Credentials, No Authenticade");
             }
-            if(!user.IsActive)
+            if (!user.IsActive)
             {
                 throw new Exception("The User is Inactive");
             }
 
-            var shippingAddress=await _unitOfWork!.Repository<Address>().GetEntityAsync(x=>x.UserName==user.UserName);
+            var shippingAddress = await _unitOfWork!.Repository<Address>().GetEntityAsync(x => x.UserName == user.UserName);
             var roles = await _userManager.GetRolesAsync(user);
             var authResponse = new AuthResponse
             {

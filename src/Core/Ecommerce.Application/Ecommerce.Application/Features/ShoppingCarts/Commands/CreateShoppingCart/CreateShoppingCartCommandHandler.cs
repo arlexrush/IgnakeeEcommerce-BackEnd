@@ -24,7 +24,7 @@ namespace Ecommerce.Application.Features.ShoppingCarts.Commands.CreateShoppingCa
 
         public async Task<ShoppingCartVm> Handle(CreateShoppingCartCommand request, CancellationToken cancellationToken)
         {
-            var shoppingCartMasterId=Guid.NewGuid();
+            var shoppingCartMasterId = Guid.NewGuid();
             var shoppingcartEntity = await _unitOfWork!.Repository<ShoppingCart>().GetEntityAsync(x => x.ShoppingCartMasterId == shoppingCartMasterId, null, true);
 
             if (shoppingcartEntity is not null)
@@ -33,8 +33,8 @@ namespace Ecommerce.Application.Features.ShoppingCarts.Commands.CreateShoppingCa
                 return shoppingCartResponse;
             }
 
-            var newShoppingCart = new ShoppingCart() { ShoppingCartMasterId=shoppingCartMasterId };
-            var shoppingCartEntity=await _unitOfWork.Repository<ShoppingCart>().AddAsync(newShoppingCart);
+            var newShoppingCart = new ShoppingCart() { ShoppingCartMasterId = shoppingCartMasterId };
+            var shoppingCartEntity = await _unitOfWork.Repository<ShoppingCart>().AddAsync(newShoppingCart);
             var shoppingcartResponse = _mapper!.Map<ShoppingCartVm>(shoppingCartEntity);
             return shoppingcartResponse;
         }

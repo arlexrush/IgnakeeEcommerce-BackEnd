@@ -16,11 +16,11 @@ namespace Ecommerce.Application.Models.Shipping.Correos
         // Obligatorio si
         // Tipo de documento adjunto: 1-.jpg 2-.pdf 3-.zpl
         // 1 espacios
-        public string? Tipo_Doc { get; set;}
+        public string? Tipo_Doc { get; set; }
 
         // Obligatorio si
         // Fichero propiamente dicho codificado en Base64
         // 100 espacios
-        public byte[]? Fichero { get; set;}
+        public byte[]? Fichero { get; set; }
     }
 }

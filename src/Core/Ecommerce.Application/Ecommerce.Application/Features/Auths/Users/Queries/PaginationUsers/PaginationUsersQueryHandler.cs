@@ -32,11 +32,11 @@ namespace Ecommerce.Application.Features.Auths.Users.Queries.PaginationUsers
 
             var spec = new UserSpecification(userSpecificationParams);
 
-            var users=await _unitOfWork.Repository<User>().GetAllByIdWithSpec(spec);
+            var users = await _unitOfWork.Repository<User>().GetAllByIdWithSpec(spec);
 
             var totalUsers = await _unitOfWork.Repository<User>().CountAsync(spec);
 
-            var rounded = Math.Ceiling((Convert.ToDecimal(totalUsers))/(Convert.ToDecimal(request.PageSize)));
+            var rounded = Math.Ceiling((Convert.ToDecimal(totalUsers)) / (Convert.ToDecimal(request.PageSize)));
 
             var totalPage = Convert.ToInt32(rounded);
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Application.Features.Auths.Users.Commands.ResetPasswordByToken
 {
-    public class ResetPasswordByTokenCommand: IRequest<string>
+    public class ResetPasswordByTokenCommand : IRequest<string>
     {
         public string? Email { get; set; }
         public string? Password { get; set; }

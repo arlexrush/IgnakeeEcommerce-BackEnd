@@ -24,16 +24,16 @@ namespace Ecommerce.Application.Features.Products.Commands.CreateProduct
 
         public async Task<ProductVm> Handle(CreateProductCommand request, CancellationToken cancellationToken)
         {
-            var product=_mapper!.Map<Product>(request);
-            var result= await _unitOfWork!.Repository<Product>().AddAsync(product);
+            var product = _mapper!.Map<Product>(request);
+            var result = await _unitOfWork!.Repository<Product>().AddAsync(product);
             if ((request.ImageUrls is not null) && (request.ImageUrls.Count > 0))
             {
-                var imagesToSave=request.ImageUrls.Select(c => { c.ProductId = product.Id; return c; }).ToList();
-                var images= _mapper!.Map<List<Image>>(imagesToSave);
+                var imagesToSave = request.ImageUrls.Select(c => { c.ProductId = product.Id; return c; }).ToList();
+                var images = _mapper!.Map<List<Image>>(imagesToSave);
                 _unitOfWork.Repository<Image>().AddRange(images);
                 await _unitOfWork.Complete();
-            } 
-            var newProduct=_mapper.Map<ProductVm>(product);
+            }
+            var newProduct = _mapper.Map<ProductVm>(product);
             return newProduct;
         }
     }

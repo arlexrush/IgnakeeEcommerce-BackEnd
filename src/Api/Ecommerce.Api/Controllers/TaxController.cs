@@ -15,7 +15,7 @@ namespace Ecommerce.Api.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class TaxController:ControllerBase
+    public class TaxController : ControllerBase
     {
         private readonly IMediator? _mediator;
 
@@ -29,7 +29,7 @@ namespace Ecommerce.Api.Controllers
         [ProducesResponseType(typeof(IReadOnlyList<TaxVm>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<IReadOnlyList<TaxVm>>> GetTaxesByCountryList(int id)
         {
-            var query = new GetTaxesByCountryQuery() { CountryId=id };
+            var query = new GetTaxesByCountryQuery() { CountryId = id };
             IReadOnlyList<TaxVm> responseTaxes = await _mediator!.Send(query);
             return Ok(responseTaxes);
         }
@@ -59,7 +59,7 @@ namespace Ecommerce.Api.Controllers
         [ProducesResponseType(typeof(TaxVm), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<TaxVm>> DeleteTax(int id)
         {
-            var request=new DeleteTaxCommand() { Id=id };
+            var request = new DeleteTaxCommand() { Id = id };
             var response = await _mediator!.Send(request);
             return Ok(response);
         }

@@ -24,7 +24,7 @@ namespace Ecommerce.Application.Features.Taxes.Commands.UpdateTax
 
         public async Task<TaxVm> Handle(UpdateTaxCommand request, CancellationToken cancellationToken)
         {
-            var taxCurrent= await _unitOfWork!.Repository<Tax>().GetByIdAsync(request.TaxId);
+            var taxCurrent = await _unitOfWork!.Repository<Tax>().GetByIdAsync(request.TaxId);
             if (taxCurrent is null)
             {
                 throw new Exception("Not found Tax");
@@ -33,7 +33,7 @@ namespace Ecommerce.Application.Features.Taxes.Commands.UpdateTax
             taxCurrent.Name = request.Name;
             taxCurrent.Percentage = request.Percentage;
             taxCurrent.ApplicationTax = request.ApplicationTax;
-            var taxUpdate= await _unitOfWork.Repository<Tax>().UpdateAsync(taxCurrent);
+            var taxUpdate = await _unitOfWork.Repository<Tax>().UpdateAsync(taxCurrent);
             var response = _mapper!.Map<TaxVm>(taxUpdate);
             return response;
         }

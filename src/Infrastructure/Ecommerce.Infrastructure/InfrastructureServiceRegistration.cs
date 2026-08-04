@@ -52,7 +52,7 @@ namespace Ecommerce.Infrastructure
             services.AddTransient<Configuration>();
             services.AddTransient<PaymentIntentService>();
             services.AddHttpContextAccessor();
-            
+
 
             services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
             services.Configure<CloudinarySettings>(configuration.GetSection("CloudinarySettings"));

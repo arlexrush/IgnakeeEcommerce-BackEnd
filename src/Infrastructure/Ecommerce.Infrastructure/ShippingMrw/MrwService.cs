@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Ecommerce.Infrastructure.ShippingMrw
 {
-    public class MrwService:IMrwService
+    public class MrwService : IMrwService
     {
 
         private readonly IHttpClientFactory? _httpClient;
@@ -18,10 +18,10 @@ namespace Ecommerce.Infrastructure.ShippingMrw
         public MrwService(IHttpClientFactory? httpClient, IOptions<MRWSettings>? setting)
         {
             _httpClient = httpClient;
-            _setting = setting.Value;                 
+            _setting = setting.Value;
         }
 
-        
+
 
         public async Task<RespuestaPreRegistroEnvio> PreRegistro(PreRegistroEnvio request)
         {
@@ -33,7 +33,7 @@ namespace Ecommerce.Infrastructure.ShippingMrw
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw;
             }
 
             response = new RespuestaPreRegistroEnvio()
@@ -100,9 +100,9 @@ namespace Ecommerce.Infrastructure.ShippingMrw
                 IdiomaErrores = "",
                 Resultado = 0,
                 TotalBultos = 1,
-                BultoError = { 
-                    DescError = "", 
-                    Error = "", 
+                BultoError = {
+                    DescError = "",
+                    Error = "",
                     Numbulto = 1 }
             };
 
@@ -118,7 +118,7 @@ namespace Ecommerce.Infrastructure.ShippingMrw
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw;
             }
 
             var response = new SolicitudEtiquetaOpResponse()
@@ -161,7 +161,7 @@ namespace Ecommerce.Infrastructure.ShippingMrw
                                                                 PesoReal = "",
                                                                 PesoVol = "",
                                                                 Referencia = "",
-                                                                VA={    
+                                                                VA={
                                                                         ComplejidadGestion=1,
                                                                         DUA="",
                                                                         eAR="",
@@ -197,12 +197,12 @@ namespace Ecommerce.Infrastructure.ShippingMrw
             {
                 responseMRW = await SolicitarTarifaEnvioAsync(request);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                responseMRW= 2000;
+                responseMRW = 2000;
             }
-            
-            var response = new RespuestaCalculaTarifa() { Tarifa=responseMRW.ToString(), Resultado=0, FechaRespuesta=DateTime.UtcNow};
+
+            var response = new RespuestaCalculaTarifa() { Tarifa = responseMRW.ToString(), Resultado = 0, FechaRespuesta = DateTime.UtcNow };
             return response;
         }
 
@@ -257,10 +257,10 @@ namespace Ecommerce.Infrastructure.ShippingMrw
 
         public async Task<byte[]> GenerarEtiquetaEnvioAsync(SolicitudEtiquetaOpRequest request)
         {
-                       
+
             _accessToken = await GetAccessTokenAsync();
             using (var client = _httpClient!.CreateClient())
-            {                
+            {
                 client.BaseAddress = new Uri(_setting!.ApiUrl!);
                 client.DefaultRequestHeaders.Add("Authorization", "Bearer " + _accessToken);
 
@@ -302,6 +302,6 @@ namespace Ecommerce.Infrastructure.ShippingMrw
                 }
             }
         }
-        
+
     }
 }
