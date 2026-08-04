@@ -1,6 +1,5 @@
 ﻿using Ecommerce.Domain.Commons;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce.Domain
 {
@@ -9,7 +8,7 @@ namespace Ecommerce.Domain
         public Product? Product { get; set; }
         public int ProductId { get; set; }
 
-        [Column(TypeName = "DECIMAL(20,2)")]
+        [Precision(20, 2)]
         public decimal? Price { get; set; }
         public int Quantity { get; set; }
         public virtual Order? Order { get; set; }

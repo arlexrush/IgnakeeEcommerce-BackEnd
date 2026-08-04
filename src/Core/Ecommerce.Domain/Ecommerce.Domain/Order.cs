@@ -1,9 +1,7 @@
 ﻿using Ecommerce.Domain.Commons;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
 
 namespace Ecommerce.Domain
 {
@@ -41,21 +39,20 @@ namespace Ecommerce.Domain
         public virtual ICollection<ParTaxItem>? ParTaxItems { get; set; }
         public virtual Shipping? Shipping { get; set; }
 
-        [Column(TypeName = "DECIMAL(20,2)")]
+        [Precision(20, 2)]
         public decimal? SubTotal { get; set; }
         public OrderStatus orderStatus { get; set; } = OrderStatus.Pending;
 
-        [Column(TypeName = "DECIMAL(20,2)")]
+        [Precision(20, 2)]
         public decimal? Total { get; set; }
 
-        [Column(TypeName = "DECIMAL(20,2)")]
+        [Precision(20, 2)]
         public decimal? PriceTax { get; set; }
 
-        [Column(TypeName = "INT")]
         public int? WeightOrder { get; set; }
         public string? ShippingOperator { get; set; }
 
-        [Column(TypeName = "DECIMAL(20,2)")]
+        [Precision(20, 2)]
         public decimal? ShippingCost { get; set; }
         public string? PaymentIntentId { get; set; }
         public string? ClientSecret { get; set; }

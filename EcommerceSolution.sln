@@ -28,6 +28,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{32F7003D-3
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "github", "github", "{7536ECEA-AF9D-4097-8F90-6A13465805B3}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "upgrades", "upgrades", "{8A7E0669-1C8B-4129-96D3-C80489347D69}"
 EndProject
@@ -76,14 +79,23 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{DFC51C71-779C-49A0-8BC0-401EDFC1D784}"
 	ProjectSection(SolutionItems) = preProject
 		.dockerignore = .dockerignore
+		docker-compose.production.yml = docker-compose.production.yml
 		docker-compose.yml = docker-compose.yml
 		Dockerfile = Dockerfile
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuraciones", "Configuraciones", "{09CDA99D-5946-4751-8449-2BDCC08D8AEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "develop", "develop", "{CF0EF164-C1DD-4DA5-981C-AED7A2D94DFC}"
 	ProjectSection(SolutionItems) = preProject
 		.env = .env
 		.env.example = .env.example
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "production", "production", "{14E3302F-DC64-4C33-8C7B-5C46F482A950}"
+	ProjectSection(SolutionItems) = preProject
+		.env.production = .env.production
+		.env.production.example = .env.production.example
 	EndProjectSection
 EndProject
 Global
@@ -198,6 +210,8 @@ Global
 		{57E806FC-750D-408A-8160-4CFBE2DAA159} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 		{DFC51C71-779C-49A0-8BC0-401EDFC1D784} = {B1175157-8A14-4C05-9915-FA5D4C91B9FA}
 		{09CDA99D-5946-4751-8449-2BDCC08D8AEF} = {B1175157-8A14-4C05-9915-FA5D4C91B9FA}
+		{CF0EF164-C1DD-4DA5-981C-AED7A2D94DFC} = {09CDA99D-5946-4751-8449-2BDCC08D8AEF}
+		{14E3302F-DC64-4C33-8C7B-5C46F482A950} = {09CDA99D-5946-4751-8449-2BDCC08D8AEF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7EC0D5D3-0DB7-49D6-969E-C5496DD2E740}

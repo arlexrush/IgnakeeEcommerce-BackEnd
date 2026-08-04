@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Ecommerce.Infrastructure.Migrations
 {
     [DbContext(typeof(EcommerceDbContext))]
-    [Migration("20260804005933_InitialPostgres")]
+    [Migration("20260804022636_InitialPostgres")]
     partial class InitialPostgres
     {
         /// <inheritdoc />
@@ -29,39 +29,47 @@ namespace Ecommerce.Infrastructure.Migrations
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
                     b.Property<string>("City")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("Country")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("PostalCode")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("Region")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("UserAddress")
-                        .HasColumnType("NVARCHAR(4000)");
+                        .HasMaxLength(4000)
+                        .HasColumnType("character varying(4000)");
 
                     b.Property<string>("UserName")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.HasKey("Id");
 
@@ -72,24 +80,27 @@ namespace Ecommerce.Infrastructure.Migrations
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Name")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.HasKey("Id");
 
@@ -100,15 +111,16 @@ namespace Ecommerce.Infrastructure.Migrations
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Currency")
                         .HasColumnType("text");
@@ -120,10 +132,11 @@ namespace Ecommerce.Infrastructure.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Name")
                         .HasColumnType("text");
@@ -137,31 +150,34 @@ namespace Ecommerce.Infrastructure.Migrations
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int?>("ProductId")
                         .IsRequired()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<string>("PublicCode")
                         .HasColumnType("text");
 
                     b.Property<string>("Url")
-                        .HasColumnType("NVARCHAR(4000)");
+                        .HasMaxLength(4000)
+                        .HasColumnType("character varying(4000)");
 
                     b.HasKey("Id");
 
@@ -174,7 +190,7 @@ namespace Ecommerce.Infrastructure.Migrations
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
@@ -188,28 +204,32 @@ namespace Ecommerce.Infrastructure.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int?>("OrderAddressId")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<string>("PaymentIntentId")
                         .HasColumnType("text");
 
                     b.Property<decimal?>("PriceTax")
-                        .HasColumnType("DECIMAL(20,2)");
+                        .HasPrecision(20, 2)
+                        .HasColumnType("numeric(20,2)");
 
                     b.Property<decimal?>("ShippingCost")
-                        .HasColumnType("DECIMAL(20,2)");
+                        .HasPrecision(20, 2)
+                        .HasColumnType("numeric(20,2)");
 
                     b.Property<string>("ShippingOperator")
                         .HasColumnType("text");
@@ -218,13 +238,15 @@ namespace Ecommerce.Infrastructure.Migrations
                         .HasColumnType("text");
 
                     b.Property<decimal?>("SubTotal")
-                        .HasColumnType("DECIMAL(20,2)");
+                        .HasPrecision(20, 2)
+                        .HasColumnType("numeric(20,2)");
 
                     b.Property<decimal?>("Total")
-                        .HasColumnType("DECIMAL(20,2)");
+                        .HasPrecision(20, 2)
+                        .HasColumnType("numeric(20,2)");
 
                     b.Property<int?>("WeightOrder")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<int>("orderStatus")
                         .HasColumnType("integer");
@@ -240,39 +262,47 @@ namespace Ecommerce.Infrastructure.Migrations
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
                     b.Property<string>("City")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("Country")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("PostalCode")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("Region")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("UserAddress")
-                        .HasColumnType("NVARCHAR(4000)");
+                        .HasMaxLength(4000)
+                        .HasColumnType("character varying(4000)");
 
                     b.Property<string>("UserName")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.HasKey("Id");
 
@@ -283,33 +313,36 @@ namespace Ecommerce.Infrastructure.Migrations
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("ImageUrl")
                         .HasColumnType("text");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("OrderId")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<decimal?>("Price")
-                        .HasColumnType("DECIMAL(20,2)");
+                        .HasPrecision(20, 2)
+                        .HasColumnType("numeric(20,2)");
 
                     b.Property<int>("ProductId")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<int>("ProductItemId")
                         .HasColumnType("integer");
@@ -333,36 +366,41 @@ namespace Ecommerce.Infrastructure.Migrations
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<decimal?>("MontoItem")
-                        .HasColumnType("DECIMAL(20,2)");
+                        .HasPrecision(20, 2)
+                        .HasColumnType("numeric(20,2)");
 
                     b.Property<int?>("OrderId")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<string>("TaxName")
                         .HasColumnType("text");
 
                     b.Property<decimal?>("TaxPercentage")
-                        .HasColumnType("DECIMAL(20,2)");
+                        .HasPrecision(20, 2)
+                        .HasColumnType("numeric(20,2)");
 
                     b.Property<decimal?>("TotalMontoItem")
-                        .HasColumnType("DECIMAL(20,2)");
+                        .HasPrecision(20, 2)
+                        .HasColumnType("numeric(20,2)");
 
                     b.HasKey("Id");
 
@@ -375,100 +413,118 @@ namespace Ecommerce.Infrastructure.Migrations
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
                     b.Property<string>("BarCode")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<int?>("CategoryId")
                         .IsRequired()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<string>("CountrySell")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Currency")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("Description")
-                        .HasColumnType("NVARCHAR(4000)");
+                        .HasMaxLength(4000)
+                        .HasColumnType("character varying(4000)");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<decimal?>("Price")
-                        .HasColumnType("DECIMAL(20,2)");
+                        .HasPrecision(20, 2)
+                        .HasColumnType("numeric(20,2)");
 
                     b.Property<string>("ProductCode")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<int?>("ProductDimensionId")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<string>("ProductName")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("ProviderName")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<int>("PurchaseCriteria")
                         .HasColumnType("integer");
 
                     b.Property<int?>("PurchaseLeadTime")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<string>("PurchaseLeadTimeUnit")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<int?>("PurchaseLot")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<string>("QrCode")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<int?>("Rating")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<int?>("RatingTotal")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<string>("ReplenishmentPoint")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<int?>("SafetyStock")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<string>("SellerName")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<int>("Status")
                         .HasColumnType("integer");
 
                     b.Property<int?>("Stock")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<string>("UnitToBuy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("UnitToProduction")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("UnitToSell")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("UnitToStore")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<int>("typeProduct")
                         .HasColumnType("integer");
@@ -484,30 +540,32 @@ namespace Ecommerce.Infrastructure.Migrations
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("Depth")
                         .HasColumnType("integer");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("Length")
                         .HasColumnType("integer");
 
                     b.Property<int>("ProductId")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<int>("Weight")
                         .HasColumnType("integer");
@@ -527,30 +585,34 @@ namespace Ecommerce.Infrastructure.Migrations
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
                     b.Property<string>("Comment")
-                        .HasColumnType("NVARCHAR(4000)");
+                        .HasMaxLength(4000)
+                        .HasColumnType("character varying(4000)");
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Name")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<int>("ProductId")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<int>("Rating")
                         .HasColumnType("integer");
@@ -566,30 +628,33 @@ namespace Ecommerce.Infrastructure.Migrations
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int?>("OperatorId")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<int?>("OrderId")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<decimal?>("TotalShipping")
-                        .HasColumnType("DECIMAL(20,2)");
+                        .HasPrecision(20, 2)
+                        .HasColumnType("numeric(20,2)");
 
                     b.HasKey("Id");
 
@@ -605,27 +670,29 @@ namespace Ecommerce.Infrastructure.Migrations
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
                     b.Property<int?>("CountryId")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<string>("CountryName")
                         .HasColumnType("text");
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("NameService")
                         .HasColumnType("text");
@@ -640,7 +707,8 @@ namespace Ecommerce.Infrastructure.Migrations
                         .HasColumnType("integer");
 
                     b.Property<decimal?>("TarifaShipping")
-                        .HasColumnType("DECIMAL(20,2)");
+                        .HasPrecision(20, 2)
+                        .HasColumnType("numeric(20,2)");
 
                     b.Property<string>("Type")
                         .HasColumnType("text");
@@ -656,21 +724,23 @@ namespace Ecommerce.Infrastructure.Migrations
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<Guid?>("ShoppingCartMasterId")
                         .HasColumnType("uuid");
@@ -684,7 +754,7 @@ namespace Ecommerce.Infrastructure.Migrations
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
@@ -692,19 +762,22 @@ namespace Ecommerce.Infrastructure.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("DECIMAL(20,2)");
+                        .HasPrecision(20, 2)
+                        .HasColumnType("numeric(20,2)");
 
                     b.Property<int>("ProductId")
                         .HasColumnType("integer");
@@ -720,7 +793,7 @@ namespace Ecommerce.Infrastructure.Migrations
 
                     b.Property<int?>("ShoppingCartId")
                         .IsRequired()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<Guid?>("ShoppingCartMasterId")
                         .HasColumnType("uuid");
@@ -739,7 +812,7 @@ namespace Ecommerce.Infrastructure.Migrations
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
@@ -747,25 +820,28 @@ namespace Ecommerce.Infrastructure.Migrations
                         .HasColumnType("integer");
 
                     b.Property<int>("CountryId")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Name")
                         .HasColumnType("text");
 
                     b.Property<decimal?>("Percentage")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(18, 2)
+                        .HasColumnType("numeric(18,2)");
 
                     b.HasKey("Id");
 
@@ -777,28 +853,30 @@ namespace Ecommerce.Infrastructure.Migrations
             modelBuilder.Entity("Ecommerce.Domain.TaxByProduct", b =>
                 {
                     b.Property<int?>("ProductId")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<int?>("TaxId")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int?>("Id")
-                        .HasColumnType("INT");
+                        .HasColumnType("integer");
 
                     b.Property<bool>("IsActivated")
                         .HasColumnType("boolean");
 
                     b.Property<string>("LastModifiedBy")
-                        .HasColumnType("NVARCHAR(100)");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("DATETIME");
+                        .HasColumnType("timestamp with time zone");
 
                     b.HasKey("ProductId", "TaxId");
 
