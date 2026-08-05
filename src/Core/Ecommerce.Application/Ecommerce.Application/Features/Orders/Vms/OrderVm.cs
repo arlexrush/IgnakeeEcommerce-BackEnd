@@ -28,6 +28,7 @@ namespace Ecommerce.Application.Features.Orders.Vms
         public string? PaymentIntentId { get; set; }
         public string? ClientSecret { get; set; }
         public string? StripeApiKey { get; set; }
+        public PaymentStatus PaymentStatus { get; set; }
 
         public string? BuyerUserName { get; set; }
         public string? BuyerName { get; set; }

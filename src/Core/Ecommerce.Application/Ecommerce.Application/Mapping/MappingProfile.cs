@@ -61,7 +61,8 @@ namespace Ecommerce.Application.Mapping
                 .ForMember(x => x.ShippingAddress, y => y.MapFrom(z => z.OrderAddress))
                 .ForMember(x => x.Taxes, y => y.MapFrom(z => z.PriceTax))
                 .ForMember(x => x.Shipping, y => y.MapFrom(z => z.ShippingCost))
-                .ForMember(x => x.Status, y => y.MapFrom(z => z.orderStatus));
+                .ForMember(x => x.Status, y => y.MapFrom(z => z.orderStatus))
+                .ForMember(x => x.PaymentStatus, y => y.MapFrom(z => z.PaymentStatus));
             CreateMap<OrderVm, Order>()
                 .ForMember(x => x.OrderAddress, y => y.MapFrom(z => z.ShippingAddress))
                 .ForMember(x => x.PriceTax, y => y.MapFrom(z => z.Taxes))

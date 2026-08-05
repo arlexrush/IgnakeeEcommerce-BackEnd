@@ -361,7 +361,6 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
 
             //Payment
 
-            StripeConfiguration.ApiKey = _stripeSettings!.SecretKey;
             var service = new PaymentIntentService();
             PaymentIntent intent;
             var countryNamePayment = orderAddress.Country;
@@ -370,9 +369,10 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
             {
                 var options = new PaymentIntentCreateOptions()
                 {
-                    Amount = (long)order.Total!,
+                    Amount = checked((long)Math.Round((order.Total ?? 0m) * 100m, MidpointRounding.ToEven)),
                     Currency = countryPayment.Currency == null ? "usd" : countryPayment.Currency,
                     PaymentMethodTypes = new List<string>() { "card" },
+                    Metadata = new Dictionary<string, string> { ["order_id"] = order.Id!.Value.ToString() },
                 };
                 intent = await service.CreateAsync(options);
                 order.PaymentIntentId = intent.Id;
@@ -383,7 +383,7 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
             {
                 var options = new PaymentIntentUpdateOptions()
                 {
-                    Amount = (long)order.Total!,
+                    Amount = checked((long)Math.Round((order.Total ?? 0m) * 100m, MidpointRounding.ToEven)),
                 };
                 await service.UpdateAsync(order.PaymentIntentId, options);
             }

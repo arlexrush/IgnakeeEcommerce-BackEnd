@@ -111,6 +111,11 @@ namespace Ecommerce.Infrastructure.Persistence
             builder.Entity<Order>()
                 .HasOne(z => z.Shipping)
                 .WithOne();
+
+            builder.Entity<Order>()
+                .Property(x => x.PaymentStatus)
+                .HasConversion<string>()
+                .HasDefaultValue(PaymentStatus.Pending);
         }
         public DbSet<Product>? Products { get; set; }
         public DbSet<Address>? Addresses { get; set; }
