@@ -1,18 +1,13 @@
 ﻿using AutoMapper;
 using Ecommerce.Application.Contracts.Identity;
-using Ecommerce.Application.Contracts.Infrastructure;
 using Ecommerce.Application.Exceptions;
 using Ecommerce.Application.Features.Orders.Vms;
 using Ecommerce.Application.Models.Payment;
-using Ecommerce.Application.Models.Shipping;
-using Ecommerce.Application.Models.Shipping.Correos;
 using Ecommerce.Application.Persistence;
 using Ecommerce.Domain;
 using MediatR;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Stripe;
-using System.Diagnostics;
 using System.Linq.Expressions;
 
 namespace Ecommerce.Application.Features.Payments.Commands.CreatePayment
@@ -22,20 +17,14 @@ namespace Ecommerce.Application.Features.Payments.Commands.CreatePayment
         private readonly StripeSettings? _stripeSettings;
         private readonly IUnitOfWork? _unitOfWork;
         private readonly IMapper? _mapper;
-        private readonly IShippingManagementService _shippingManagementService;
         private readonly PaymentIntentService? _paymentIntentService;
-        private readonly IAuthService? _authService;
-        private readonly UserManager<User>? _userManager;
 
-        public CreatePaymentCommandHandler(IOptions<StripeSettings>? stripeSettings, IUnitOfWork? unitOfWork, IMapper? mapper, IShippingManagementService shippingManagementService, PaymentIntentService? paymentIntentService, IAuthService authService, UserManager<User> userManager)
+        public CreatePaymentCommandHandler(IOptions<StripeSettings>? stripeSettings, IUnitOfWork? unitOfWork, IMapper? mapper, PaymentIntentService? paymentIntentService)
         {
             _stripeSettings = stripeSettings!.Value;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
-            _shippingManagementService = shippingManagementService;
             _paymentIntentService = paymentIntentService;
-            _authService = authService;
-            _userManager = userManager;
         }
 
         public async Task<OrderVm> Handle(CreatePaymentCommand request, CancellationToken cancellationToken)
@@ -52,26 +41,25 @@ namespace Ecommerce.Application.Features.Payments.Commands.CreatePayment
                 throw new NoFoundException("Not Found Order Requested", orderToPay!);
             }
 
-            orderToPay.orderStatus = OrderStatus.Approved;
+            if (orderToPay.PaymentStatus == PaymentStatus.Succeeded)
+            {
+                return _mapper!.Map<OrderVm>(orderToPay);
+            }
 
-            await _unitOfWork!.Repository<Order>().UpdateAsync(orderToPay);
+            if (string.IsNullOrWhiteSpace(orderToPay.PaymentIntentId))
+            {
+                var options = new PaymentIntentCreateOptions
+                {
+                    Amount = checked((long)Math.Round((orderToPay.Total ?? 0m) * 100m, MidpointRounding.ToEven)),
+                    Currency = "usd",
+                    PaymentMethodTypes = new List<string> { "card" },
+                    Metadata = new Dictionary<string, string> { ["order_id"] = orderToPay.Id!.Value.ToString() }
+                };
 
-            // to do Shipping
-            User? userBuyer;
-            userBuyer = await _userManager!.FindByNameAsync(_authService!.GetSessionUser());
+                var intent = await _paymentIntentService!.CreateAsync(options, cancellationToken: cancellationToken);
+                orderToPay.SetPaymentDetails(intent.Id, intent.ClientSecret, _stripeSettings!.Publishablekey);
+            }
 
-            ShippingOperator shippingOperator;
-            shippingOperator = await _unitOfWork!.Repository<ShippingOperator>().GetByIdAsync(orderToPay.Id);
-            var shippingServices = _mapper!.Map<PropertyInformation>(shippingOperator);
-
-            RespuestaPreRegistroEnvio shipping;
-            shipping = await _shippingManagementService.DoShipping(shippingServices, userBuyer!, orderToPay.OrderAddress!, orderToPay.WeightOrder, orderToPay);
-
-            SolicitudEtiquetaOpResponse tagShipping;
-            tagShipping = await _shippingManagementService.RequestTagShipping(shippingServices);
-
-            var shoppingCartItems = await _unitOfWork!.Repository<ShoppingCartItem>().GetAsync(x => x.ShoppingCartMasterId == request.ShoppingCartMasterId);
-            _unitOfWork.Repository<ShoppingCartItem>().DeleteRange(shoppingCartItems);
             await _unitOfWork.Complete();
             var response = _mapper!.Map<OrderVm>(orderToPay);
             return response;

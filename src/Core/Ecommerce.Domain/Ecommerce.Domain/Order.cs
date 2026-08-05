@@ -57,6 +57,7 @@ namespace Ecommerce.Domain
         public string? PaymentIntentId { get; set; }
         public string? ClientSecret { get; set; }
         public string? StripeApiKey { get; set; }
+        public PaymentStatus PaymentStatus { get; private set; } = PaymentStatus.Pending;
 
         public void ApplyPricing(decimal? subTotal, decimal? priceTax, decimal? shippingCost)
         {
@@ -132,6 +133,23 @@ namespace Ecommerce.Domain
             PaymentIntentId = paymentIntentId;
             ClientSecret = clientSecret;
             StripeApiKey = stripeApiKey;
+        }
+
+        public void MarkPaymentProcessing()
+        {
+            PaymentStatus = PaymentStatus.Processing;
+        }
+
+        public void MarkPaymentSucceeded()
+        {
+            PaymentStatus = PaymentStatus.Succeeded;
+            orderStatus = OrderStatus.Approved;
+        }
+
+        public void MarkPaymentFailed()
+        {
+            PaymentStatus = PaymentStatus.Failed;
+            orderStatus = OrderStatus.Error;
         }
 
         public void MarkAsApproved()

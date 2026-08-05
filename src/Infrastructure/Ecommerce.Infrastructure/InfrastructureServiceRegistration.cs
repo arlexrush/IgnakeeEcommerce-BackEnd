@@ -58,6 +58,7 @@ namespace Ecommerce.Infrastructure
             services.Configure<CloudinarySettings>(configuration.GetSection("CloudinarySettings"));
             services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
             services.Configure<StripeSettings>(configuration.GetSection("StripeSettings"));
+            StripeConfiguration.ApiKey = configuration["StripeSettings:SecretKey"];
             services.Configure<CorreosSettings>(configuration.GetSection("CorreosSettings"));
             services.Configure<GlovoSettings>(configuration.GetSection("GlovoSettings"));
             services.Configure<MRWSettings>(configuration.GetSection("MRWSettings"));

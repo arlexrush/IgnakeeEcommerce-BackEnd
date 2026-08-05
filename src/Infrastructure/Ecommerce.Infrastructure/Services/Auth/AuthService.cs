@@ -59,9 +59,12 @@ namespace Ecommerce.Infrastructure.Services.Auth
 
         public string GetSessionUser()
         {
-            // UserName from  token
-            var userName = httpContextAccessor.HttpContext!.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
-            return userName!;
+            var claims = httpContextAccessor.HttpContext?.User?.Claims;
+            var userName = claims?.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value
+                ?? claims?.FirstOrDefault(x => x.Type == "preferred_username")?.Value
+                ?? claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email || x.Type == "email")?.Value;
+
+            return userName ?? throw new InvalidOperationException("The authenticated user does not contain a usable profile identifier.");
         }
     }
 }
