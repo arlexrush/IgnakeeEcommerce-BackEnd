@@ -103,6 +103,39 @@ public class OrderTests
         Assert.Equal("key", order.StripeApiKey);
     }
 
+    [Fact]
+    public void MarkPaymentSucceededApprovesOrder()
+    {
+        var order = new Order();
+
+        order.MarkPaymentSucceeded();
+
+        Assert.Equal(PaymentStatus.Succeeded, order.PaymentStatus);
+        Assert.Equal(OrderStatus.Approved, order.orderStatus);
+    }
+
+    [Fact]
+    public void MarkPaymentFailedSetsErrorStatus()
+    {
+        var order = new Order();
+
+        order.MarkPaymentFailed();
+
+        Assert.Equal(PaymentStatus.Failed, order.PaymentStatus);
+        Assert.Equal(OrderStatus.Error, order.orderStatus);
+    }
+
+    [Fact]
+    public void MarkPaymentProcessingKeepsOrderPending()
+    {
+        var order = new Order();
+
+        order.MarkPaymentProcessing();
+
+        Assert.Equal(PaymentStatus.Processing, order.PaymentStatus);
+        Assert.Equal(OrderStatus.Pending, order.orderStatus);
+    }
+
     private static OrderItem CreateItem(int productId, int quantity, decimal price, string productName)
     {
         return new OrderItem

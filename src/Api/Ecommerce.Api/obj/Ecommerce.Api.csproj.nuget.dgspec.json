@@ -57,6 +57,10 @@
           "framework": "net8.0",
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -67,9 +71,17 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Microsoft.Identity.Web": {
+              "target": "Package",
+              "version": "[4.14.2, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[41.13.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
