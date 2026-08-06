@@ -16,11 +16,30 @@ services:
       timeout: 5s
       retries: 5
 
+  rabbitmq:
+    image: rabbitmq:3.13-management-alpine
+    container_name: ecommerce-rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER:-guest}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS:-guest}
+    ports:
+      - "${RABBITMQ_PORT:-5672}:5672"
+      - "${RABBITMQ_MANAGEMENT_PORT:-15672}:15672"
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
   pgadmin:
     image: dpage/pgadmin4:8
     container_name: ecommerce-pgadmin
     depends_on:
       postgres:
+        condition: service_healthy
+      rabbitmq:
         condition: service_healthy
     env_file:
       - .env
@@ -42,6 +61,7 @@ services:
       - .env
     environment:
       ASPNETCORE_ENVIRONMENT: Development
+      RabbitMq__HostName: rabbitmq
     ports:
       - "${API_PORT:-5000}:8080"
     restart: unless-stopped
@@ -49,3 +69,4 @@ services:
 volumes:
   postgres-data:
   pgadmin-data:
+  rabbitmq-data:
