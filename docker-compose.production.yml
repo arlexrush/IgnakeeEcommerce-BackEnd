@@ -14,11 +14,29 @@ services:
       timeout: 5s
       retries: 5
 
+  rabbitmq:
+    image: rabbitmq:3.13-management-alpine
+    container_name: ecommerce-rabbitmq-production
+    env_file:
+      - .env.production
+    ports:
+      - "127.0.0.1:5672:5672"
+      - "127.0.0.1:15672:15672"
+    volumes:
+      - rabbitmq-production-data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
   pgadmin:
     image: dpage/pgadmin4:8
     container_name: ecommerce-pgadmin-production
     depends_on:
       postgres:
+        condition: service_healthy
+      rabbitmq:
         condition: service_healthy
     env_file:
       - .env.production
@@ -40,6 +58,7 @@ services:
       - .env.production
     environment:
       ASPNETCORE_ENVIRONMENT: Production
+      RabbitMq__HostName: rabbitmq
     ports:
       - "127.0.0.1:8080:8080"
     restart: unless-stopped
@@ -47,3 +66,4 @@ services:
 volumes:
   postgres-production-data:
   pgadmin-production-data:
+  rabbitmq-production-data:

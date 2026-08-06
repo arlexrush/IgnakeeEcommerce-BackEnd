@@ -3,6 +3,7 @@ using Ecommerce.Application.Contracts.Identity;
 using Ecommerce.Application.Contracts.Infrastructure;
 using Ecommerce.Application.Features.Orders.Vms;
 using Ecommerce.Application.Models.Payment;
+using Ecommerce.Application.Models.Messaging;
 using Ecommerce.Application.Models.Shipping;
 using Ecommerce.Application.Models.Shipping.Correos;
 using Ecommerce.Application.Persistence;
@@ -11,6 +12,7 @@ using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.Logging;
 using Stripe;
 using System.Diagnostics;
 using System.Linq.Expressions;
@@ -29,6 +31,8 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
         private readonly ICorreosService? _correosService;
         private readonly UserManager<User>? _userManager;
         private readonly StripeSettings? _stripeSettings;
+        private readonly IIntegrationEventPublisher _integrationEventPublisher;
+        private readonly ILogger<CreateOrderCommandHandler> _logger;
 
         public CreateOrderCommandHandler(IUnitOfWork? unitOfWork,
                                         IMapper? mapper,
@@ -37,7 +41,9 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
                                         IShippingManagementService shippingManagementService,
                                         UserManager<User>? userManager,
                                         ITaxService? taxService,
-                                        IOptions<StripeSettings>? stripeSettings)
+                                         IOptions<StripeSettings>? stripeSettings,
+                                         IIntegrationEventPublisher integrationEventPublisher,
+                                         ILogger<CreateOrderCommandHandler> logger)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
@@ -47,6 +53,8 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
             _stripeSettings = stripeSettings!.Value;
             _taxService = taxService;
             _shippingManagementService = shippingManagementService;
+            _integrationEventPublisher = integrationEventPublisher ?? throw new ArgumentNullException(nameof(integrationEventPublisher));
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
         public async Task<OrderVm> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
@@ -394,6 +402,28 @@ namespace Ecommerce.Application.Features.Orders.Commands.CreateOrder
             {
                 throw new Exception("Error while to creating strype intent of payment");
             }
+
+            try
+            {
+                var integrationEvent = new OrderCreatedIntegrationEvent(
+                    order.Id!.Value,
+                    order.BuyerUserName!,
+                    order.Total ?? 0m,
+                    order.orderStatus.ToString(),
+                    order.PaymentIntentId,
+                    items.Select(item => new OrderCreatedItem(item.ProductId, item.productName, item.Price ?? 0m, item.Quantity)).ToArray());
+
+                await _integrationEventPublisher.PublishAsync(integrationEvent, "orders.created", cancellationToken);
+            }
+            catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(ex, "Order {OrderId} was persisted but its integration event could not be published.", order.Id);
+            }
+
             var response = _mapper!.Map<OrderVm>(order);
             return response;
         }
