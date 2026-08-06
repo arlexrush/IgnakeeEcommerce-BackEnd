@@ -1,14 +1,44 @@
 # Integración RabbitMQ
 
-## Alcance de B6
+## Alcance completado: B6, B6.1, B6.2 y B6.3
 
-La API publica el evento de integración `OrderCreatedIntegrationEvent` después de persistir el pedido, sus líneas y el PaymentIntent. El evento se publica en el exchange topic durable `ecommerce.integration` con la routing key `orders.created` y contenido JSON persistente.
+La API publica `OrderCreatedIntegrationEvent` después de persistir el pedido, sus líneas y el PaymentIntent. El evento usa un envelope versionado con:
 
-El contrato está en `Ecommerce.Application.Models.Messaging` y el transporte se mantiene en Infrastructure mediante `IIntegrationEventPublisher`. Los consumidores downstream pueden crear sus propias colas y enlazarlas al exchange sin introducir dependencias de RabbitMQ en Application.
+- `MessageId` para deduplicación.
+- `EventType` (`orders.created`).
+- `ContractVersion` (`1`).
+- `OccurredOnUtc`.
+- `Payload`.
+
+El mensaje se publica como JSON persistente en el exchange topic durable `ecommerce.integration` con routing key `orders.created`.
+
+El worker `src/Workers/Ecommerce.Messaging.Worker` consume el evento como un proceso independiente. Su procesamiento inicial registra el evento y guarda el `MessageId` en PostgreSQL. La clave primaria impide procesar de nuevo el mismo mensaje después de un redelivery o reinicio.
+
+## Topología
+
+| Elemento | Nombre | Propósito |
+| --- | --- | --- |
+| Exchange principal | `ecommerce.integration` | Publicación de eventos topic. |
+| Cola principal | `ecommerce.orders.created` | Consumo de pedidos creados. |
+| Cola retry | `ecommerce.orders.created.retry` | Backoff mediante TTL y retorno al exchange principal. |
+| Exchange dead-letter | `ecommerce.integration.dlx` | Entrada de mensajes rechazados o agotados. |
+| Cola dead-letter | `ecommerce.orders.created.dlq` | Inspección y recuperación manual. |
+
+El worker usa `prefetch` configurable y acknowledgement manual. El `ack` solo se ejecuta después del procesamiento y de guardar la marca de idempotencia.
+
+## Retry, timeout y dead-letter
+
+- Los mensajes JSON inválidos o con una versión no soportada van directamente a DLQ.
+- Los errores de procesamiento se reintentan hasta `MaxRetryAttempts`.
+- La cola retry aplica `RetryDelayMilliseconds` mediante TTL.
+- El procesamiento usa un `CancellationToken` vinculado al shutdown y `ProcessingTimeoutSeconds`.
+- Los mensajes que superan el máximo de intentos se publican en DLQ.
+
+La política no garantiza exactly-once para efectos externos al PostgreSQL; los handlers que añadan efectos externos deben ser idempotentes usando `MessageId`.
 
 ## Configuración
 
-Las opciones se leen de la sección `RabbitMq` y admiten configuración por variables de entorno con la convención de .NET:
+Las opciones RabbitMQ usan estas variables .NET:
 
 - `RabbitMq__HostName`
 - `RabbitMq__Port`
@@ -17,19 +47,28 @@ Las opciones se leen de la sección `RabbitMq` y admiten configuración por vari
 - `RabbitMq__VirtualHost`
 - `RabbitMq__ExchangeName`
 
-Para desarrollo fuera de Docker el host por defecto es `localhost`. En Compose, la API usa el nombre de servicio `rabbitmq`. El broker local expone AMQP en `5672` y la interfaz de administración en `15672`.
+Las opciones del worker usan:
+
+- `MessagingWorker__QueueName`
+- `MessagingWorker__RetryQueueName`
+- `MessagingWorker__DeadLetterExchangeName`
+- `MessagingWorker__DeadLetterQueueName`
+- `MessagingWorker__PrefetchCount`
+- `MessagingWorker__MaxRetryAttempts`
+- `MessagingWorker__RetryDelayMilliseconds`
+- `MessagingWorker__ProcessingTimeoutSeconds`
+
+Para desarrollo fuera de Docker el host por defecto es `localhost`. En Compose, API y worker usan el nombre de servicio `rabbitmq`. El broker local expone AMQP en `5672` y administración en `15672`.
 
 ## Ejecución local
 
 ```powershell
 docker compose up -d postgres rabbitmq
-docker compose up api
+docker compose up --build api worker
 ```
 
-La interfaz de administración queda disponible en `http://localhost:15672` con las credenciales configuradas por `RABBITMQ_DEFAULT_USER` y `RABBITMQ_DEFAULT_PASS` (por defecto `guest` únicamente para desarrollo local).
+El worker aplica las migraciones de PostgreSQL al iniciar. La interfaz de administración queda disponible en `http://localhost:15672` con `RABBITMQ_DEFAULT_USER` y `RABBITMQ_DEFAULT_PASS`.
 
-## Limitaciones y siguiente trabajo
+## Evolución de contratos
 
-La publicación se realiza después del guardado de la transacción de negocio. Si RabbitMQ está temporalmente caído, el pedido no se revierte y se registra un warning; por tanto, B6 no garantiza entrega eventual. El patrón outbox, reintentos, timeouts, dead-letter y procesamiento idempotente corresponden a B6.1 y B6.2. La evolución explícita de contratos corresponde a B6.3.
-
-No se ha añadido todavía un worker ni una cola de consumo: B6 entrega el backbone de publicación para que esos componentes se incorporen posteriormente sin mover la lógica de negocio.
+Los consumidores deben comprobar `EventType` y `ContractVersion` antes de ejecutar el payload. Una nueva versión debe introducir compatibilidad explícita en el worker; no se debe reinterpretar silenciosamente el payload de una versión anterior.

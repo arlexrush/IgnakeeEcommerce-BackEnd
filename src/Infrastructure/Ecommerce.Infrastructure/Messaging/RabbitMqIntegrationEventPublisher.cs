@@ -1,6 +1,7 @@
 using System.Text;
 using System.Text.Json;
 using Ecommerce.Application.Contracts.Infrastructure;
+using Ecommerce.Application.Models.Messaging;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
@@ -27,7 +28,7 @@ public sealed class RabbitMqIntegrationEventPublisher : IIntegrationEventPublish
         TEvent integrationEvent,
         string routingKey,
         CancellationToken cancellationToken = default)
-        where TEvent : class
+        where TEvent : class, IIntegrationEvent
     {
         ArgumentNullException.ThrowIfNull(integrationEvent);
         ArgumentException.ThrowIfNullOrWhiteSpace(routingKey);
@@ -47,11 +48,17 @@ public sealed class RabbitMqIntegrationEventPublisher : IIntegrationEventPublish
         using var channel = connection.CreateModel();
         channel.ExchangeDeclare(_options.ExchangeName, ExchangeType.Topic, durable: true, autoDelete: false);
 
-        var body = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(integrationEvent, SerializerOptions));
+        var envelope = new IntegrationEventEnvelope<TEvent>(
+            Guid.NewGuid(),
+            integrationEvent.EventType,
+            integrationEvent.ContractVersion,
+            DateTimeOffset.UtcNow,
+            integrationEvent);
+        var body = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(envelope, SerializerOptions));
         var properties = channel.CreateBasicProperties();
         properties.Persistent = true;
         properties.ContentType = "application/json";
-        properties.Type = typeof(TEvent).Name;
+        properties.Type = integrationEvent.EventType;
 
         channel.BasicPublish(
             exchange: _options.ExchangeName,

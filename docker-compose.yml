@@ -62,8 +62,30 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       RabbitMq__HostName: rabbitmq
+      RabbitMq__UserName: ${RABBITMQ_DEFAULT_USER:-guest}
+      RabbitMq__Password: ${RABBITMQ_DEFAULT_PASS:-guest}
     ports:
       - "${API_PORT:-5000}:8080"
+    restart: unless-stopped
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+    container_name: ecommerce-messaging-worker
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      RabbitMq__HostName: rabbitmq
+      RabbitMq__UserName: ${RABBITMQ_DEFAULT_USER:-guest}
+      RabbitMq__Password: ${RABBITMQ_DEFAULT_PASS:-guest}
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
     restart: unless-stopped
 
 volumes:
