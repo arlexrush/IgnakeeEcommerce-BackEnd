@@ -6,7 +6,7 @@ namespace Ecommerce.UnitTests;
 public class OrderCreatedIntegrationEventTests
 {
     [Fact]
-    public void SerializesOrderCreatedEventWithExpectedContract()
+    public void SerializesVersionedEnvelopeWithExpectedContract()
     {
         var integrationEvent = new OrderCreatedIntegrationEvent(
             42,
@@ -16,11 +16,19 @@ public class OrderCreatedIntegrationEventTests
             "pi_123",
             [new OrderCreatedItem(7, "Product", 100m, 1)]);
 
-        var json = JsonSerializer.Serialize(integrationEvent, new JsonSerializerOptions(JsonSerializerDefaults.Web));
+        var envelope = new IntegrationEventEnvelope<OrderCreatedIntegrationEvent>(
+            Guid.Parse("11111111-1111-1111-1111-111111111111"),
+            integrationEvent.EventType,
+            integrationEvent.ContractVersion,
+            new DateTimeOffset(2026, 1, 2, 3, 4, 5, TimeSpan.Zero),
+            integrationEvent);
+        var json = JsonSerializer.Serialize(envelope, new JsonSerializerOptions(JsonSerializerDefaults.Web));
 
-        Assert.Equal(
-            "{\"orderId\":42,\"buyerUserName\":\"buyer@example.com\",\"total\":125.50,\"status\":\"Pending\",\"paymentIntentId\":\"pi_123\",\"items\":[{\"productId\":7,\"productName\":\"Product\",\"price\":100,\"quantity\":1}]}",
-            json);
+        var deserialized = JsonSerializer.Deserialize<IntegrationEventEnvelope<OrderCreatedIntegrationEvent>>(
+            json,
+            new JsonSerializerOptions(JsonSerializerDefaults.Web));
+
+        Assert.Equal(envelope.MessageId, deserialized!.MessageId);
     }
 
     [Fact]

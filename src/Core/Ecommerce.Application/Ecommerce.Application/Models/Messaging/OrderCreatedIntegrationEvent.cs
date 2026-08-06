@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace Ecommerce.Application.Models.Messaging;
 
 public sealed record OrderCreatedIntegrationEvent(
@@ -6,7 +8,14 @@ public sealed record OrderCreatedIntegrationEvent(
     decimal Total,
     string Status,
     string? PaymentIntentId,
-    IReadOnlyCollection<OrderCreatedItem> Items);
+    IReadOnlyCollection<OrderCreatedItem> Items) : IIntegrationEvent
+{
+    [JsonIgnore]
+    public string EventType => "orders.created";
+
+    [JsonIgnore]
+    public int ContractVersion => 1;
+}
 
 public sealed record OrderCreatedItem(
     int ProductId,
