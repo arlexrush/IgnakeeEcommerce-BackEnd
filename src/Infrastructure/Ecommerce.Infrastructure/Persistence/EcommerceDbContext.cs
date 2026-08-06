@@ -1,5 +1,6 @@
 ﻿using Ecommerce.Domain;
 using Ecommerce.Domain.Commons;
+using Ecommerce.Infrastructure.Messaging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -116,6 +117,15 @@ namespace Ecommerce.Infrastructure.Persistence
                 .Property(x => x.PaymentStatus)
                 .HasConversion<string>()
                 .HasDefaultValue(PaymentStatus.Pending);
+
+            builder.Entity<ProcessedIntegrationMessage>(entity =>
+            {
+                entity.HasKey(message => message.MessageId);
+                entity.Property(message => message.MessageId).HasMaxLength(36);
+                entity.Property(message => message.EventType).HasMaxLength(200).IsRequired();
+                entity.Property(message => message.ContractVersion).IsRequired();
+                entity.Property(message => message.ProcessedAtUtc).IsRequired();
+            });
         }
         public DbSet<Product>? Products { get; set; }
         public DbSet<Address>? Addresses { get; set; }
@@ -134,6 +144,7 @@ namespace Ecommerce.Infrastructure.Persistence
         public DbSet<ParTaxItem>? parTaxItems { get; set; }
         public DbSet<Shipping>? shippings { get; set; }
         public DbSet<ShippingOperator>? shippingOperators { get; set; }
+        public DbSet<ProcessedIntegrationMessage> ProcessedIntegrationMessages => Set<ProcessedIntegrationMessage>();
 
 
 
