@@ -1,7 +1,8 @@
-using Ecommerce.Application.Features.Products.Queries.GetInventoryProductByCode;
-using Ecommerce.Application.Features.Products.Queries.GetInventoryProductCatalog;
-using Ecommerce.Application.Features.Products.Queries.Vms.Inventory;
+﻿using Ecommerce.Application.Features.Inventory.Queries.GetInventoryProductByCode;
+using Ecommerce.Application.Features.Inventory.Queries.PaginationInventoryProducts;
+using Ecommerce.Application.Features.Inventory.Queries.Vms;
 using Ecommerce.Application.Features.Shared.Queries;
+using Ecommerce.Application.Models.Authorization;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -9,14 +10,9 @@ using System.Net;
 
 namespace Ecommerce.Api.Controllers
 {
-    /// <summary>
-    /// Read-only inventory surface for the IgnakeeAI.McpServer.Supplier service-to-service integration.
-    /// All endpoints require authentication. Callers must hold the ADMIN or SUPPLIER_INTEGRATION role.
-    /// No write/mutation capability is exposed here.
-    /// </summary>
     [ApiController]
+    [Authorize(Roles = $"{Role.ADMIN},{Role.INVENTORY_READER}")]
     [Route("api/v1/[controller]")]
-    [Authorize(Policy = "SupplierIntegration")]
     public class InventoryController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -26,44 +22,43 @@ namespace Ecommerce.Api.Controllers
             _mediator = mediator;
         }
 
-        /// <summary>
-        /// Returns the inventory view for a single active product identified by its canonical ProductCode.
-        /// </summary>
-        /// <param name="productCode">The canonical product code (e.g. "P-001").</param>
-        [HttpGet("product/{productCode}", Name = "GetInventoryProductByCode")]
+        [HttpGet("{productCode}", Name = "GetInventoryProductByCode")]
         [ProducesResponseType(typeof(InventoryProductVm), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        public async Task<ActionResult<InventoryProductVm>> GetByProductCode(string productCode)
+        public async Task<ActionResult<InventoryProductVm>> GetInventoryProductByCode(string productCode)
         {
             if (string.IsNullOrWhiteSpace(productCode))
             {
-                return BadRequest("productCode is required.");
+                return BadRequest("Product code is required.");
             }
 
-            var query = new GetInventoryProductByCodeQuery(productCode);
-            var result = await _mediator.Send(query);
-
-            if (result is null)
-            {
-                return NotFound();
-            }
-
-            return Ok(result);
+            var product = await _mediator.Send(new GetInventoryProductByCodeQuery(productCode));
+            return Ok(product);
         }
 
-        /// <summary>
-        /// Returns a paginated list of active products for catalog synchronization.
-        /// Supports optional text search and category filtering.
-        /// </summary>
-        [HttpGet("catalog", Name = "GetInventoryProductCatalog")]
+        [HttpGet(Name = "PaginationInventoryProducts")]
         [ProducesResponseType(typeof(PaginationVm<InventoryProductVm>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<ActionResult<PaginationVm<InventoryProductVm>>> GetCatalog(
-            [FromQuery] GetInventoryProductCatalogQuery query)
+        public async Task<ActionResult<PaginationVm<InventoryProductVm>>> PaginationInventoryProducts([FromQuery] PaginationInventoryProductsQuery request)
         {
-            var result = await _mediator.Send(query);
-            return Ok(result);
+            if (request.PageIndex is < 1)
+            {
+                return BadRequest("PageIndex must be greater than zero.");
+            }
+
+            if (request.PageSize < 1)
+            {
+                return BadRequest("PageSize must be greater than zero.");
+            }
+
+            if (request.CategoryId is <= 0)
+            {
+                return BadRequest("CategoryId must be greater than zero.");
+            }
+
+            var products = await _mediator.Send(request);
+            return Ok(products);
         }
     }
 }

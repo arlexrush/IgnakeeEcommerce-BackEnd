@@ -22,9 +22,18 @@ namespace Ecommerce.Infrastructure.Persistence
         {
             try
             {
-                if (!roleManager.Roles.Any())
+                if (!await roleManager.RoleExistsAsync(Role.ADMIN))
                 {
                     await roleManager.CreateAsync(new IdentityRole(Role.ADMIN));
+                }
+
+                if (!await roleManager.RoleExistsAsync(Role.INVENTORY_READER))
+                {
+                    await roleManager.CreateAsync(new IdentityRole(Role.INVENTORY_READER));
+                }
+
+                if (!await roleManager.RoleExistsAsync(Role.USER))
+                {
                     await roleManager.CreateAsync(new IdentityRole(Role.USER));
                 }
 

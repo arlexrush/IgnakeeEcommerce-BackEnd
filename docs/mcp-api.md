@@ -4,6 +4,8 @@
 
 B7 expone una superficie MCP delgada sobre la API ecommerce existente. La implementación usa el SDK oficial `ModelContextProtocol.AspNetCore` y delega las operaciones en consultas MediatR de `Ecommerce.Application`.
 
+La integración REST específica de inventario para `IgnakeeAI.McpServer.Supplier` se documenta por separado en [`inventory-integration-api.md`](./inventory-integration-api.md). Ese contrato HTTP no sustituye ni modifica el contrato existente de `/api/mcp`.
+
 ## Endpoint
 
 - URL: `/api/mcp`
