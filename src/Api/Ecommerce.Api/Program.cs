@@ -19,6 +19,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Identity.Web;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.WebUtilities;
+using ModelContextProtocol.Server;
 using System.Net;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
@@ -42,6 +43,10 @@ builder.Services.AddDbContext<EcommerceDbContext>(options =>
 
 // Add services to CQRS implementation by Mediatr lybrary
 builder.Services.AddMediatR(c => c.RegisterServicesFromAssembly(typeof(GetProductListQueryHandler).Assembly));
+
+builder.Services.AddMcpServer()
+    .WithHttpTransport()
+    .WithToolsFromAssembly();
 
 
 // Add service to Clouddinary service implementation
@@ -197,6 +202,7 @@ app.UseAuthorization();
 
 app.UseCors("CorsPolicy");
 
+app.MapMcp("/api/mcp").RequireAuthorization();
 app.MapControllers();
 
 // upload Initial Data to BD
