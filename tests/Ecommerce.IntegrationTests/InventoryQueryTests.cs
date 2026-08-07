@@ -1,4 +1,5 @@
 using AutoMapper;
+using Ecommerce.Application.Exceptions;
 using Ecommerce.Application.Features.Inventory.Queries.GetInventoryProductByCode;
 using Ecommerce.Application.Features.Inventory.Queries.PaginationInventoryProducts;
 using Ecommerce.Application.Mapping;
@@ -43,6 +44,40 @@ public class InventoryQueryTests
         Assert.Equal("product-2", result.ProductCode);
         Assert.Equal(2, result.ProductId);
         Assert.Equal("Tea", result.ProductName);
+    }
+
+    [Fact]
+    public async Task GetInventoryProductByCodeReturnsUnavailableWhenStockIsNull()
+    {
+        await using var context = CreateContext();
+        await SeedAsync(context);
+        var handler = new GetInventoryProductByCodeQueryHandler(new UnitOfWork(context), CreateMapper());
+
+        var result = await handler.Handle(new GetInventoryProductByCodeQuery("SKU-004"), CancellationToken.None);
+
+        Assert.False(result.IsAvailableForSale);
+    }
+
+    [Fact]
+    public async Task GetInventoryProductByCodeRejectsInactiveProducts()
+    {
+        await using var context = CreateContext();
+        await SeedAsync(context);
+        var handler = new GetInventoryProductByCodeQueryHandler(new UnitOfWork(context), CreateMapper());
+
+        await Assert.ThrowsAsync<NoFoundException>(() =>
+            handler.Handle(new GetInventoryProductByCodeQuery("SKU-003"), CancellationToken.None));
+    }
+
+    [Fact]
+    public async Task GetInventoryProductByCodeRejectsUnknownProducts()
+    {
+        await using var context = CreateContext();
+        await SeedAsync(context);
+        var handler = new GetInventoryProductByCodeQueryHandler(new UnitOfWork(context), CreateMapper());
+
+        await Assert.ThrowsAsync<NoFoundException>(() =>
+            handler.Handle(new GetInventoryProductByCodeQuery("SKU-404"), CancellationToken.None));
     }
 
     [Fact]
@@ -135,6 +170,19 @@ public class InventoryQueryTests
                 Stock = 0,
                 UnitToSell = "bag",
                 Status = ProductStatus.Obsolete
+            },
+            new Product
+            {
+                Id = 4,
+                ProductCode = "SKU-004",
+                ProductName = "Untracked stock coffee",
+                CategoryId = 1,
+                Category = category,
+                Currency = "USD",
+                Price = 4m,
+                Stock = null,
+                UnitToSell = "bag",
+                Status = ProductStatus.Active
             });
 
         await context.SaveChangesAsync();
