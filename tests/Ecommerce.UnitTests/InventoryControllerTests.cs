@@ -52,6 +52,17 @@ public class InventoryControllerTests
         Assert.IsType<BadRequestObjectResult>(result.Result);
     }
 
+    [Fact]
+    public void PaginationInventoryProductsLimitsPageSizeToFifty()
+    {
+        var request = new PaginationInventoryProductsQuery
+        {
+            PageSize = 51
+        };
+
+        Assert.Equal(50, request.PageSize);
+    }
+
     private sealed class StubMediator : IMediator
     {
         public Task Send<TRequest>(TRequest request, CancellationToken cancellationToken = default)

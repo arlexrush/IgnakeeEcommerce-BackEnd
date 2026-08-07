@@ -12,9 +12,9 @@ The Inventory Integration API sits under the existing `api/v1` routing conventio
 MCP Client / AI Agent
         ↓  (MCP protocol)
 IgnakeeAI.McpServer.Supplier
-        ↓  (HTTP – ****** SUPPLIER_INTEGRATION or ADMIN role)
-GET /api/v1/inventory/product/{productCode}
-GET /api/v1/inventory/catalog
+        ↓  (HTTP – INVENTORY_READER or ADMIN role)
+GET /api/v1/inventory/{productCode}
+GET /api/v1/inventory?pageIndex={pageIndex}&pageSize={pageSize}
         ↓
 Ecommerce.Application (MediatR query handlers)
         ↓
@@ -30,15 +30,14 @@ All endpoints require a valid ******** issued by this application's local JWT au
 
 ### Policy
 ```
-Policy name: SupplierIntegration
-Requires: authenticated user AND (role = ADMIN OR role = SUPPLIER_INTEGRATION)
+Requires: authenticated user AND (role = ADMIN OR role = INVENTORY_READER)
 ```
 
-The `SUPPLIER_INTEGRATION` role is a least-privilege service identity intended exclusively for the MCP Supplier adapter. It has **no access** to order, user, payment, or admin endpoints.
+The `INVENTORY_READER` role is the least-privilege service role for the MCP Supplier adapter. It has **no access** to order, user, payment, or admin endpoints.
 
 ### Setting up a service account
 1. Register a user (or use an existing technical user) in the ecommerce Identity store.
-2. Assign the `SUPPLIER_INTEGRATION` role via the admin role-assignment endpoint.
+2. Assign the `INVENTORY_READER` role via the admin role-assignment endpoint.
 3. Generate a JWT for that user and configure it as the `Bearer` token in the MCP Supplier adapter.
 
 > **Important:** Do not reuse end-user credentials. The service-to-service token should be rotated on your chosen schedule and kept in a secrets manager (not in source code or config files).
@@ -48,7 +47,7 @@ The `SUPPLIER_INTEGRATION` role is a least-privilege service identity intended e
 | Condition | Status |
 |---|---|
 | No `Authorization` header or invalid/expired token | `401 Unauthorized` |
-| Valid token but missing `ADMIN` or `SUPPLIER_INTEGRATION` role | `403 Forbidden` |
+| Valid token but missing `ADMIN` or `INVENTORY_READER` role | `403 Forbidden` |
 | Invalid input (e.g. blank `productCode`) | `400 Bad Request` |
 | Product not found or not active | `404 Not Found` |
 | Successful response | `200 OK` |
@@ -66,7 +65,7 @@ The `SUPPLIER_INTEGRATION` role is a least-privilege service identity intended e
 ### 1. Get product inventory by code
 
 ```
-GET /api/v1/inventory/product/{productCode}
+GET /api/v1/inventory/{productCode}
 Authorization: ******
 ```
 
@@ -90,15 +89,16 @@ Returns the inventory view for a single **Active** product.
   "category": "Beverages",
   "price": 12.50,
   "currency": "EUR",
+  "isAvailableForSale": true,
   "stock": 35,
   "unitToSell": "bag",
   "purchaseLeadTime": 3,
   "purchaseLeadTimeUnit": "days",
-  "status": 0
+  "status": "Active"
 }
 ```
 
-`status` values: `0 = Active`, `1 = Desactive` (inactive), `2 = Obsolete`. Note: `Desactive` is the domain enum name in this codebase; it means the product is not actively for sale.
+`status` values are domain enum names serialized as text: `Active`, `Desactive`, and `Obsolete`. This API only returns `Active` products.
 
 #### Error responses
 
@@ -112,7 +112,7 @@ Returns the inventory view for a single **Active** product.
 ### 2. Get active product catalog (paginated)
 
 ```
-GET /api/v1/inventory/catalog
+GET /api/v1/inventory?pageIndex={pageIndex}&pageSize={pageSize}
 Authorization: ******
 ```
 
@@ -146,17 +146,18 @@ Returns a paginated list of **Active** products suitable for full or incremental
       "category": "Beverages",
       "price": 12.50,
       "currency": "EUR",
+      "isAvailableForSale": true,
       "stock": 35,
       "unitToSell": "bag",
       "purchaseLeadTime": 3,
       "purchaseLeadTimeUnit": "days",
-      "status": 0
+      "status": "Active"
     }
   ]
 }
 ```
 
-- Only `Active` products are returned (this is enforced server-side; the `status` field in the response will always be `0` for this endpoint).
+- Only `Active` products are returned (this is enforced server-side; the `status` field in the response will always be `"Active"` for this endpoint).
 - The paginated envelope is the same `PaginationVm<T>` shape used across the rest of the API.
 - For incremental synchronization, iterate pages until `pageIndex >= pageCount`.
 
@@ -165,12 +166,27 @@ Returns a paginated list of **Active** products suitable for full or incremental
 ## Integration Notes for IgnakeeAI.McpServer.Supplier
 
 ### Recommended approach (hybrid)
-- **Catalog / prices**: synchronize periodically via `GET /api/v1/inventory/catalog` (all pages). Cache locally for low-latency MCP `GetPrice` and `SearchAlternatives` calls.
-- **Stock / availability**: query `GET /api/v1/inventory/product/{productCode}` in real time for `CheckAvailability`, as stock can change with each order.
+- **Catalog / prices**: synchronize periodically via `GET /api/v1/inventory?pageIndex={pageIndex}&pageSize={pageSize}` (all pages, maximum page size `50`). Cache locally for low-latency MCP `GetPrice` and `SearchAlternatives` calls.
+- **Stock / availability**: query `GET /api/v1/inventory/{productCode}` in real time for `CheckAvailability`, as stock can change with each order.
+
+### Supplier configuration
+
+Configure the Supplier service using protected environment variables:
+
+```text
+EcommerceInventory__Enabled=true
+EcommerceInventory__BaseUrl=https://<ecommerce-host>
+EcommerceInventory__BearerToken=<technical-identity-jwt>
+EcommerceInventory__TimeoutSeconds=10
+EcommerceInventory__SyncPageSize=50
+```
+
+Do not commit the bearer token to `appsettings.json`, `.env.example`, `README.md`, or `docker-compose.yml`. Store it in the deployment secret manager or protected environment variables.
 
 ### Null field semantics
-- `stock: null` means stock is not tracked for this product (treat as available).
-- `stock: 0` means explicitly out of stock.
+- `stock: null` means the product is not available for sale (`isAvailableForSale: false`).
+- `stock: 0` means explicitly out of stock (`isAvailableForSale: false`).
+- `stock: > 0` means the product is available for sale (`isAvailableForSale: true`).
 - `price: null` / `currency: null` means pricing is not configured (return an appropriate "price unavailable" response from the MCP tool).
 
 ---
