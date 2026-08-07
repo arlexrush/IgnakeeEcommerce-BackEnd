@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Ecommerce.Application.Features.Addresses.Vms;
 using Ecommerce.Application.Features.Countries.Queries.Vm;
+using Ecommerce.Application.Features.Inventory;
+using Ecommerce.Application.Features.Inventory.Queries.Vms;
 using Ecommerce.Application.Features.Orders.Vms;
 using Ecommerce.Application.Features.Products.Commands.CreateProduct;
 using Ecommerce.Application.Features.Products.Commands.UpdateProduct;
@@ -23,6 +25,13 @@ namespace Ecommerce.Application.Mapping
             CreateMap<Product, ProductVm>()
             .ForMember(p => p.CategoryNombre, x => x.MapFrom(a => a.Category!.Name))
             .ForMember(p => p.NumeroReviews, x => x.MapFrom(a => a.Reviews == null ? 0 : a.Reviews.Count));
+            CreateMap<Product, InventoryProductVm>()
+                .ForMember(p => p.ProductCode, x => x.MapFrom(a => InventoryProductCode.Resolve(a)))
+                .ForMember(p => p.ProductId, x => x.MapFrom(a => a.Id))
+                .ForMember(p => p.ProductName, x => x.MapFrom(a => a.ProductName))
+                .ForMember(p => p.Category, x => x.MapFrom(a => a.Category != null ? a.Category.Name : null))
+                .ForMember(p => p.IsAvailableForSale, x => x.MapFrom(a => a.Status == ProductStatus.Active && (a.Stock ?? 0) > 0))
+                .ForMember(p => p.Status, x => x.MapFrom(a => a.Status.ToString()));
 
             CreateMap<Image, ImageVm>();
             CreateMap<Review, ReviewVm>();
