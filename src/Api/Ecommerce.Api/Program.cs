@@ -65,6 +65,17 @@ builder.Services.AddControllers(opt =>
 
 }).AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
+builder.Services.AddAuthorization(options =>
+{
+    // Least-privilege policy for the IgnakeeAI.McpServer.Supplier service-to-service integration.
+    // Callers must be authenticated and hold the ADMIN or SUPPLIER_INTEGRATION role.
+    options.AddPolicy("SupplierIntegration", policy =>
+        policy.RequireAuthenticatedUser()
+              .RequireRole(
+                  Ecommerce.Application.Models.Authorization.Role.ADMIN,
+                  Ecommerce.Application.Models.Authorization.Role.SUPPLIER_INTEGRATION));
+});
+
 
 
 
