@@ -5141,24 +5141,32 @@
     ]
   },
   "packageFolders": {
-    "/tmp/codeql-scratch-1ff5ee0b372d6898/dbs/csharp/working/packages": {}
+    "C:\\Users\\arlex\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/runner/work/IgnakeeEcommerce-BackEnd/IgnakeeEcommerce-BackEnd/src/Infrastructure/Ecommerce.Infrastructure/Ecommerce.Infrastructure.csproj",
+      "projectUniqueName": "C:\\NET_Dev\\IgnakeeEcommerce-BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
       "projectName": "Ecommerce.Infrastructure",
-      "projectPath": "/home/runner/work/IgnakeeEcommerce-BackEnd/IgnakeeEcommerce-BackEnd/src/Infrastructure/Ecommerce.Infrastructure/Ecommerce.Infrastructure.csproj",
-      "packagesPath": "/tmp/codeql-scratch-1ff5ee0b372d6898/dbs/csharp/working/packages",
-      "outputPath": "/home/runner/work/IgnakeeEcommerce-BackEnd/IgnakeeEcommerce-BackEnd/src/Infrastructure/Ecommerce.Infrastructure/obj/",
+      "projectPath": "C:\\NET_Dev\\IgnakeeEcommerce-BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\Ecommerce.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\arlex\\.nuget\\packages\\",
+      "outputPath": "C:\\NET_Dev\\IgnakeeEcommerce-BackEnd\\src\\Infrastructure\\Ecommerce.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/runner/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\arlex\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -5166,11 +5174,11 @@
           "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/runner/work/IgnakeeEcommerce-BackEnd/IgnakeeEcommerce-BackEnd/src/Core/Ecommerce.Application/Ecommerce.Application/Ecommerce.Application.csproj": {
-              "projectPath": "/home/runner/work/IgnakeeEcommerce-BackEnd/IgnakeeEcommerce-BackEnd/src/Core/Ecommerce.Application/Ecommerce.Application/Ecommerce.Application.csproj"
+            "C:\\NET_Dev\\IgnakeeEcommerce-BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj": {
+              "projectPath": "C:\\NET_Dev\\IgnakeeEcommerce-BackEnd\\src\\Core\\Ecommerce.Application\\Ecommerce.Application\\Ecommerce.Application.csproj"
             },
-            "/home/runner/work/IgnakeeEcommerce-BackEnd/IgnakeeEcommerce-BackEnd/src/Core/Ecommerce.Domain/Ecommerce.Domain/Ecommerce.Domain.csproj": {
-              "projectPath": "/home/runner/work/IgnakeeEcommerce-BackEnd/IgnakeeEcommerce-BackEnd/src/Core/Ecommerce.Domain/Ecommerce.Domain/Ecommerce.Domain.csproj"
+            "C:\\NET_Dev\\IgnakeeEcommerce-BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj": {
+              "projectPath": "C:\\NET_Dev\\IgnakeeEcommerce-BackEnd\\src\\Core\\Ecommerce.Domain\\Ecommerce.Domain\\Ecommerce.Domain.csproj"
             }
           }
         }
@@ -5246,22 +5254,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.29, 8.0.29]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.29, 8.0.29]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
