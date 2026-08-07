@@ -75,6 +75,10 @@
               "target": "Package",
               "version": "[4.14.2, )"
             },
+            "ModelContextProtocol.AspNetCore": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[8.0.0, )"
