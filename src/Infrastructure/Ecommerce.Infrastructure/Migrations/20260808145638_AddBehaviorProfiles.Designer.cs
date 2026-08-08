@@ -3,6 +3,7 @@ using System;
 using Ecommerce.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Ecommerce.Infrastructure.Migrations
 {
     [DbContext(typeof(EcommerceDbContext))]
-    partial class EcommerceDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260808145638_AddBehaviorProfiles")]
+    partial class AddBehaviorProfiles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -968,52 +971,6 @@ namespace Ecommerce.Infrastructure.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("Ecommerce.Infrastructure.Messaging.BehaviorEvent", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
-
-                    b.Property<string>("Action")
-                        .IsRequired()
-                        .HasMaxLength(40)
-                        .HasColumnType("character varying(40)");
-
-                    b.Property<int?>("CategoryId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("CategoryName")
-                        .HasMaxLength(100)
-                        .HasColumnType("character varying(100)");
-
-                    b.Property<DateTimeOffset>("OccurredOnUtc")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<int?>("ProductId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("ProductName")
-                        .HasMaxLength(100)
-                        .HasColumnType("character varying(100)");
-
-                    b.Property<decimal?>("ProductPrice")
-                        .HasPrecision(20, 2)
-                        .HasColumnType("numeric(20,2)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasMaxLength(36)
-                        .HasColumnType("character varying(36)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId", "OccurredOnUtc");
-
-                    b.ToTable("BehaviorEvents");
-                });
-
             modelBuilder.Entity("Ecommerce.Infrastructure.Messaging.BehaviorProfile", b =>
                 {
                     b.Property<string>("UserId")
@@ -1035,16 +992,8 @@ namespace Ecommerce.Infrastructure.Migrations
                     b.Property<bool>("HasConsented")
                         .HasColumnType("boolean");
 
-                    b.Property<decimal?>("HighestObservedProductPrice")
-                        .HasPrecision(20, 2)
-                        .HasColumnType("numeric(20,2)");
-
                     b.Property<DateTimeOffset?>("LastActivityAtUtc")
                         .HasColumnType("timestamp with time zone");
-
-                    b.Property<decimal?>("LowestObservedProductPrice")
-                        .HasPrecision(20, 2)
-                        .HasColumnType("numeric(20,2)");
 
                     b.Property<int>("ProductViews")
                         .HasColumnType("integer");
