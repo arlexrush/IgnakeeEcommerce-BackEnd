@@ -126,6 +126,35 @@ namespace Ecommerce.Infrastructure.Persistence
                 entity.Property(message => message.ContractVersion).IsRequired();
                 entity.Property(message => message.ProcessedAtUtc).IsRequired();
             });
+
+            builder.Entity<ProcessedBehaviorMessage>(entity =>
+            {
+                entity.HasKey(message => message.MessageId);
+                entity.Property(message => message.MessageId).HasMaxLength(36);
+                entity.Property(message => message.EventType).HasMaxLength(200).IsRequired();
+                entity.Property(message => message.ContractVersion).IsRequired();
+                entity.Property(message => message.ProcessedAtUtc).IsRequired();
+            });
+
+            builder.Entity<BehaviorProfile>(entity =>
+            {
+                entity.HasKey(profile => profile.UserId);
+                entity.Property(profile => profile.UserId).HasMaxLength(36);
+                entity.Property(profile => profile.HasConsented).IsRequired();
+                entity.Property(profile => profile.LowestObservedProductPrice).HasPrecision(20, 2);
+                entity.Property(profile => profile.HighestObservedProductPrice).HasPrecision(20, 2);
+            });
+
+            builder.Entity<BehaviorEvent>(entity =>
+            {
+                entity.HasKey(behaviorEvent => behaviorEvent.Id);
+                entity.Property(behaviorEvent => behaviorEvent.UserId).HasMaxLength(36).IsRequired();
+                entity.Property(behaviorEvent => behaviorEvent.Action).HasConversion<string>().HasMaxLength(40);
+                entity.Property(behaviorEvent => behaviorEvent.ProductName).HasMaxLength(100);
+                entity.Property(behaviorEvent => behaviorEvent.CategoryName).HasMaxLength(100);
+                entity.Property(behaviorEvent => behaviorEvent.ProductPrice).HasPrecision(20, 2);
+                entity.HasIndex(behaviorEvent => new { behaviorEvent.UserId, behaviorEvent.OccurredOnUtc });
+            });
         }
         public DbSet<Product>? Products { get; set; }
         public DbSet<Address>? Addresses { get; set; }
@@ -145,6 +174,9 @@ namespace Ecommerce.Infrastructure.Persistence
         public DbSet<Shipping>? shippings { get; set; }
         public DbSet<ShippingOperator>? shippingOperators { get; set; }
         public DbSet<ProcessedIntegrationMessage> ProcessedIntegrationMessages => Set<ProcessedIntegrationMessage>();
+        public DbSet<ProcessedBehaviorMessage> ProcessedBehaviorMessages => Set<ProcessedBehaviorMessage>();
+        public DbSet<BehaviorProfile> BehaviorProfiles => Set<BehaviorProfile>();
+        public DbSet<BehaviorEvent> BehaviorEvents => Set<BehaviorEvent>();
 
 
 

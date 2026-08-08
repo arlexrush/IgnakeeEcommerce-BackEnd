@@ -1,4 +1,5 @@
 using Ecommerce.Api.Middlewares;
+using Ecommerce.Api.AiOrchestration;
 using Ecommerce.Application;
 using Ecommerce.Application.Contracts.Infrastructure;
 using Ecommerce.Application.Features.Products.Queries.GetProductList;
@@ -44,6 +45,13 @@ builder.Services.AddDbContext<EcommerceDbContext>(options =>
 // Add services to CQRS implementation by Mediatr lybrary
 builder.Services.AddMediatR(c => c.RegisterServicesFromAssembly(typeof(GetProductListQueryHandler).Assembly));
 
+builder.Services.Configure<AiOrchestrationOptions>(builder.Configuration.GetSection(AiOrchestrationOptions.SectionName));
+builder.Services.AddScoped<EcommerceAiTools>();
+builder.Services.AddScoped<EcommerceAiPageContextProvider>();
+builder.Services.AddScoped<AiAssistantUserProfileProvider>();
+builder.Services.AddScoped<AiAssistantBehaviorProfileProvider>();
+builder.Services.AddScoped<IAiAssistant, FoundryAiAssistant>();
+
 builder.Services.AddMcpServer()
     .WithHttpTransport()
     .WithToolsFromAssembly();
@@ -63,7 +71,11 @@ builder.Services.AddControllers(opt =>
     // Sevice to Authorize
     opt.Filters.Add(new AuthorizeFilter(policy));
 
-}).AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+}).AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+});
 
 builder.Services.AddAuthorization(options =>
 {
