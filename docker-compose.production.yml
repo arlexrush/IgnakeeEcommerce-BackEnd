@@ -61,8 +61,19 @@ services:
       RabbitMq__HostName: rabbitmq
       RabbitMq__UserName: ${RABBITMQ_DEFAULT_USER:-guest}
       RabbitMq__Password: ${RABBITMQ_DEFAULT_PASS:-guest}
+    restart: unless-stopped
+
+  gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile.gateway
+    container_name: ecommerce-gateway-production
+    depends_on:
+      - api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
     ports:
-      - "127.0.0.1:8080:8080"
+      - "${GATEWAY_PORT:-8080}:8080"
     restart: unless-stopped
 
   worker:

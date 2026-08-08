@@ -8,6 +8,7 @@ var builder = Host.CreateApplicationBuilder(args);
 
 builder.Services.Configure<RabbitMqOptions>(builder.Configuration.GetSection(RabbitMqOptions.SectionName));
 builder.Services.Configure<WorkerOptions>(builder.Configuration.GetSection(WorkerOptions.SectionName));
+builder.Services.Configure<BehaviorWorkerOptions>(builder.Configuration.GetSection(BehaviorWorkerOptions.SectionName));
 builder.Services.AddDbContext<EcommerceDbContext>(options =>
 {
     var connectionString = builder.Configuration.GetConnectionString("PostgresConnection")
@@ -22,7 +23,9 @@ builder.Services.AddDbContext<EcommerceDbContext>(options =>
         databaseOptions.MigrationsAssembly(typeof(EcommerceDbContext).Assembly.FullName));
 });
 builder.Services.AddScoped<OrderCreatedEventHandler>();
+builder.Services.AddScoped<BehaviorRecordedEventHandler>();
 builder.Services.AddHostedService<RabbitMqOrderWorker>();
+builder.Services.AddHostedService<RabbitMqBehaviorWorker>();
 
 var host = builder.Build();
 
